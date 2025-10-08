@@ -1,0 +1,8 @@
+{
+  "whatsapp": {
+    "bearer": "REPLACE_WITH_WHATSAPP_BEARER_TOKEN"
+  },
+  "otp": {
+    "secret": "REPLACE_WITH_OTP_SECRET"
+  }
+}

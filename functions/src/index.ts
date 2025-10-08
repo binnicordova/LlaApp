@@ -1,13 +1,17 @@
-import * as functions from "firebase-functions";
+import { onRequest } from "firebase-functions/v2/https";
 import * as express from 'express';
+import authRouter from './auth';
 
-let app = express();
+const app = express();
 
-app.post('/', (request, response)=>{
+app.use(express.json());
+
+app.post('/', (request: express.Request, response: express.Response) => {
   console.log('request post');
-  console.log(request);
+  console.log(request.body || request);
   response.send("post received");
 });
 
+app.use('/auth', authRouter);
 
-export const llaAppWebsite = functions.https.onRequest(app);
+export const llaapp = onRequest(app);
