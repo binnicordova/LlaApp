@@ -1,45 +1,43 @@
 # LlaApp
 
-Welcome to the official repository for LlaApp, a premier software development company specializing in creating exceptional mobile and web applications. With over 10 years of experience, we deliver high-quality, user-focused solutions that have been downloaded by millions worldwide.
+Rendered from: [public/index.html](public/index.html)
 
-[![LlaApp Website Screenshot](https://llaapp.com/assets/images/screenshot-2023-08-11-at-6.10.21-pm-2576x1610.png)](https://llaapp.com/)
+<img src="public/assets/images/react-native-wgpu_demo.gif" alt="LlaApp demo" width="360" />
 
-## Our Services
+## Build High-Performance Mobile Apps That Scale
 
-We offer a comprehensive suite of services to help you achieve your digital goals:
+An enterprise-grade mobile engineering partner delivering secure, scalable applications trusted by global enterprises. Leveraging 10+ years of expertise to support mission-critical systems and millions of users worldwide.
 
-- **Consulting**: We evaluate and rethink current processes to drive digital transformation and create new growth opportunities.
-- **UX/UI Design**: Our team identifies user needs to develop digital products that provide a seamless and engaging user experience.
-- **Programming**: We build high-impact technology solutions that optimize processes and generate real growth for our clients.
-- **Talent**: We provide dedicated teams with the technological and digital expertise to develop your projects.
-- **Cloud Computing**: Our cloud infrastructure solutions ensure the continuity and scalability of your operations.
-- **Marketing**: We implement comprehensive communication strategies and manage digital platforms to align with your company’s objectives.
-- **Code Refactor**: We take on existing projects to optimize their features and improve performance.
+## Services & Capabilities
 
-## Technologies
+- **Enterprise Mobile Architecture**: Cross-platform strategy, robust backend patterns, and scalable app platforms.
+- **Cross-Platform Development**: React Native senior-led engineering for Android & iOS.
+- **CI/CD & Observability**: Pipelines, monitoring, and performance tooling for production systems.
+- **Security & Compliance**: App-level security, threat modelling, and enterprise governance.
 
-Our primary expertise lies in **React Native**, which we use to build high-quality mobile applications for both **Android** and **iOS**. We also specialize in a wide range of modern web technologies to deliver robust and scalable solutions.
+## Project Gallery (selected)
 
-## Project Gallery
+- [MiMarket (CocaCola)](https://play.google.com/store/apps/details?id=com.mycoke.gulf) — Retail platform for high-volume offline transactions
+- [NFL+ App TV](https://www.nfl.com/apps/) — High-traffic sports engagement platform
+- [ITU Bank App](https://apps.apple.com/us/app/itu-cuenta-corriente-digital/id1620586910) — Global banking application with robust security
+- [Platanitos](https://apps.apple.com/us/app/platanitos/id1093153586) — Omnichannel retail app
+- [PlacaOk](https://play.google.com/store/apps/details?id=com.placaok) — Vehicle status validation
+- [Verano Saludable](https://play.google.com/store/apps/details?id=com.saludables.app) — Beach, pool & food safety app (MINSA Digesa)
+- [PickPointer Taxi](https://play.google.com/store/apps/details?id=com.pickpointer.app) — Ride-hailing with real-time tracking
+- [Vifacilita Europe](https://play.google.com/store/apps/details?id=app.facilita.marketplace) — Community marketplace
+- [Bolidon](https://play.google.com/store/apps/details?id=com.bolidon.app) — Vehicle maintenance management
+- [TokAI](https://play.google.com/store/apps/details?id=com.tokai) — Gamified live streamings
+- [Aguaviva](https://play.google.com/store/apps/details?id=br.com.bredas.portalescola.aguaviva) — Community & spiritual growth app
+- [Pittigo Taxi](https://apkpure.com/pittigo/com.pittigo.cliente) — Ride-hailing with robust backend
 
-Here are some of the projects our talented developers have worked on:
+Additional enterprise case studies available upon request. Some projects delivered under NDA.
 
-- **miMarket**: A comprehensive e-commerce application.
-- **NFL**: An engaging app for football enthusiasts.
-- **ITU**: A utility and services application.
-- **Platanitos**: A stylish and functional retail app.
-- **PickPointer**: An innovative location-based service.
-- **Vifacilita**: A productivity and management tool.
-- **Aguaviva**: A wellness and lifestyle application.
-- **Pittigo**: A specialized service-oriented app.
+## Contact
 
-## Get in Touch
-
-Ready to start your next project? We’d love to hear from you!
-
-- **[Get a Free Technical Evaluation](https://wa.me/send?phone=16503744225&text=Budget)**: Let us help you scope your project and provide a detailed estimate.
-- **[Contact Us](https://wa.me/send?phone=16503744225&text=Quote)**: Have a question or want to discuss your project? Reach out to our team today.
+- Phone: +1 650 374 4225
+- Talk to an expert: `tel:+16503744225`
+- WhatsApp: [Get a Proposal](https://wa.me/send?phone=16503744225&text=GetAProposal) | [Free Technical Evaluation](https://wa.me/send?phone=16503744225&text=Budget)
 
 ---
 
-© 2025 LlaApp. All rights reserved.
+© 2026 LlaApp. All rights reserved.
