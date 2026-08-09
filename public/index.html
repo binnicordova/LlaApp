@@ -218,7 +218,7 @@
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
   <link rel="alternate" type="text/plain" title="LLM-friendly version" href="/llms.txt">
   <link rel="alternate" type="text/plain" title="Full LLM-friendly documentation" href="/llms-full.txt">
-  <link rel="preload" as="image" href="/assets/ext/images/hero-team-900.jpg" imagesrcset="/assets/ext/images/hero-team-480.jpg 480w, /assets/ext/images/hero-team-900.jpg 900w" imagesizes="(max-width: 1023px) 256px, 320px">
+  <link rel="preload" as="image" href="/assets/ext/images/hero-aurora.svg">
   <script src="/assets/ext/scripts/tailwindcdn.js"></script>
   <script>
     tailwind.config = {
@@ -251,10 +251,115 @@
     img {
       height: auto;
     }
+
+    :root {
+      --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.7s var(--ease-spring), transform 0.7s var(--ease-spring);
+      transition-delay: var(--reveal-delay, 0s);
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Header elevation on scroll */
+    header.is-scrolled {
+      box-shadow: 0 1px 0 rgba(0,0,0,0.06), 0 12px 24px -18px rgba(0,0,0,0.35);
+    }
+
+    @keyframes driftSlow {
+      0%, 100% { transform: translate3d(0, 0, 0) rotate(var(--r, 0deg)); }
+      50% { transform: translate3d(0, -22px, 0) rotate(calc(var(--r, 0deg) + 2deg)); }
+    }
+    @keyframes shimmer {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+
+    .drift-shape { animation: driftSlow 9s ease-in-out infinite; }
+    .text-shimmer {
+      background: linear-gradient(100deg, #f8fafc 42%, #ffed00 50%, #f8fafc 58%);
+      background-size: 220% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: shimmer 6s linear infinite;
+    }
+
+    /* Hero parallax background */
+    .hero-parallax-layer {
+      will-change: transform;
+    }
+    #neuronCanvas {
+      display: block;
+    }
+
+    /* Industry / capability tiles */
+    .tile-icon {
+      transition: transform 0.5s var(--ease-spring);
+    }
+    a.group:hover .tile-icon, a.group:focus-visible .tile-icon {
+      transform: scale(1.1) translateY(-2px);
+    }
+
+    /* Press feedback (respond on press, not release) */
+    .press:active {
+      transform: scale(0.97);
+      transition: transform 0.1s ease-out;
+    }
+
+    /* Client logo marquee */
+    .logo-marquee {
+      overflow-x: auto;
+      scrollbar-width: thin;
+    }
+    .logo-track {
+      width: max-content;
+    }
+    .logo-track.is-animated {
+      animation: marqueeScroll 46s linear infinite;
+    }
+    .logo-marquee:hover .logo-track.is-animated,
+    .logo-marquee:focus-within .logo-track.is-animated {
+      animation-play-state: paused;
+    }
+    @keyframes marqueeScroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* Consistent, visible keyboard focus everywhere */
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+      outline: 2px solid #3b48ff;
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .drift-shape, .text-shimmer, .logo-track.is-animated {
+        animation: none !important;
+      }
+      .reveal {
+        transition: opacity 0.3s ease !important;
+        transform: none !important;
+      }
+      .press:active {
+        transform: none;
+      }
+      .hero-parallax-layer {
+        transform: none !important;
+      }
+    }
   </style>
 </head>
 <body class="bg-slate-100 text-ink font-body antialiased pb-[calc(5rem+env(safe-area-inset-bottom))] lg:pb-0">
-  <header class="sticky top-0 z-40 border-b border-black/10 bg-white/95 backdrop-blur">
+  <header class="sticky top-0 z-40 border-b border-black/10 bg-white/95 backdrop-blur transition-shadow duration-300">
     <div class="mx-auto flex min-h-16 w-[min(1180px,calc(100%-1.5rem))] items-center gap-3 lg:min-h-20 lg:w-[min(1180px,calc(100%-2rem))]">
       <a href="#home" class="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-[0.1em]" aria-label="Home" data-analytics-event="home_click">
         <img src="../assets/logo-512x512.png" alt="" width="28" height="28" decoding="async" class="h-7 w-auto rounded">
@@ -272,15 +377,15 @@
       </nav>
 
       <div class="hidden items-center gap-2 lg:inline-flex" aria-label="Language switcher">
-        <a href="#" class="text-slate-700 [&.active]:font-bold [&.active]:text-yellow-600" data-lang-switch="en" data-analytics-event="lang_switch_click" data-analytics-label="EN" aria-label="English">EN</a>
+        <a href="#" class="text-slate-700 [&.active]:font-bold [&.active]:text-brand [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="en" data-analytics-event="lang_switch_click" data-analytics-label="EN" aria-label="English">EN</a>
         <span class="text-slate-400">|</span>
-        <a href="#" class="text-slate-700 [&.active]:font-bold [&.active]:text-yellow-600" data-lang-switch="fr" data-analytics-event="lang_switch_click" data-analytics-label="FR" aria-label="French">FR</a>
+        <a href="#" class="text-slate-700 [&.active]:font-bold [&.active]:text-brand [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="fr" data-analytics-event="lang_switch_click" data-analytics-label="FR" aria-label="French">FR</a>
         <span class="text-slate-400">|</span>
-        <a href="#" class="text-slate-700 [&.active]:font-bold [&.active]:text-yellow-600" data-lang-switch="es" data-analytics-event="lang_switch_click" data-analytics-label="ES" aria-label="Spanish">ES</a>
+        <a href="#" class="text-slate-700 [&.active]:font-bold [&.active]:text-brand [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="es" data-analytics-event="lang_switch_click" data-analytics-label="ES" aria-label="Spanish">ES</a>
         <span class="text-slate-400">|</span>
-        <a href="#" class="text-slate-700 [&.active]:font-bold [&.active]:text-yellow-600" data-lang-switch="de" data-analytics-event="lang_switch_click" data-analytics-label="DE" aria-label="German">DE</a>
+        <a href="#" class="text-slate-700 [&.active]:font-bold [&.active]:text-brand [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="de" data-analytics-event="lang_switch_click" data-analytics-label="DE" aria-label="German">DE</a>
         <span class="text-slate-400">|</span>
-        <a href="#" class="text-slate-700 [&.active]:font-bold [&.active]:text-yellow-600" data-lang-switch="it" data-analytics-event="lang_switch_click" data-analytics-label="IT" aria-label="Italian">IT</a>
+        <a href="#" class="text-slate-700 [&.active]:font-bold [&.active]:text-brand [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="it" data-analytics-event="lang_switch_click" data-analytics-label="IT" aria-label="Italian">IT</a>
       </div>
 
       <div id="menuPanel" class="absolute right-3 top-[calc(100%+.5rem)] hidden w-[min(340px,calc(100vw-1.5rem))] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-strong lg:hidden" aria-hidden="true">
@@ -293,107 +398,149 @@
           <a href="#contact" data-i18n="navContact" data-analytics-event="nav_click" data-analytics-label="Mobile Contact Us" class="min-h-11 px-4 py-3 text-slate-700">Contact Us</a>
         </nav>
         <div class="grid grid-cols-5 border-t border-slate-100 bg-slate-50" aria-label="Mobile language switcher">
-          <a href="#" class="inline-flex min-h-11 items-center justify-center border-r border-slate-200 font-mono text-xs uppercase tracking-wide text-slate-700 [&.active]:font-bold [&.active]:text-yellow-600" data-lang-switch="en" data-analytics-event="lang_switch_click_mobile" data-analytics-label="EN" aria-label="English">EN</a>
-          <a href="#" class="inline-flex min-h-11 items-center justify-center border-r border-slate-200 font-mono text-xs uppercase tracking-wide text-slate-700 [&.active]:font-bold [&.active]:text-yellow-600" data-lang-switch="fr" data-analytics-event="lang_switch_click_mobile" data-analytics-label="FR" aria-label="French">FR</a>
-          <a href="#" class="inline-flex min-h-11 items-center justify-center border-r border-slate-200 font-mono text-xs uppercase tracking-wide text-slate-700 [&.active]:font-bold [&.active]:text-yellow-600" data-lang-switch="es" data-analytics-event="lang_switch_click_mobile" data-analytics-label="ES" aria-label="Spanish">ES</a>
-          <a href="#" class="inline-flex min-h-11 items-center justify-center border-r border-slate-200 font-mono text-xs uppercase tracking-wide text-slate-700 [&.active]:font-bold [&.active]:text-yellow-600" data-lang-switch="de" data-analytics-event="lang_switch_click_mobile" data-analytics-label="DE" aria-label="German">DE</a>
-          <a href="#" class="inline-flex min-h-11 items-center justify-center font-mono text-xs uppercase tracking-wide text-slate-700 [&.active]:font-bold [&.active]:text-yellow-600" data-lang-switch="it" data-analytics-event="lang_switch_click_mobile" data-analytics-label="IT" aria-label="Italian">IT</a>
+          <a href="#" class="inline-flex min-h-11 items-center justify-center border-r border-slate-200 font-mono text-xs uppercase tracking-wide text-slate-700 [&.active]:font-bold [&.active]:text-brand [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="en" data-analytics-event="lang_switch_click_mobile" data-analytics-label="EN" aria-label="English">EN</a>
+          <a href="#" class="inline-flex min-h-11 items-center justify-center border-r border-slate-200 font-mono text-xs uppercase tracking-wide text-slate-700 [&.active]:font-bold [&.active]:text-brand [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="fr" data-analytics-event="lang_switch_click_mobile" data-analytics-label="FR" aria-label="French">FR</a>
+          <a href="#" class="inline-flex min-h-11 items-center justify-center border-r border-slate-200 font-mono text-xs uppercase tracking-wide text-slate-700 [&.active]:font-bold [&.active]:text-brand [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="es" data-analytics-event="lang_switch_click_mobile" data-analytics-label="ES" aria-label="Spanish">ES</a>
+          <a href="#" class="inline-flex min-h-11 items-center justify-center border-r border-slate-200 font-mono text-xs uppercase tracking-wide text-slate-700 [&.active]:font-bold [&.active]:text-brand [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="de" data-analytics-event="lang_switch_click_mobile" data-analytics-label="DE" aria-label="German">DE</a>
+          <a href="#" class="inline-flex min-h-11 items-center justify-center font-mono text-xs uppercase tracking-wide text-slate-700 [&.active]:font-bold [&.active]:text-brand [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="it" data-analytics-event="lang_switch_click_mobile" data-analytics-label="IT" aria-label="Italian">IT</a>
         </div>
       </div>
     </div>
   </header>
 
   <main id="home">
-    <section class="relative overflow-hidden bg-gradient-to-b from-slate-100 to-slate-200 py-8 sm:py-10 lg:py-16">
-      <div class="pointer-events-none absolute -right-40 top-52 hidden h-64 w-[30rem] rotate-[-32deg] rounded-[2.5rem] bg-gradient-to-br from-signal via-brand to-indigo-900 sm:block"></div>
-      <div class="relative z-10 mx-auto grid w-[min(1180px,calc(100%-1.5rem))] gap-5 lg:w-[min(1180px,calc(100%-2rem))] lg:min-h-[680px] lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-        <div>
-          <p class="mb-3 font-mono text-xs uppercase tracking-[0.08em] text-slate-700" data-i18n="heroEyebrow">AI Transformation Partner</p>
-          <h1 class="max-w-[13ch] font-mono text-5xl uppercase leading-[0.9] tracking-tight sm:text-6xl lg:text-7xl" data-i18n="heroTitle">AI Transformation, Engineered To Ship_</h1>
-          <p class="mt-4 max-w-2xl text-base text-slate-700" data-i18n="heroCopy">We help businesses adopt AI that works: readiness audits, custom AI agents, and LLM integrations built by senior engineers with 10+ years shipping mission-critical software for global market leaders.</p>
-          <p class="mt-3 max-w-2xl text-sm text-slate-700" data-i18n="heroGeoLine">Serving Vancouver &amp; Canada, the United States (San Francisco, Texas, Chicago, and nationwide), and Europe (Germany, Italy, Spain).</p>
-          <div class="mt-5 grid gap-3 sm:flex sm:flex-wrap">
-            <a class="inline-flex min-h-11 items-center justify-center rounded-full bg-signal px-6 py-3 font-bold text-indigo-950 shadow-lg shadow-yellow-300/40" href="#contact" data-i18n="heroCtaPrimary" data-analytics-event="hero_cta_audit">Book a Free AI Audit</a>
-            <a class="inline-flex min-h-11 items-center justify-center rounded-full border border-slate-300 bg-white/95 px-6 py-3 font-bold text-slate-900" href="#services" data-i18n="heroCtaSecondary" data-analytics-event="hero_cta_solutions">See AI Services</a>
-          </div>
+    <section id="heroSection" class="relative overflow-hidden bg-night py-20 sm:py-24 lg:py-28">
+      <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+        <div class="hero-parallax-layer absolute inset-[-12%]" data-parallax-speed="0.1">
+          <img src="/assets/ext/images/hero-aurora.svg" alt="" width="1600" height="1000" fetchpriority="high" decoding="async" class="h-full w-full object-cover">
         </div>
-        <div class="relative justify-self-end">
-          <img src="/assets/ext/images/hero-team-900.jpg" srcset="/assets/ext/images/hero-team-480.jpg 480w, /assets/ext/images/hero-team-900.jpg 900w" sizes="(max-width: 1023px) 256px, 320px" alt="Team collaboration" width="320" height="320" loading="eager" fetchpriority="high" decoding="async" class="h-52 w-52 rounded-full border-8 border-white object-cover shadow-strong sm:h-64 sm:w-64 lg:h-80 lg:w-80">
+        <canvas id="neuronCanvas" class="absolute inset-0 h-full w-full" role="img" aria-label="Animated visualization of an AI neural network"></canvas>
+        <div class="absolute inset-0 bg-night/55"></div>
+        <div class="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-b from-transparent to-night"></div>
+      </div>
+      <div class="relative z-10 mx-auto w-[min(880px,calc(100%-1.5rem))] lg:w-[min(880px,calc(100%-2rem))]">
+        <p class="reveal mb-4 font-mono text-xs uppercase tracking-[0.14em] text-slate-200" style="--reveal-delay:0s" data-i18n="heroEyebrow">AI Transformation Partner</p>
+        <h1 class="reveal max-w-[16ch] font-mono text-4xl uppercase leading-[0.95] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl" style="--reveal-delay:.05s" data-i18n="heroTitle">AI Transformation, <span class="text-shimmer">Engineered To Ship_</span></h1>
+        <p class="reveal mt-5 max-w-2xl text-base text-slate-100 sm:text-lg" style="--reveal-delay:.1s" data-i18n="heroCopy">We help businesses adopt AI that works: readiness audits, custom AI agents, and LLM integrations built by senior engineers with 10+ years shipping mission-critical software for global market leaders.</p>
+
+        <div class="reveal mt-7 grid gap-3 sm:flex sm:flex-wrap" style="--reveal-delay:.15s">
+          <a class="press inline-flex min-h-11 items-center justify-center rounded-full bg-signal px-6 py-3 font-bold text-indigo-950 shadow-lg shadow-yellow-300/40 transition-shadow duration-300 hover:shadow-xl hover:shadow-yellow-300/50" href="#contact" data-i18n="heroCtaPrimary" data-analytics-event="hero_cta_audit">Book a Free AI Audit</a>
+          <a class="press inline-flex min-h-11 items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3 font-bold text-white backdrop-blur transition-colors duration-300 hover:border-white/60 hover:bg-white/15" href="#services" data-i18n="heroCtaSecondary" data-analytics-event="hero_cta_solutions">See AI Services</a>
         </div>
+
+        <div class="reveal mt-10 flex flex-wrap gap-x-8 gap-y-4 border-t border-white/15 pt-6" style="--reveal-delay:.2s">
+          <div><strong class="font-mono text-2xl text-signal sm:text-3xl">+15</strong><span class="ml-2 text-xs uppercase tracking-wide text-slate-200" data-i18n="stat1">AI &amp; Engineering Experts</span></div>
+          <div><strong class="font-mono text-2xl text-signal sm:text-3xl">+20</strong><span class="ml-2 text-xs uppercase tracking-wide text-slate-200" data-i18n="stat2">Enterprise Systems Delivered</span></div>
+          <div><strong class="font-mono text-2xl text-signal sm:text-3xl">+12</strong><span class="ml-2 text-xs uppercase tracking-wide text-slate-200" data-i18n="stat3">Sectors Covered</span></div>
+          <div><strong class="font-mono text-2xl text-signal sm:text-3xl">+80</strong><span class="ml-2 text-xs uppercase tracking-wide text-slate-200" data-i18n="stat4">Market-Leading Clients</span></div>
+        </div>
+
+        <p class="reveal mt-6 flex items-start gap-2 text-sm text-slate-200" style="--reveal-delay:.28s">
+          <svg class="mt-0.5 h-5 w-5 shrink-0 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M3 12h18"></path>
+            <path d="M12 3c2.5 2.6 3.8 5.8 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.8-3.8-9S9.5 5.6 12 3Z"></path>
+          </svg>
+          <span data-i18n="heroGeoLine">Serving Vancouver &amp; Canada, the United States (San Francisco, Texas, Chicago, and nationwide), and Europe (Germany, Italy, Spain).</span>
+        </p>
       </div>
     </section>
 
     <section id="services" class="relative overflow-hidden bg-night py-14 text-slate-50">
-      <div class="pointer-events-none absolute -left-44 bottom-[-5rem] hidden h-48 w-[30rem] rotate-[13deg] rounded-[2rem] bg-gradient-to-r from-signal via-brand to-indigo-900 md:block"></div>
+      <div class="drift-shape pointer-events-none absolute -left-44 bottom-[-5rem] hidden h-48 w-[30rem] rounded-[2rem] bg-gradient-to-r from-signal via-brand to-indigo-900 blur-[2px] md:block" style="--r:13deg; transform:rotate(13deg); animation-delay:-2s"></div>
       <div class="relative z-10 mx-auto w-[min(1180px,calc(100%-1.5rem))] lg:w-[min(1180px,calc(100%-2rem))]">
-        <h2 class="font-mono text-2xl uppercase tracking-wide" data-i18n="capabilitiesTitle">AI Transformation Capabilities</h2>
-        <p class="mt-3 max-w-3xl text-slate-200" data-i18n="capabilitiesLead">Six ways we help growing businesses adopt AI that produces measurable results, not just pilots.</p>
-        <div class="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          <article class="relative rounded-2xl border border-slate-700 bg-slate-950 p-4 transition hover:-translate-y-1 hover:border-slate-400">
-            <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950">01</div>
+        <h2 class="reveal font-mono text-2xl uppercase tracking-wide" data-i18n="capabilitiesTitle">AI Transformation Capabilities</h2>
+        <p class="reveal mt-3 max-w-3xl text-slate-200" style="--reveal-delay:.05s" data-i18n="capabilitiesLead">Six ways we help growing businesses adopt AI that produces measurable results, not just pilots.</p>
+        <div class="relative mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <article class="reveal group relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950 p-4 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1.5 hover:border-brand/60 hover:shadow-[0_20px_40px_-20px_rgba(59,72,255,0.55)]" style="--reveal-delay:.05s">
+            <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950 transition-transform duration-500 group-hover:scale-110">01</div>
             <h3 class="font-mono text-xs uppercase tracking-wide text-slate-100" data-i18n="service1Title">AI Readiness &amp; Opportunity Audit</h3>
             <p class="mt-2 text-sm text-slate-300" data-i18n="service1Desc">A structured audit of your operations to find the highest-ROI AI use cases, ranked by impact, cost, and implementation risk.</p>
-            <a class="absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800" href="#contact" aria-label="AI Readiness Audit details" data-analytics-event="service_click" data-analytics-label="AI Readiness Audit">&gt;</a>
+            <a class="press absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800 group-hover:translate-x-0.5" href="#contact" aria-label="AI Readiness Audit details" data-analytics-event="service_click" data-analytics-label="AI Readiness Audit">&gt;</a>
           </article>
-          <article class="relative rounded-2xl border border-slate-700 bg-slate-950 p-4 transition hover:-translate-y-1 hover:border-slate-400">
-            <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950">02</div>
+          <article class="reveal group relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950 p-4 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1.5 hover:border-brand/60 hover:shadow-[0_20px_40px_-20px_rgba(59,72,255,0.55)]" style="--reveal-delay:.1s">
+            <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950 transition-transform duration-500 group-hover:scale-110">02</div>
             <h3 class="font-mono text-xs uppercase tracking-wide text-slate-100" data-i18n="service2Title">AI Agents &amp; Workflow Automation</h3>
             <p class="mt-2 text-sm text-slate-300" data-i18n="service2Desc">Custom AI agents that handle support, sales operations, back-office workflows, and approvals, integrated with the tools you already run.</p>
-            <a class="absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800" href="#contact" aria-label="AI Agents details" data-analytics-event="service_click" data-analytics-label="AI Agents & Workflow Automation">&gt;</a>
+            <a class="press absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800 group-hover:translate-x-0.5" href="#contact" aria-label="AI Agents details" data-analytics-event="service_click" data-analytics-label="AI Agents & Workflow Automation">&gt;</a>
           </article>
-          <article class="relative rounded-2xl border border-slate-700 bg-slate-950 p-4 transition hover:-translate-y-1 hover:border-slate-400">
-            <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950">03</div>
+          <article class="reveal group relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950 p-4 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1.5 hover:border-brand/60 hover:shadow-[0_20px_40px_-20px_rgba(59,72,255,0.55)]" style="--reveal-delay:.15s">
+            <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950 transition-transform duration-500 group-hover:scale-110">03</div>
             <h3 class="font-mono text-xs uppercase tracking-wide text-slate-100" data-i18n="service3Title">LLM &amp; Knowledge Integration (RAG)</h3>
             <p class="mt-2 text-sm text-slate-300" data-i18n="service3Desc">Retrieval-augmented copilots and internal knowledge assistants built on your own data, with enterprise-grade access controls.</p>
-            <a class="absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800" href="#contact" aria-label="LLM Integration details" data-analytics-event="service_click" data-analytics-label="LLM & Knowledge Integration">&gt;</a>
+            <a class="press absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800 group-hover:translate-x-0.5" href="#contact" aria-label="LLM Integration details" data-analytics-event="service_click" data-analytics-label="LLM & Knowledge Integration">&gt;</a>
           </article>
-          <article class="relative rounded-2xl border border-slate-700 bg-slate-950 p-4 transition hover:-translate-y-1 hover:border-slate-400">
-            <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950">04</div>
+          <article class="reveal group relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950 p-4 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1.5 hover:border-brand/60 hover:shadow-[0_20px_40px_-20px_rgba(59,72,255,0.55)]" style="--reveal-delay:.2s">
+            <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950 transition-transform duration-500 group-hover:scale-110">04</div>
             <h3 class="font-mono text-xs uppercase tracking-wide text-slate-100" data-i18n="service4Title">Applied AI Product Engineering</h3>
             <p class="mt-2 text-sm text-slate-300" data-i18n="service4Desc">AI-native features shipped inside your existing product, built by the same senior engineering team behind mission-critical apps for global brands.</p>
-            <a class="absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800" href="#contact" aria-label="Applied AI Engineering details" data-analytics-event="service_click" data-analytics-label="Applied AI Product Engineering">&gt;</a>
+            <a class="press absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800 group-hover:translate-x-0.5" href="#contact" aria-label="Applied AI Engineering details" data-analytics-event="service_click" data-analytics-label="Applied AI Product Engineering">&gt;</a>
           </article>
-          <article class="relative rounded-2xl border border-slate-700 bg-slate-950 p-4 transition hover:-translate-y-1 hover:border-slate-400">
-            <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950">05</div>
+          <article class="reveal group relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950 p-4 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1.5 hover:border-brand/60 hover:shadow-[0_20px_40px_-20px_rgba(59,72,255,0.55)]" style="--reveal-delay:.25s">
+            <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950 transition-transform duration-500 group-hover:scale-110">05</div>
             <h3 class="font-mono text-xs uppercase tracking-wide text-slate-100" data-i18n="service5Title">AI Infrastructure, MLOps &amp; Governance</h3>
             <p class="mt-2 text-sm text-slate-300" data-i18n="service5Desc">Secure model deployment, observability, cost control, and governance so AI systems scale safely in production.</p>
-            <a class="absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800" href="#contact" aria-label="AI Infrastructure details" data-analytics-event="service_click" data-analytics-label="AI Infrastructure & Governance">&gt;</a>
+            <a class="press absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800 group-hover:translate-x-0.5" href="#contact" aria-label="AI Infrastructure details" data-analytics-event="service_click" data-analytics-label="AI Infrastructure & Governance">&gt;</a>
           </article>
-          <article class="relative rounded-2xl border border-slate-700 bg-slate-950 p-4 transition hover:-translate-y-1 hover:border-slate-400">
-            <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950">06</div>
+          <article class="reveal group relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950 p-4 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1.5 hover:border-brand/60 hover:shadow-[0_20px_40px_-20px_rgba(59,72,255,0.55)]" style="--reveal-delay:.3s">
+            <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950 transition-transform duration-500 group-hover:scale-110">06</div>
             <h3 class="font-mono text-xs uppercase tracking-wide text-slate-100" data-i18n="service6Title">Fractional AI Strategy &amp; Enablement</h3>
             <p class="mt-2 text-sm text-slate-300" data-i18n="service6Desc">Embedded AI leadership and hands-on team training so your organization keeps building after we hand off.</p>
-            <a class="absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800" href="#contact" aria-label="Fractional AI Strategy details" data-analytics-event="service_click" data-analytics-label="Fractional AI Strategy & Enablement">&gt;</a>
+            <a class="press absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800 group-hover:translate-x-0.5" href="#contact" aria-label="Fractional AI Strategy details" data-analytics-event="service_click" data-analytics-label="Fractional AI Strategy & Enablement">&gt;</a>
           </article>
         </div>
       </div>
     </section>
 
     <section id="industries" class="relative overflow-hidden bg-slate-100 py-14">
-      <div class="pointer-events-none absolute -right-52 top-4 hidden h-56 w-[40rem] rotate-[-12deg] rounded-[2rem] bg-gradient-to-r from-signal via-brand to-indigo-900 md:block"></div>
+      <div class="drift-shape pointer-events-none absolute -right-52 top-4 hidden h-56 w-[40rem] rounded-[2rem] bg-gradient-to-r from-signal via-brand to-indigo-900 blur-[2px] md:block" style="--r:-12deg; transform:rotate(-12deg); animation-delay:-4s"></div>
       <div class="relative z-10 mx-auto w-[min(1180px,calc(100%-1.5rem))] lg:w-[min(1180px,calc(100%-2rem))]">
-        <h2 class="font-mono text-2xl uppercase tracking-wide" data-i18n="sectorsTitle">Strategic Sectors</h2>
-        <p class="mt-3 max-w-3xl text-slate-600" data-i18n="sectorsLead">We apply AI transformation where operational complexity and data volume make the ROI clearest.</p>
-        <div class="mt-6 grid gap-2 md:grid-cols-2 lg:grid-cols-3">
-          <a class="group relative block min-h-36 overflow-hidden rounded-xl" href="#contact" data-analytics-event="industry_click" data-analytics-label="Banking and finance"><img src="/assets/ext/images/industry-banking.jpg" alt="Banking and finance" width="900" height="360" loading="lazy" decoding="async" fetchpriority="low" class="h-36 w-full object-cover transition group-hover:scale-105"><span data-i18n="ind1" class="absolute bottom-2 left-2 right-2 text-sm text-white drop-shadow">Banking and finance</span></a>
-          <a class="group relative block min-h-36 overflow-hidden rounded-xl" href="#contact" data-analytics-event="industry_click" data-analytics-label="Retail"><img src="/assets/ext/images/industry-retail.jpg" alt="Retail" width="900" height="360" loading="lazy" decoding="async" fetchpriority="low" class="h-36 w-full object-cover transition group-hover:scale-105"><span data-i18n="ind2" class="absolute bottom-2 left-2 right-2 text-sm text-white drop-shadow">Retail</span></a>
-          <a class="group relative block min-h-36 overflow-hidden rounded-xl" href="#contact" data-analytics-event="industry_click" data-analytics-label="Consumer goods"><img src="/assets/ext/images/industry-consumer-goods.jpg" alt="Consumer goods" width="900" height="360" loading="lazy" decoding="async" fetchpriority="low" class="h-36 w-full object-cover transition group-hover:scale-105"><span data-i18n="ind3" class="absolute bottom-2 left-2 right-2 text-sm text-white drop-shadow">Consumer goods</span></a>
-          <a class="group relative block min-h-36 overflow-hidden rounded-xl" href="#contact" data-analytics-event="industry_click" data-analytics-label="Logistics and transportation"><img src="/assets/ext/images/industry-logistics.jpg" alt="Logistics and transportation" width="900" height="360" loading="lazy" decoding="async" fetchpriority="low" class="h-36 w-full object-cover transition group-hover:scale-105"><span data-i18n="ind4" class="absolute bottom-2 left-2 right-2 text-sm text-white drop-shadow">Logistics and transportation</span></a>
-          <a class="group relative block min-h-36 overflow-hidden rounded-xl" href="#contact" data-analytics-event="industry_click" data-analytics-label="Health"><img src="/assets/ext/images/industry-health.jpg" alt="Health" width="900" height="360" loading="lazy" decoding="async" fetchpriority="low" class="h-36 w-full object-cover transition group-hover:scale-105"><span data-i18n="ind5" class="absolute bottom-2 left-2 right-2 text-sm text-white drop-shadow">Health</span></a>
-          <a class="group relative block min-h-36 overflow-hidden rounded-xl" href="#contact" data-analytics-event="industry_click" data-analytics-label="Manufacturing"><img src="/assets/ext/images/industry-manufacturing.jpg" alt="Manufacturing" width="900" height="360" loading="lazy" decoding="async" fetchpriority="low" class="h-36 w-full object-cover transition group-hover:scale-105"><span data-i18n="ind6" class="absolute bottom-2 left-2 right-2 text-sm text-white drop-shadow">Manufacturing</span></a>
+        <h2 class="reveal font-mono text-2xl uppercase tracking-wide" data-i18n="sectorsTitle">Strategic Sectors</h2>
+        <p class="reveal mt-3 max-w-3xl text-slate-600" style="--reveal-delay:.05s" data-i18n="sectorsLead">We apply AI transformation where operational complexity and data volume make the ROI clearest.</p>
+        <div class="mt-6 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+          <a class="reveal group relative block min-h-36 overflow-hidden rounded-xl bg-gradient-to-br from-indigo-950 via-brand to-indigo-800 press" style="--reveal-delay:.05s" href="#contact" data-analytics-event="industry_click" data-analytics-label="Banking and finance">
+            <span class="pointer-events-none absolute inset-0 opacity-[0.15] [background-image:radial-gradient(circle,white_1px,transparent_1px)] [background-size:16px_16px]"></span>
+            <span class="tile-icon absolute right-3 top-3 text-white/90"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10 12 4l9 6"></path><path d="M5 10v9M10 10v9M14 10v9M19 10v9"></path><path d="M3 19h18"></path></svg></span>
+            <span class="flex min-h-36 items-end p-4"><span data-i18n="ind1" class="text-sm font-bold text-white drop-shadow">Banking and finance</span></span>
+          </a>
+          <a class="reveal group relative block min-h-36 overflow-hidden rounded-xl bg-gradient-to-br from-amber-500 via-signal to-amber-300 press" style="--reveal-delay:.1s" href="#contact" data-analytics-event="industry_click" data-analytics-label="Retail">
+            <span class="pointer-events-none absolute inset-0 opacity-[0.18] [background-image:radial-gradient(circle,black_1px,transparent_1px)] [background-size:16px_16px]"></span>
+            <span class="tile-icon absolute right-3 top-3 text-indigo-950"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg></span>
+            <span class="flex min-h-36 items-end p-4"><span data-i18n="ind2" class="text-sm font-bold text-indigo-950 drop-shadow">Retail</span></span>
+          </a>
+          <a class="reveal group relative block min-h-36 overflow-hidden rounded-xl bg-gradient-to-br from-emerald-700 via-emerald-500 to-teal-400 press" style="--reveal-delay:.15s" href="#contact" data-analytics-event="industry_click" data-analytics-label="Consumer goods">
+            <span class="pointer-events-none absolute inset-0 opacity-[0.15] [background-image:radial-gradient(circle,white_1px,transparent_1px)] [background-size:16px_16px]"></span>
+            <span class="tile-icon absolute right-3 top-3 text-white/90"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 7.5 8.5-4 8.5 4-8.5 4-8.5-4Z"></path><path d="M3.5 7.5v9l8.5 4 8.5-4v-9"></path><path d="M12 11.5v9"></path></svg></span>
+            <span class="flex min-h-36 items-end p-4"><span data-i18n="ind3" class="text-sm font-bold text-white drop-shadow">Consumer goods</span></span>
+          </a>
+          <a class="reveal group relative block min-h-36 overflow-hidden rounded-xl bg-gradient-to-br from-slate-900 via-slate-700 to-slate-500 press" style="--reveal-delay:.2s" href="#contact" data-analytics-event="industry_click" data-analytics-label="Logistics and transportation">
+            <span class="pointer-events-none absolute inset-0 opacity-[0.15] [background-image:radial-gradient(circle,white_1px,transparent_1px)] [background-size:16px_16px]"></span>
+            <span class="tile-icon absolute right-3 top-3 text-white/90"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3z"></path><path d="M14 10h4l3 3v3h-7z"></path><circle cx="7.5" cy="18" r="1.6"></circle><circle cx="17.5" cy="18" r="1.6"></circle></svg></span>
+            <span class="flex min-h-36 items-end p-4"><span data-i18n="ind4" class="text-sm font-bold text-white drop-shadow">Logistics and transportation</span></span>
+          </a>
+          <a class="reveal group relative block min-h-36 overflow-hidden rounded-xl bg-gradient-to-br from-rose-700 via-rose-500 to-orange-400 press" style="--reveal-delay:.25s" href="#contact" data-analytics-event="industry_click" data-analytics-label="Health">
+            <span class="pointer-events-none absolute inset-0 opacity-[0.15] [background-image:radial-gradient(circle,white_1px,transparent_1px)] [background-size:16px_16px]"></span>
+            <span class="tile-icon absolute right-3 top-3 text-white/90"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"></path></svg></span>
+            <span class="flex min-h-36 items-end p-4"><span data-i18n="ind5" class="text-sm font-bold text-white drop-shadow">Health</span></span>
+          </a>
+          <a class="reveal group relative block min-h-36 overflow-hidden rounded-xl bg-gradient-to-br from-indigo-900 via-violet-700 to-fuchsia-500 press" style="--reveal-delay:.3s" href="#contact" data-analytics-event="industry_click" data-analytics-label="Manufacturing">
+            <span class="pointer-events-none absolute inset-0 opacity-[0.15] [background-image:radial-gradient(circle,white_1px,transparent_1px)] [background-size:16px_16px]"></span>
+            <span class="tile-icon absolute right-3 top-3 text-white/90"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6 8 12l2 2-6 6"></path><path d="M16 8a3 3 0 1 0-4-4l-1.5 1.5 4 4L16 8Z"></path><path d="m14 10 6 6-2 2-6-6"></path></svg></span>
+            <span class="flex min-h-36 items-end p-4"><span data-i18n="ind6" class="text-sm font-bold text-white drop-shadow">Manufacturing</span></span>
+          </a>
         </div>
       </div>
     </section>
 
     <section id="why" class="bg-night py-14 text-slate-100">
       <div class="mx-auto w-[min(1180px,calc(100%-1.5rem))] text-center lg:w-[min(1180px,calc(100%-2rem))]">
-        <h2 class="font-mono text-2xl uppercase tracking-wide" data-i18n="institutionalExpertise">Engineering Pedigree, Applied To AI</h2>
-        <p class="mx-auto mt-3 max-w-3xl text-slate-300" data-i18n="institutionalLead">A decade of mission-critical engineering discipline, security, scale, and reliability, now the foundation every AI system we build stands on.</p>
+        <h2 class="reveal font-mono text-2xl uppercase tracking-wide" data-i18n="institutionalExpertise">Engineering Pedigree, Applied To AI</h2>
+        <p class="reveal mx-auto mt-3 max-w-3xl text-slate-300" style="--reveal-delay:.05s" data-i18n="institutionalLead">A decade of mission-critical engineering discipline, security, scale, and reliability, now the foundation every AI system we build stands on.</p>
         <div class="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          <div class="border-t border-white/20 pt-3"><strong class="block font-mono text-4xl leading-none text-signal">+15</strong><span class="text-xs uppercase tracking-wide text-slate-400" data-i18n="stat1">AI &amp; Engineering Experts</span></div>
-          <div class="border-t border-white/20 pt-3"><strong class="block font-mono text-4xl leading-none text-signal">+20</strong><span class="text-xs uppercase tracking-wide text-slate-400" data-i18n="stat2">Enterprise Systems Delivered</span></div>
-          <div class="border-t border-white/20 pt-3"><strong class="block font-mono text-4xl leading-none text-signal">+12</strong><span class="text-xs uppercase tracking-wide text-slate-400" data-i18n="stat3">Sectors Covered</span></div>
-          <div class="border-t border-white/20 pt-3"><strong class="block font-mono text-4xl leading-none text-signal">+80</strong><span class="text-xs uppercase tracking-wide text-slate-400" data-i18n="stat4">Market-Leading Clients</span></div>
+          <div class="reveal border-t border-white/20 pt-3 transition-colors duration-500 hover:border-signal" style="--reveal-delay:.1s"><strong class="block font-mono text-4xl leading-none text-signal">+15</strong><span class="text-xs uppercase tracking-wide text-slate-400" data-i18n="stat1">AI &amp; Engineering Experts</span></div>
+          <div class="reveal border-t border-white/20 pt-3 transition-colors duration-500 hover:border-signal" style="--reveal-delay:.18s"><strong class="block font-mono text-4xl leading-none text-signal">+20</strong><span class="text-xs uppercase tracking-wide text-slate-400" data-i18n="stat2">Enterprise Systems Delivered</span></div>
+          <div class="reveal border-t border-white/20 pt-3 transition-colors duration-500 hover:border-signal" style="--reveal-delay:.26s"><strong class="block font-mono text-4xl leading-none text-signal">+12</strong><span class="text-xs uppercase tracking-wide text-slate-400" data-i18n="stat3">Sectors Covered</span></div>
+          <div class="reveal border-t border-white/20 pt-3 transition-colors duration-500 hover:border-signal" style="--reveal-delay:.34s"><strong class="block font-mono text-4xl leading-none text-signal">+80</strong><span class="text-xs uppercase tracking-wide text-slate-400" data-i18n="stat4">Market-Leading Clients</span></div>
         </div>
       </div>
     </section>
@@ -401,153 +548,136 @@
     <section id="clients" class="relative bg-slate-100 py-16">
       <div class="pointer-events-none absolute left-0 top-0 h-24 w-full bg-gradient-to-br from-brand/20 to-transparent"></div>
       <div class="relative z-10 mx-auto w-[min(1180px,calc(100%-1.5rem))] lg:w-[min(1180px,calc(100%-2rem))]">
-        <h2 class="font-mono text-2xl uppercase tracking-wide" data-i18n="clientsTitle">Trusted At Enterprise Scale</h2>
-        <p class="mt-3 max-w-3xl text-slate-600" data-i18n="clientsLead">Before AI, we earned trust building mission-critical software for these organizations. That same engineering discipline is the foundation every AI system we build stands on.</p>
-        <div class="mt-8 overflow-x-auto pb-2">
-          <div class="grid min-w-max grid-flow-col gap-4">
-            <a href="https://www.coca-colacompany.com/" title="Coca-Cola" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Coca-Cola" class="flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5"><img src="/assets/ext/images/logo-cocacola.svg" alt="Coca-Cola" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-500">Coca-Cola</span></a>
-            <a href="https://www.nfl.com/" title="NFL" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="NFL" class="flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5"><img src="/assets/ext/images/logo-nfl.svg" alt="NFL" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-500">NFL</span></a>
-            <a href="https://www.globant.com/" title="Globant" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Globant" class="flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5"><img src="/assets/ext/images/logo-globant.svg" alt="Globant" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-500">Globant</span></a>
-            <a href="https://platanitos.com/" title="Platanitos" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Platanitos" class="flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5"><img src="/assets/ext/images/logo-platanitos.svg" alt="Platanitos" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-500">Platanitos</span></a>
-            <a href="https://www.gpigroup.com/" title="GPI Group" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="GPI Group" class="flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5"><img src="/assets/ext/images/logo-gpi.svg" alt="GPI Group" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-500">GPI Group</span></a>
-            <a href="https://www.google.com/" title="Google" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Google" class="flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5"><img src="/assets/ext/images/logo-google.svg" alt="Google" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-500">Google</span></a>
-            <a href="https://www.microsoft.com/" title="Microsoft" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Microsoft" class="flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5"><img src="/assets/ext/images/logo-microsoft.svg" alt="Microsoft" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-500">Microsoft</span></a>
-            <a href="https://www.amazon.com/" title="Amazon" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Amazon" class="flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5"><img src="/assets/ext/images/logo-amazon.svg" alt="Amazon" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-500">Amazon</span></a>
-            <a href="https://cloud.google.com/" title="Google Cloud" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Google Cloud" class="flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5"><img src="/assets/ext/images/logo-google-cloud.svg" alt="Google Cloud" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-500">Google Cloud</span></a>
-            <a href="https://www.viabcp.com/" title="BCP" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="BCP" class="flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5"><img src="/assets/ext/images/logo-bcp.png" alt="BCP" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-500">BCP</span></a>
-            <a href="https://www.apple.com/" title="Apple" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Apple" class="flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5"><img src="/assets/ext/images/logo-apple.svg" alt="Apple" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-500">Apple</span></a>
-            <a href="http://www.digesa.minsa.gob.pe/" title="DIGESA" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="DIGESA" class="flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5"><img src="/assets/ext/images/logo-digesa-minsa.png" alt="DIGESA" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-500">DIGESA</span></a>
+        <h2 class="reveal font-mono text-2xl uppercase tracking-wide" data-i18n="clientsTitle">Trusted At Enterprise Scale</h2>
+        <p class="reveal mt-3 max-w-3xl text-slate-600" style="--reveal-delay:.05s" data-i18n="clientsLead">Before AI, we earned trust building mission-critical software for these organizations. That same engineering discipline is the foundation every AI system we build stands on.</p>
+        <div class="logo-marquee reveal mt-8 pb-2" style="--reveal-delay:.1s">
+          <div class="logo-track flex gap-4">
+            <a href="https://www.coca-colacompany.com/" title="Coca-Cola" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Coca-Cola" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-cocacola.svg" alt="Coca-Cola" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">Coca-Cola</span></a>
+            <a href="https://www.nfl.com/" title="NFL" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="NFL" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-nfl.svg" alt="NFL" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">NFL</span></a>
+            <a href="https://www.globant.com/" title="Globant" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Globant" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-globant.svg" alt="Globant" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">Globant</span></a>
+            <a href="https://platanitos.com/" title="Platanitos" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Platanitos" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-platanitos.svg" alt="Platanitos" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">Platanitos</span></a>
+            <a href="https://www.gpigroup.com/" title="GPI Group" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="GPI Group" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-gpi.svg" alt="GPI Group" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">GPI Group</span></a>
+            <a href="https://www.google.com/" title="Google" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Google" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-google.svg" alt="Google" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">Google</span></a>
+            <a href="https://www.microsoft.com/" title="Microsoft" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Microsoft" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-microsoft.svg" alt="Microsoft" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">Microsoft</span></a>
+            <a href="https://www.amazon.com/" title="Amazon" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Amazon" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-amazon.svg" alt="Amazon" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">Amazon</span></a>
+            <a href="https://cloud.google.com/" title="Google Cloud" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Google Cloud" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-google-cloud.svg" alt="Google Cloud" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">Google Cloud</span></a>
+            <a href="https://www.viabcp.com/" title="BCP" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="BCP" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-bcp.png" alt="BCP" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">BCP</span></a>
+            <a href="https://www.apple.com/" title="Apple" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Apple" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-apple.svg" alt="Apple" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">Apple</span></a>
+            <a href="http://www.digesa.minsa.gob.pe/" title="DIGESA" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="DIGESA" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-digesa-minsa.png" alt="DIGESA" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">DIGESA</span></a>
           </div>
         </div>
       </div>
     </section>
 
     <section id="blog" class="relative overflow-hidden bg-slate-100 py-14">
-      <div class="pointer-events-none absolute -left-40 -top-16 hidden h-44 w-[32rem] rotate-[-14deg] rounded-[1.75rem] bg-gradient-to-r from-signal via-brand to-indigo-900 md:block"></div>
+      <div class="drift-shape pointer-events-none absolute -left-40 -top-16 hidden h-44 w-[32rem] rounded-[1.75rem] bg-gradient-to-r from-signal via-brand to-indigo-900 blur-[2px] md:block" style="--r:-14deg; transform:rotate(-14deg); animation-delay:-1s"></div>
       <div class="relative z-10 mx-auto w-[min(1180px,calc(100%-1.5rem))] lg:w-[min(1180px,calc(100%-2rem))]">
-        <h2 class="font-mono text-2xl uppercase tracking-wide" data-i18n="blogTitle">Engineering Insights</h2>
-        <p class="mt-3 max-w-3xl text-slate-600" data-i18n="blogLead">The engineering discipline behind our AI transformation work, from the field.</p>
+        <h2 class="reveal font-mono text-2xl uppercase tracking-wide" data-i18n="blogTitle">Engineering Insights</h2>
+        <p class="reveal mt-3 max-w-3xl text-slate-600" style="--reveal-delay:.05s" data-i18n="blogLead">The engineering discipline behind our AI transformation work, from the field.</p>
         <div class="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          <article class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm"><a class="block" href="https://blog.llaapp.com/2021/06/04/strategic-pitfalls-enterprise-commerce/" target="_blank" rel="noreferrer noopener" data-analytics-event="blog_article_click" data-analytics-label="Strategic Pitfalls in Enterprise Commerce"><img src="/assets/ext/images/blog-ecommerce.jpg" alt="Ecommerce lessons" width="900" height="506" loading="lazy" decoding="async" fetchpriority="low" class="aspect-video w-full object-cover"><div class="p-4"><h3 class="font-mono text-sm uppercase" data-i18n="blog1Title">Strategic Pitfalls in Enterprise Commerce</h3><p class="mt-2 text-sm text-slate-600" data-i18n="blog1Desc">Advanced operational insights and practical lessons for scaling high-demand digital architecture.</p></div></a></article>
-          <article class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm"><a class="block" href="https://blog.llaapp.com/2021/05/25/cloud-engineering-llaapp/" target="_blank" rel="noreferrer noopener" data-analytics-event="blog_article_click" data-analytics-label="Resilient Cloud Infrastructure Modernization"><img src="/assets/ext/images/blog-cloud.jpg" alt="Cloud migration" width="900" height="506" loading="lazy" decoding="async" fetchpriority="low" class="aspect-video w-full object-cover"><div class="p-4"><h3 class="font-mono text-sm uppercase" data-i18n="blog2Title">Resilient Cloud Infrastructure Modernization</h3><p class="mt-2 text-sm text-slate-600" data-i18n="blog2Desc">Optimizing architectural governance and cost efficiency through distributed cloud-native models.</p></div></a></article>
-          <article class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm"><a class="block" href="https://blog.llaapp.com/2021/06/14/agile-technical-governance/" target="_blank" rel="noreferrer noopener" data-analytics-event="blog_article_click" data-analytics-label="Technical Governance in Distributed Squads"><img src="/assets/ext/images/blog-agile.jpg" alt="Agile squads" width="900" height="506" loading="lazy" decoding="async" fetchpriority="low" class="aspect-video w-full object-cover"><div class="p-4"><h3 class="font-mono text-sm uppercase" data-i18n="blog3Title">Technical Governance in Distributed Squads</h3><p class="mt-2 text-sm text-slate-600" data-i18n="blog3Desc">Enhancing engineering velocity and architectural alignment across cross-functional enterprise programs.</p></div></a></article>
+          <article class="reveal group overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-xl" style="--reveal-delay:.05s"><a class="block" href="https://blog.llaapp.com/2021/06/04/strategic-pitfalls-enterprise-commerce/" target="_blank" rel="noreferrer noopener" data-analytics-event="blog_article_click" data-analytics-label="Strategic Pitfalls in Enterprise Commerce"><span class="block overflow-hidden"><img src="/assets/ext/images/blog-ecommerce.jpg" alt="Ecommerce lessons" width="900" height="506" loading="lazy" decoding="async" fetchpriority="low" class="aspect-video w-full object-cover transition-transform duration-700 ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-110"></span><div class="p-4"><h3 class="font-mono text-sm uppercase" data-i18n="blog1Title">Strategic Pitfalls in Enterprise Commerce</h3><p class="mt-2 text-sm text-slate-600" data-i18n="blog1Desc">Advanced operational insights and practical lessons for scaling high-demand digital architecture.</p></div></a></article>
+          <article class="reveal group overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-xl" style="--reveal-delay:.15s"><a class="block" href="https://blog.llaapp.com/2021/05/25/cloud-engineering-llaapp/" target="_blank" rel="noreferrer noopener" data-analytics-event="blog_article_click" data-analytics-label="Resilient Cloud Infrastructure Modernization"><span class="block overflow-hidden"><img src="/assets/ext/images/blog-cloud.jpg" alt="Cloud migration" width="900" height="506" loading="lazy" decoding="async" fetchpriority="low" class="aspect-video w-full object-cover transition-transform duration-700 ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-110"></span><div class="p-4"><h3 class="font-mono text-sm uppercase" data-i18n="blog2Title">Resilient Cloud Infrastructure Modernization</h3><p class="mt-2 text-sm text-slate-600" data-i18n="blog2Desc">Optimizing architectural governance and cost efficiency through distributed cloud-native models.</p></div></a></article>
+          <article class="reveal group overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-xl" style="--reveal-delay:.25s"><a class="block" href="https://blog.llaapp.com/2021/06/14/agile-technical-governance/" target="_blank" rel="noreferrer noopener" data-analytics-event="blog_article_click" data-analytics-label="Technical Governance in Distributed Squads"><span class="block overflow-hidden"><img src="/assets/ext/images/blog-agile.jpg" alt="Agile squads" width="900" height="506" loading="lazy" decoding="async" fetchpriority="low" class="aspect-video w-full object-cover transition-transform duration-700 ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-110"></span><div class="p-4"><h3 class="font-mono text-sm uppercase" data-i18n="blog3Title">Technical Governance in Distributed Squads</h3><p class="mt-2 text-sm text-slate-600" data-i18n="blog3Desc">Enhancing engineering velocity and architectural alignment across cross-functional enterprise programs.</p></div></a></article>
         </div>
       </div>
     </section>
 
     <section id="faq" class="relative bg-white py-14">
-      <div class="pointer-events-none absolute right-[-8rem] top-[-4rem] hidden h-48 w-[30rem] rotate-[18deg] rounded-[1.75rem] bg-gradient-to-br from-signal/90 via-brand/80 to-indigo-900/80 md:block"></div>
+      <div class="drift-shape pointer-events-none absolute right-[-8rem] top-[-4rem] hidden h-48 w-[30rem] rounded-[1.75rem] bg-gradient-to-br from-signal/90 via-brand/80 to-indigo-900/80 blur-[2px] md:block" style="--r:18deg; transform:rotate(18deg); animation-delay:-3s"></div>
       <div class="relative z-10 mx-auto w-[min(1180px,calc(100%-1.5rem))] lg:w-[min(1180px,calc(100%-2rem))]">
-        <h2 class="font-mono text-2xl uppercase tracking-wide" data-i18n="faqTitle">AI Transformation Questions We Solve</h2>
-        <p class="mt-3 max-w-3xl text-slate-600" data-i18n="faqLead">Common questions from business owners and entrepreneurs in Vancouver, across Canada and the USA, and in Europe evaluating AI adoption.</p>
-        <div class="mt-6 grid gap-4 md:grid-cols-2">
-          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+        <h2 class="reveal font-mono text-2xl uppercase tracking-wide" data-i18n="faqTitle">AI Transformation Questions We Solve</h2>
+        <p class="reveal mt-3 max-w-3xl text-slate-600" style="--reveal-delay:.05s" data-i18n="faqLead">Common questions from business owners and entrepreneurs in Vancouver, across Canada and the USA, and in Europe evaluating AI adoption.</p>
+        <div class="reveal mt-6 grid gap-4 md:grid-cols-2" style="--reveal-delay:.1s">
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-colors duration-300 hover:border-brand/40 hover:bg-white">
             <h3 class="font-mono text-xs uppercase tracking-wide text-slate-800" data-i18n="faq1Q">What does an AI transformation consultant actually do?</h3>
             <p class="mt-2 text-sm text-slate-700" data-i18n="faq1A">We audit your operations to find the highest-ROI AI use cases, then design and build the AI agents, LLM integrations, or automations that deliver them.</p>
           </article>
-          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-colors duration-300 hover:border-brand/40 hover:bg-white">
             <h3 class="font-mono text-xs uppercase tracking-wide text-slate-800" data-i18n="faq2Q">How do I know if my business is ready for AI?</h3>
             <p class="mt-2 text-sm text-slate-700" data-i18n="faq2A">If you have repeatable manual workflows, unstructured data, or predictable customer questions, you are ready. We confirm readiness with a fixed-scope audit first.</p>
           </article>
-          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-colors duration-300 hover:border-brand/40 hover:bg-white">
             <h3 class="font-mono text-xs uppercase tracking-wide text-slate-800" data-i18n="faq3Q">How is this different from just using ChatGPT or Copilot?</h3>
             <p class="mt-2 text-sm text-slate-700" data-i18n="faq3A">Off-the-shelf tools help one person at a time. We integrate AI into your systems and data, with security and governance, so the whole business benefits.</p>
           </article>
-          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-colors duration-300 hover:border-brand/40 hover:bg-white">
             <h3 class="font-mono text-xs uppercase tracking-wide text-slate-800" data-i18n="faq4Q">Do you build custom AI agents, or only advise on strategy?</h3>
             <p class="mt-2 text-sm text-slate-700" data-i18n="faq4A">Both. We deliver the strategy and audit, and our senior engineering team builds and ships the AI agents, RAG systems, and integrations.</p>
           </article>
-          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-colors duration-300 hover:border-brand/40 hover:bg-white">
             <h3 class="font-mono text-xs uppercase tracking-wide text-slate-800" data-i18n="faq5Q">How much does an AI transformation engagement cost?</h3>
             <p class="mt-2 text-sm text-slate-700" data-i18n="faq5A">Engagements typically start with a fixed-scope AI Readiness Audit, followed by phased implementation priced by scope. You get a clear estimate before build starts.</p>
           </article>
-          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-colors duration-300 hover:border-brand/40 hover:bg-white">
             <h3 class="font-mono text-xs uppercase tracking-wide text-slate-800" data-i18n="faq6Q">Can you add AI to our existing software instead of rebuilding?</h3>
             <p class="mt-2 text-sm text-slate-700" data-i18n="faq6A">Yes. Most engagements add AI capabilities to systems you already run, rather than replacing them, which minimizes risk and time to value.</p>
           </article>
-          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-colors duration-300 hover:border-brand/40 hover:bg-white">
             <h3 class="font-mono text-xs uppercase tracking-wide text-slate-800" data-i18n="faq7Q">Do you work with small businesses, or only large enterprises?</h3>
             <p class="mt-2 text-sm text-slate-700" data-i18n="faq7A">Both. Our engineering discipline was built delivering mission-critical systems for global enterprises, and we apply that same rigor to growing businesses.</p>
           </article>
-          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-colors duration-300 hover:border-brand/40 hover:bg-white">
             <h3 class="font-mono text-xs uppercase tracking-wide text-slate-800" data-i18n="faq8Q">Which regions do you serve for AI consulting?</h3>
             <p class="mt-2 text-sm text-slate-700" data-i18n="faq8A">Vancouver and Canada, the United States including San Francisco, Texas, and Chicago, and Europe including Germany, Italy, and Spain, remote-first everywhere.</p>
           </article>
         </div>
         <div class="mt-6">
-          <a class="inline-flex min-h-11 items-center justify-center rounded-full bg-signal px-6 py-3 font-bold text-indigo-950 shadow-lg shadow-yellow-300/40" href="#contact" data-i18n="faqCta" data-analytics-event="faq_cta_click">Talk to Our AI Transformation Team</a>
+          <a class="press inline-flex min-h-11 items-center justify-center rounded-full bg-signal px-6 py-3 font-bold text-indigo-950 shadow-lg shadow-yellow-300/40 transition-shadow duration-300 hover:shadow-xl hover:shadow-yellow-300/50" href="#contact" data-i18n="faqCta" data-analytics-event="faq_cta_click">Talk to Our AI Transformation Team</a>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="relative overflow-hidden bg-slate-100 py-14">
-      <div class="pointer-events-none absolute bottom-[-5.5rem] right-[-7rem] hidden h-64 w-[28rem] rotate-[-15deg] rounded-[1.75rem] bg-gradient-to-br from-signal via-brand to-indigo-900 md:block"></div>
+    <section id="contact" class="relative overflow-hidden bg-night py-16 text-white lg:py-20">
+      <div class="drift-shape pointer-events-none absolute bottom-[-5.5rem] right-[-7rem] hidden h-64 w-[28rem] rounded-[1.75rem] bg-gradient-to-br from-signal via-brand to-indigo-900 blur-[2px] md:block" style="--r:-15deg; transform:rotate(-15deg); animation-delay:-5s"></div>
       <div class="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-indigo-900 via-brand to-signal"></div>
       <div class="relative z-10 mx-auto w-[min(1180px,calc(100%-1.5rem))] lg:w-[min(1180px,calc(100%-2rem))]">
-        <h2 class="font-mono text-2xl uppercase tracking-wide" data-i18n="contactTitle">Start Your AI Transformation</h2>
-        <p class="mt-3 max-w-3xl text-slate-600" data-i18n="contactLead">Tell us where AI could save time, cut cost, or unlock new revenue in your business. We respond with a clear, honest assessment, not a sales pitch.</p>
-        <div class="mt-6 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-            <div class="mb-6">
-              <h3 class="font-mono text-xl uppercase" data-i18n="auditTitle">Free AI Opportunity Audit</h3>
-              <p class="mt-1 text-sm text-slate-600" data-i18n="auditTime">Estimated response time: &lt; 12 business hours.</p>
-            </div>
-            <form id="contactForm" action="#" method="post" novalidate>
-              <div class="grid gap-5">
-                <div>
-                  <label class="mb-1 block text-xs font-bold uppercase tracking-wide text-slate-600" for="name" data-i18n="labelName">Professional Name</label>
-                  <input id="name" type="text" data-i18n="placeholderName" placeholder="e.g. Alexander Pierce" required class="min-h-12 w-full rounded-lg border border-slate-200 bg-slate-50 px-4 text-slate-800 outline-none focus:border-brand focus:bg-white focus:ring-4 focus:ring-brand/10">
-                </div>
-                <div class="grid gap-4 md:grid-cols-2">
-                  <div>
-                    <label class="mb-1 block text-xs font-bold uppercase tracking-wide text-slate-600" for="email" data-i18n="labelEmail">Corporate Email</label>
-                    <input id="email" type="email" data-i18n="placeholderEmail" placeholder="name@company.com" required class="min-h-12 w-full rounded-lg border border-slate-200 bg-slate-50 px-4 text-slate-800 outline-none focus:border-brand focus:bg-white focus:ring-4 focus:ring-brand/10">
-                  </div>
-                  <div>
-                    <label class="mb-1 block text-xs font-bold uppercase tracking-wide text-slate-600" for="phone" data-i18n="labelPhone">Direct Line</label>
-                    <input id="phone" type="text" data-i18n="placeholderPhone" placeholder="+1..." required class="min-h-12 w-full rounded-lg border border-slate-200 bg-slate-50 px-4 text-slate-800 outline-none focus:border-brand focus:bg-white focus:ring-4 focus:ring-brand/10">
-                  </div>
-                </div>
-                <div>
-                  <label class="mb-1 block text-xs font-bold uppercase tracking-wide text-slate-600" for="service" data-i18n="labelService">Select Capability Focus</label>
-                  <select id="service" required class="min-h-12 w-full cursor-pointer rounded-lg border border-slate-200 bg-slate-50 px-4 text-slate-800 outline-none focus:border-brand focus:bg-white focus:ring-4 focus:ring-brand/10">
-                    <option value="" disabled selected data-i18n="optDefault">Choose a focus...</option>
-                    <option data-i18n="opt1">AI Readiness & Opportunity Audit</option>
-                    <option data-i18n="opt2">AI Agents & Workflow Automation</option>
-                    <option data-i18n="opt3">LLM & Knowledge Integration (RAG)</option>
-                    <option data-i18n="opt4">Applied AI Product Engineering</option>
-                    <option data-i18n="opt5">AI Infrastructure & Governance (MLOps)</option>
-                    <option data-i18n="opt6">Fractional AI Strategy & Enablement</option>
-                  </select>
-                </div>
-                <div>
-                  <label class="mb-1 block text-xs font-bold uppercase tracking-wide text-slate-600" for="message" data-i18n="labelMessage">Project Context & Objectives</label>
-                  <textarea id="message" data-i18n="placeholderMessage" placeholder="Briefly describe the challenge or scope..." required class="min-h-32 w-full resize-none rounded-lg border border-slate-200 bg-slate-50 p-4 text-slate-800 outline-none focus:border-brand focus:bg-white focus:ring-4 focus:ring-brand/10"></textarea>
-                </div>
-                <button class="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-signal px-6 py-3 font-bold text-indigo-950 shadow-lg shadow-yellow-300/40" type="submit" data-i18n="submitAudit" data-analytics-event="form_submit_start">Submit Audit Request</button>
-                <p id="formStatus" class="min-h-5 text-sm text-slate-700" aria-live="polite"></p>
-              </div>
-            </form>
-          </div>
+        <h2 class="reveal font-mono text-2xl uppercase tracking-wide text-white" data-i18n="contactTitle">Start Your AI Transformation</h2>
+        <p class="reveal mt-3 max-w-2xl text-slate-200" style="--reveal-delay:.05s" data-i18n="contactLead">Tell us where AI could save time, cut cost, or unlock new revenue in your business. We respond with a clear, honest assessment, not a sales pitch.</p>
 
-          <aside class="flex flex-col justify-center rounded-2xl bg-night p-6 text-white">
-            <h3 class="font-mono text-xl uppercase text-signal" data-i18n="directAccess">Direct Technical Access</h3>
-            <p class="mt-3 text-slate-300" data-i18n="directAccessLead">Skip the form to connect directly with our AI transformation team for rapid-response requirements.</p>
-            <p class="mt-3 text-sm text-slate-300" data-i18n="directAccessGeo">Primary service focus: Vancouver &amp; Canada, the United States (San Francisco, Texas, Chicago, and nationwide), and Europe (Germany, Italy, Spain).</p>
-            <div class="mt-6 grid gap-3">
-              <a href="mailto:llaapp.solutions@gmail.com" data-analytics-event="direct_contact_click" data-analytics-label="Email Sidebar" class="inline-flex items-center gap-3 text-sm text-white transition hover:text-signal"><span class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-signal/20 bg-white/10 text-xs">@</span><span>llaapp.solutions@gmail.com</span></a>
-              <a href="tel:+16503744225" data-analytics-event="direct_contact_click" data-analytics-label="Phone Sidebar" class="inline-flex items-center gap-3 text-sm text-white transition hover:text-signal"><span class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-signal/20 bg-white/10 text-xs">#</span><span>+1 (650) 374-4225</span></a>
-              <a href="https://wa.me/16503744225" target="_blank" rel="noreferrer noopener" data-analytics-event="direct_contact_click" data-analytics-label="WhatsApp Sidebar" class="inline-flex items-center gap-3 text-sm text-white transition hover:text-signal"><span class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-signal/20 bg-white/10 text-xs">W</span><span data-i18n="actionWhatsApp">Technical Chat via WhatsApp</span></a>
-            </div>
-            <div class="mt-8 border-t border-white/10 pt-8">
-              <h4 class="font-mono text-xs uppercase tracking-wide text-signal" data-i18n="standardsTitle">How We Work</h4>
-              <ul class="mt-3 grid gap-2">
-                <li class="text-sm text-white/90" data-i18n="standard1">Secure-by-design AI architecture, your data is never used to train third-party models without consent</li>
-                <li class="text-sm text-white/90" data-i18n="standard2">Weekly measurable-outcomes reporting, not vanity metrics</li>
-                <li class="text-sm text-white/90" data-i18n="standard3">Senior engineers on every engagement, no offshore hand-off after the sales call</li>
-              </ul>
-            </div>
-          </aside>
+        <p class="reveal mt-8 font-mono text-xs font-bold uppercase tracking-wide text-signal" style="--reveal-delay:.1s" data-i18n="directAccess">Direct Technical Access</p>
+        <p class="reveal mt-2 max-w-2xl text-slate-200" style="--reveal-delay:.12s" data-i18n="directAccessLead">Connect directly with our AI transformation team for rapid-response requirements.</p>
+
+        <div class="mt-6 grid gap-4 sm:grid-cols-3">
+          <a href="https://wa.me/16503744225" target="_blank" rel="noreferrer noopener" data-analytics-event="direct_contact_click" data-analytics-label="WhatsApp Highlight" class="press reveal group flex flex-col gap-4 rounded-2xl bg-signal p-6 text-indigo-950 shadow-lg shadow-yellow-300/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-yellow-300/40" style="--reveal-delay:.15s">
+            <span class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-indigo-950/10">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.45 1.27 4.9L2 22l5.25-1.38A9.94 9.94 0 0 0 12.04 22c5.52 0 10-4.48 10-10s-4.48-10-10-10Zm0 18.2c-1.6 0-3.13-.43-4.46-1.24l-.32-.19-3.12.82.83-3.04-.2-.31A8.18 8.18 0 0 1 3.8 12c0-4.55 3.7-8.24 8.24-8.24S20.28 7.45 20.28 12s-3.7 8.2-8.24 8.2Zm4.5-6.13c-.25-.12-1.46-.72-1.69-.8-.23-.08-.4-.12-.56.12-.17.25-.65.8-.79.96-.15.17-.29.19-.54.06-.25-.12-1.04-.38-1.98-1.21-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.44.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.48-.01s-.44.06-.67.31c-.23.25-.88.86-.88 2.1s.9 2.44 1.02 2.61c.12.17 1.77 2.7 4.28 3.78.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29Z"></path></svg>
+            </span>
+            <span>
+              <span class="block font-mono text-xs uppercase tracking-wide text-indigo-900">Fastest response</span>
+              <span class="mt-1 block text-lg font-bold" data-i18n="actionWhatsApp">Technical Chat via WhatsApp</span>
+            </span>
+          </a>
+
+          <a href="mailto:llaapp.solutions@gmail.com" data-analytics-event="direct_contact_click" data-analytics-label="Email Highlight" class="press reveal group flex flex-col gap-4 rounded-2xl border border-white/15 bg-white/5 p-6 text-white transition-all duration-300 hover:-translate-y-1 hover:border-white/35 hover:bg-white/10" style="--reveal-delay:.2s">
+            <span class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/10">
+              <svg class="h-5 w-5 text-signal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
+            </span>
+            <span>
+              <span class="block font-mono text-xs uppercase tracking-wide text-slate-200">Email</span>
+              <span class="mt-1 block break-all text-lg font-bold text-white">llaapp.solutions@gmail.com</span>
+            </span>
+          </a>
+
+          <a href="tel:+16503744225" data-analytics-event="direct_contact_click" data-analytics-label="Phone Highlight" class="press reveal group flex flex-col gap-4 rounded-2xl border border-white/15 bg-white/5 p-6 text-white transition-all duration-300 hover:-translate-y-1 hover:border-white/35 hover:bg-white/10" style="--reveal-delay:.25s">
+            <span class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/10">
+              <svg class="h-5 w-5 text-signal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"></path></svg>
+            </span>
+            <span>
+              <span class="block font-mono text-xs uppercase tracking-wide text-slate-200">Direct line</span>
+              <span class="mt-1 block text-lg font-bold text-white">+1 (650) 374-4225</span>
+            </span>
+          </a>
+        </div>
+
+        <p class="reveal mt-6 max-w-2xl text-sm text-slate-300" style="--reveal-delay:.3s" data-i18n="directAccessGeo">Primary service focus: Vancouver &amp; Canada, the United States (San Francisco, Texas, Chicago, and nationwide), and Europe (Germany, Italy, Spain).</p>
+
+        <div class="reveal mt-10 border-t border-white/10 pt-8" style="--reveal-delay:.35s">
+          <h3 class="font-mono text-xs uppercase tracking-wide text-signal" data-i18n="standardsTitle">How We Work</h3>
+          <ul class="mt-3 grid gap-2 sm:grid-cols-3">
+            <li class="text-sm text-slate-200" data-i18n="standard1">Secure-by-design AI architecture, your data is never used to train third-party models without consent</li>
+            <li class="text-sm text-slate-200" data-i18n="standard2">Weekly measurable-outcomes reporting, not vanity metrics</li>
+            <li class="text-sm text-slate-200" data-i18n="standard3">Senior engineers on every engagement, no offshore hand-off after the sales call</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -582,8 +712,6 @@
     (function () {
       var menuToggle = document.getElementById("menuToggle");
       var menuPanel = document.getElementById("menuPanel");
-      var form = document.getElementById("contactForm");
-      var formStatus = document.getElementById("formStatus");
 
       function closeMenu() {
         if (!menuPanel || !menuToggle) return;
@@ -622,51 +750,218 @@
         });
       }
 
-      function setStatus(message, type) {
-        if (!formStatus) return;
-        formStatus.textContent = message;
-        formStatus.classList.remove("text-red-700", "text-emerald-700");
-        if (type === "error") formStatus.classList.add("text-red-700");
-        if (type === "success") formStatus.classList.add("text-emerald-700");
-      }
-
-      if (form) {
-        form.addEventListener("submit", function (event) {
-          event.preventDefault();
-
-          var name = document.getElementById("name");
-          var email = document.getElementById("email");
-          var phone = document.getElementById("phone");
-          var service = document.getElementById("service");
-          var message = document.getElementById("message");
-
-          if (!name.value.trim() || !email.value.trim() || !phone.value.trim() || !message.value.trim() || service.selectedIndex === 0) {
-            setStatus("Please complete all fields before sending.", "error");
-            return;
-          }
-
-          var subject = encodeURIComponent("New website contact request");
-          var body = encodeURIComponent(
-            "Name: " + name.value.trim() + "\n" +
-            "Email: " + email.value.trim() + "\n" +
-            "Phone: " + phone.value.trim() + "\n" +
-            "Service: " + service.value + "\n\n" +
-            "Message:\n" + message.value.trim()
-          );
-
-          setStatus("Opening your email app to send the request...", "success");
-          if (typeof Analytics !== 'undefined') {
-            Analytics.logEvent('form_submit_success', {
-              service: service.value,
-              has_phone: !!phone.value.trim()
-            });
-          }
-          window.location.href = "mailto:llaapp.solutions@gmail.com?subject=" + subject + "&body=" + body;
-        });
-      }
-
       var yearEl = document.getElementById("year");
       if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+      var siteHeader = document.querySelector("header");
+      if (siteHeader) {
+        var onScroll = function () {
+          siteHeader.classList.toggle("is-scrolled", window.scrollY > 8);
+        };
+        onScroll();
+        window.addEventListener("scroll", onScroll, { passive: true });
+      }
+
+      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var heroSection = document.getElementById("heroSection");
+      var parallaxLayers = document.querySelectorAll(".hero-parallax-layer");
+
+      if (heroSection && parallaxLayers.length && !reduceMotion) {
+        var parallaxTicking = false;
+        var updateParallax = function () {
+          var rect = heroSection.getBoundingClientRect();
+          if (rect.bottom > 0 && rect.top < window.innerHeight) {
+            var scrolled = -rect.top;
+            parallaxLayers.forEach(function (layer) {
+              var speed = parseFloat(layer.getAttribute("data-parallax-speed")) || 0;
+              layer.style.transform = "translate3d(0," + (scrolled * speed) + "px,0)";
+            });
+          }
+          parallaxTicking = false;
+        };
+        updateParallax();
+        window.addEventListener("scroll", function () {
+          if (!parallaxTicking) {
+            requestAnimationFrame(updateParallax);
+            parallaxTicking = true;
+          }
+        }, { passive: true });
+      }
+
+      // Neuron network background: a lightweight canvas particle system.
+      // Only animates while the hero is on-screen and the tab is visible, and
+      // is skipped entirely (static single frame) when motion is reduced.
+      var neuronCanvas = document.getElementById("neuronCanvas");
+      if (neuronCanvas && heroSection) {
+        var ctx = neuronCanvas.getContext("2d");
+        var nodes = [];
+        var rafId = null;
+        var isRunning = false;
+        var dpr = Math.min(window.devicePixelRatio || 1, 1.75);
+        var cssWidth = 0;
+        var cssHeight = 0;
+        var LINK_DIST = 130;
+
+        function nodeCount(width, height) {
+          var base = Math.round((width * height) / 15000);
+          var cap = width < 640 ? 30 : 70;
+          return Math.max(16, Math.min(base, cap));
+        }
+
+        function buildNodes(width, height) {
+          var count = nodeCount(width, height);
+          var list = [];
+          for (var i = 0; i < count; i++) {
+            list.push({
+              x: Math.random() * width,
+              y: Math.random() * height,
+              vx: (Math.random() - 0.5) * 0.25,
+              vy: (Math.random() - 0.5) * 0.25,
+              accent: Math.random() < 0.12
+            });
+          }
+          return list;
+        }
+
+        function resize() {
+          cssWidth = heroSection.clientWidth;
+          cssHeight = heroSection.clientHeight;
+          neuronCanvas.width = Math.round(cssWidth * dpr);
+          neuronCanvas.height = Math.round(cssHeight * dpr);
+          neuronCanvas.style.width = cssWidth + "px";
+          neuronCanvas.style.height = cssHeight + "px";
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          nodes = buildNodes(cssWidth, cssHeight);
+        }
+
+        function drawFrame() {
+          ctx.clearRect(0, 0, cssWidth, cssHeight);
+
+          for (var i = 0; i < nodes.length; i++) {
+            for (var j = i + 1; j < nodes.length; j++) {
+              var dx = nodes[i].x - nodes[j].x;
+              var dy = nodes[i].y - nodes[j].y;
+              var dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < LINK_DIST) {
+                ctx.strokeStyle = "rgba(179, 190, 255," + ((1 - dist / LINK_DIST) * 0.22).toFixed(3) + ")";
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(nodes[i].x, nodes[i].y);
+                ctx.lineTo(nodes[j].x, nodes[j].y);
+                ctx.stroke();
+              }
+            }
+          }
+
+          for (var n = 0; n < nodes.length; n++) {
+            var node = nodes[n];
+            ctx.fillStyle = node.accent ? "rgba(255, 237, 0, 0.75)" : "rgba(255, 255, 255, 0.55)";
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, node.accent ? 2.2 : 1.6, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        }
+
+        function stepFrame() {
+          for (var i = 0; i < nodes.length; i++) {
+            var node = nodes[i];
+            node.x += node.vx;
+            node.y += node.vy;
+            if (node.x < 0 || node.x > cssWidth) node.vx *= -1;
+            if (node.y < 0 || node.y > cssHeight) node.vy *= -1;
+          }
+          drawFrame();
+          rafId = requestAnimationFrame(stepFrame);
+        }
+
+        function start() {
+          if (isRunning || reduceMotion) return;
+          isRunning = true;
+          rafId = requestAnimationFrame(stepFrame);
+        }
+
+        function stop() {
+          isRunning = false;
+          if (rafId) cancelAnimationFrame(rafId);
+          rafId = null;
+        }
+
+        resize();
+        drawFrame();
+
+        if (!reduceMotion) {
+          var resizeTicking = false;
+          var heroVisible = false;
+
+          window.addEventListener("resize", function () {
+            if (resizeTicking) return;
+            resizeTicking = true;
+            requestAnimationFrame(function () {
+              resize();
+              drawFrame();
+              resizeTicking = false;
+            });
+          }, { passive: true });
+
+          document.addEventListener("visibilitychange", function () {
+            if (document.hidden) {
+              stop();
+            } else if (heroVisible) {
+              start();
+            }
+          });
+
+          if ("IntersectionObserver" in window) {
+            var heroObserver = new IntersectionObserver(function (entries) {
+              entries.forEach(function (entry) {
+                heroVisible = entry.isIntersecting;
+                if (heroVisible && !document.hidden) {
+                  start();
+                } else {
+                  stop();
+                }
+              });
+            }, { threshold: 0 });
+            heroObserver.observe(heroSection);
+          } else {
+            heroVisible = true;
+            start();
+          }
+        }
+      }
+
+      // Client logo marquee: duplicate the track for a seamless loop, but
+      // only when motion is allowed — reduced-motion users keep a single,
+      // manually scrollable row with no hidden duplicates.
+      var logoTrack = document.querySelector(".logo-track");
+      if (logoTrack && !reduceMotion) {
+        Array.from(logoTrack.children).forEach(function (item) {
+          var clone = item.cloneNode(true);
+          clone.setAttribute("aria-hidden", "true");
+          clone.setAttribute("tabindex", "-1");
+          var link = clone.tagName === "A" ? clone : clone.querySelector("a");
+          if (link) link.setAttribute("tabindex", "-1");
+          logoTrack.appendChild(clone);
+        });
+        logoTrack.classList.add("is-animated");
+      }
+
+      var revealTargets = document.querySelectorAll(".reveal");
+      if (revealTargets.length) {
+        if ("IntersectionObserver" in window) {
+          var revealObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+          revealTargets.forEach(function (el) { revealObserver.observe(el); });
+        } else {
+          revealTargets.forEach(function (el) { el.classList.add("is-visible"); });
+        }
+      }
     })();
   </script>
 
