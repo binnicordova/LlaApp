@@ -243,6 +243,12 @@
     };
   </script>
   <style>
+    /* Match the hero's tone so overscroll/rubber-band bounce at the top
+       never flashes a light strip in behind the sticky header. */
+    html {
+      background-color: #06080e;
+    }
+
     main > section:not(:first-child) {
       content-visibility: auto;
       contain-intrinsic-size: 1px 900px;
@@ -268,9 +274,19 @@
       transform: translateY(0);
     }
 
-    /* Header elevation on scroll */
-    header.is-scrolled {
-      box-shadow: 0 1px 0 rgba(0,0,0,0.06), 0 12px 24px -18px rgba(0,0,0,0.35);
+    /* Header: a soft gradient scrim + progressively-fading blur, not a bar.
+       Both the tint and the blur dissolve to nothing via the same mask, so
+       there is no hard edge where chrome meets content. */
+    .header-fade {
+      background: linear-gradient(to bottom, rgba(6,8,14,0.92) 0%, rgba(6,8,14,0.72) 45%, rgba(6,8,14,0.28) 78%, rgba(6,8,14,0) 100%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      -webkit-mask-image: linear-gradient(to bottom, black 0%, black 45%, transparent 100%);
+      mask-image: linear-gradient(to bottom, black 0%, black 45%, transparent 100%);
+      transition: opacity 0.4s ease;
+    }
+    header.is-scrolled .header-fade {
+      background: linear-gradient(to bottom, rgba(6,8,14,0.97) 0%, rgba(6,8,14,0.85) 55%, rgba(6,8,14,0.35) 85%, rgba(6,8,14,0) 100%);
     }
 
     @keyframes driftSlow {
@@ -356,53 +372,61 @@
         transform: none !important;
       }
     }
+
+    @media (prefers-reduced-transparency: reduce) {
+      header, #menuPanel {
+        background-color: rgb(6, 8, 14) !important;
+        backdrop-filter: none !important;
+      }
+    }
   </style>
 </head>
-<body class="bg-slate-100 text-ink font-body antialiased pb-[calc(5rem+env(safe-area-inset-bottom))] lg:pb-0">
-  <header class="sticky top-0 z-40 border-b border-black/10 bg-white/95 backdrop-blur transition-shadow duration-300">
-    <div class="mx-auto flex min-h-16 w-[min(1180px,calc(100%-1.5rem))] items-center gap-3 lg:min-h-20 lg:w-[min(1180px,calc(100%-2rem))]">
-      <a href="#home" class="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-[0.1em]" aria-label="Home" data-analytics-event="home_click">
+<body class="bg-night text-ink font-body antialiased pb-[calc(5rem+env(safe-area-inset-bottom))] lg:pb-0">
+  <header class="sticky top-0 z-40">
+    <div class="header-fade pointer-events-none absolute inset-x-0 top-0 h-24 lg:h-28" aria-hidden="true"></div>
+    <div class="relative z-10 mx-auto flex min-h-16 w-[min(1180px,calc(100%-1.5rem))] items-center gap-3 lg:min-h-20 lg:w-[min(1180px,calc(100%-2rem))]">
+      <a href="#home" class="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-[0.1em] text-white" aria-label="Home" data-analytics-event="home_click">
         <img src="../assets/logo-512x512.png" alt="" width="28" height="28" decoding="async" class="h-7 w-auto rounded">
         <span>LLAAPP</span>
       </a>
 
-      <button id="menuToggle" data-analytics-event="mobile_menu_toggle" class="ml-auto inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-slate-300 bg-white px-4 text-xs uppercase tracking-wide text-slate-700 transition hover:border-slate-500 lg:hidden" aria-expanded="false" aria-controls="menuPanel">Menu</button>
+      <button id="menuToggle" data-analytics-event="mobile_menu_toggle" class="ml-auto inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-white/25 bg-white/10 px-4 text-xs uppercase tracking-wide text-white transition hover:border-white/50 hover:bg-white/15 lg:hidden" aria-expanded="false" aria-controls="menuPanel">Menu</button>
 
       <nav class="ml-auto hidden items-center gap-1 lg:inline-flex" aria-label="Primary navigation">
-        <a href="#services" data-i18n="navServices" data-analytics-event="nav_click" data-analytics-label="Desktop Services" class="rounded-full px-3 py-2 font-mono text-xs uppercase tracking-wide text-slate-800 hover:bg-black/5">Services</a>
-        <a href="#industries" data-i18n="navIndustries" data-analytics-event="nav_click" data-analytics-label="Desktop Industries" class="rounded-full px-3 py-2 font-mono text-xs uppercase tracking-wide text-slate-800 hover:bg-black/5">Industries</a>
-        <a href="#clients" data-i18n="navCaseStudies" data-analytics-event="nav_click" data-analytics-label="Desktop Case Studies" class="rounded-full px-3 py-2 font-mono text-xs uppercase tracking-wide text-slate-800 hover:bg-black/5">Case Studies</a>
-        <a href="#why" data-i18n="navAbout" data-analytics-event="nav_click" data-analytics-label="Desktop About Us" class="rounded-full px-3 py-2 font-mono text-xs uppercase tracking-wide text-slate-800 hover:bg-black/5">About Us</a>
-        <a href="#contact" data-i18n="navContact" data-analytics-event="nav_click" data-analytics-label="Desktop Contact Us" class="ml-1 inline-flex min-h-11 items-center rounded-full bg-signal px-6 py-2 font-mono text-xs font-bold uppercase tracking-wide text-indigo-950 shadow-lg shadow-yellow-300/40">Contact Us</a>
+        <a href="#services" data-i18n="navServices" data-analytics-event="nav_click" data-analytics-label="Desktop Services" class="rounded-full px-3 py-2 font-mono text-xs uppercase tracking-wide text-slate-200 transition-colors hover:bg-white/10 hover:text-white">Services</a>
+        <a href="#industries" data-i18n="navIndustries" data-analytics-event="nav_click" data-analytics-label="Desktop Industries" class="rounded-full px-3 py-2 font-mono text-xs uppercase tracking-wide text-slate-200 transition-colors hover:bg-white/10 hover:text-white">Industries</a>
+        <a href="#clients" data-i18n="navCaseStudies" data-analytics-event="nav_click" data-analytics-label="Desktop Case Studies" class="rounded-full px-3 py-2 font-mono text-xs uppercase tracking-wide text-slate-200 transition-colors hover:bg-white/10 hover:text-white">Case Studies</a>
+        <a href="#why" data-i18n="navAbout" data-analytics-event="nav_click" data-analytics-label="Desktop About Us" class="rounded-full px-3 py-2 font-mono text-xs uppercase tracking-wide text-slate-200 transition-colors hover:bg-white/10 hover:text-white">About Us</a>
+        <a href="#contact" data-i18n="navContact" data-analytics-event="nav_click" data-analytics-label="Desktop Contact Us" class="press ml-1 inline-flex min-h-11 items-center rounded-full bg-signal px-6 py-2 font-mono text-xs font-bold uppercase tracking-wide text-indigo-950 shadow-lg shadow-yellow-300/30 transition-shadow hover:shadow-xl hover:shadow-yellow-300/40">Contact Us</a>
       </nav>
 
       <div class="hidden items-center gap-2 lg:inline-flex" aria-label="Language switcher">
-        <a href="#" class="text-slate-700 [&.active]:font-bold [&.active]:text-brand [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="en" data-analytics-event="lang_switch_click" data-analytics-label="EN" aria-label="English">EN</a>
-        <span class="text-slate-400">|</span>
-        <a href="#" class="text-slate-700 [&.active]:font-bold [&.active]:text-brand [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="fr" data-analytics-event="lang_switch_click" data-analytics-label="FR" aria-label="French">FR</a>
-        <span class="text-slate-400">|</span>
-        <a href="#" class="text-slate-700 [&.active]:font-bold [&.active]:text-brand [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="es" data-analytics-event="lang_switch_click" data-analytics-label="ES" aria-label="Spanish">ES</a>
-        <span class="text-slate-400">|</span>
-        <a href="#" class="text-slate-700 [&.active]:font-bold [&.active]:text-brand [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="de" data-analytics-event="lang_switch_click" data-analytics-label="DE" aria-label="German">DE</a>
-        <span class="text-slate-400">|</span>
-        <a href="#" class="text-slate-700 [&.active]:font-bold [&.active]:text-brand [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="it" data-analytics-event="lang_switch_click" data-analytics-label="IT" aria-label="Italian">IT</a>
+        <a href="#" class="text-slate-300 hover:text-white [&.active]:font-bold [&.active]:text-signal [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="en" data-analytics-event="lang_switch_click" data-analytics-label="EN" aria-label="English">EN</a>
+        <span class="text-slate-500">|</span>
+        <a href="#" class="text-slate-300 hover:text-white [&.active]:font-bold [&.active]:text-signal [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="fr" data-analytics-event="lang_switch_click" data-analytics-label="FR" aria-label="French">FR</a>
+        <span class="text-slate-500">|</span>
+        <a href="#" class="text-slate-300 hover:text-white [&.active]:font-bold [&.active]:text-signal [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="es" data-analytics-event="lang_switch_click" data-analytics-label="ES" aria-label="Spanish">ES</a>
+        <span class="text-slate-500">|</span>
+        <a href="#" class="text-slate-300 hover:text-white [&.active]:font-bold [&.active]:text-signal [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="de" data-analytics-event="lang_switch_click" data-analytics-label="DE" aria-label="German">DE</a>
+        <span class="text-slate-500">|</span>
+        <a href="#" class="text-slate-300 hover:text-white [&.active]:font-bold [&.active]:text-signal [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="it" data-analytics-event="lang_switch_click" data-analytics-label="IT" aria-label="Italian">IT</a>
       </div>
 
-      <div id="menuPanel" class="absolute right-3 top-[calc(100%+.5rem)] hidden w-[min(340px,calc(100vw-1.5rem))] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-strong lg:hidden" aria-hidden="true">
+      <div id="menuPanel" class="absolute right-3 top-[calc(100%+.5rem)] hidden w-[min(340px,calc(100vw-1.5rem))] overflow-hidden rounded-2xl border border-white/10 bg-night/95 shadow-strong backdrop-blur-lg lg:hidden" aria-hidden="true">
         <nav aria-label="Mobile menu" class="grid">
-          <a href="#services" data-i18n="navServices" data-analytics-event="nav_click" data-analytics-label="Mobile Services" class="min-h-11 border-b border-slate-100 px-4 py-3 text-slate-700">Services</a>
-          <a href="#industries" data-i18n="navIndustries" data-analytics-event="nav_click" data-analytics-label="Mobile Industries" class="min-h-11 border-b border-slate-100 px-4 py-3 text-slate-700">Industries</a>
-          <a href="#clients" data-i18n="navCaseStudies" data-analytics-event="nav_click" data-analytics-label="Mobile Case Studies" class="min-h-11 border-b border-slate-100 px-4 py-3 text-slate-700">Case Studies</a>
-          <a href="#why" data-i18n="navAbout" data-analytics-event="nav_click" data-analytics-label="Mobile About Us" class="min-h-11 border-b border-slate-100 px-4 py-3 text-slate-700">About Us</a>
-          <a href="#blog" data-i18n="navBlog" data-analytics-event="nav_click" data-analytics-label="Mobile Blog" class="min-h-11 border-b border-slate-100 px-4 py-3 text-slate-700">Blog</a>
-          <a href="#contact" data-i18n="navContact" data-analytics-event="nav_click" data-analytics-label="Mobile Contact Us" class="min-h-11 px-4 py-3 text-slate-700">Contact Us</a>
+          <a href="#services" data-i18n="navServices" data-analytics-event="nav_click" data-analytics-label="Mobile Services" class="min-h-11 border-b border-white/10 px-4 py-3 text-slate-200 hover:bg-white/5">Services</a>
+          <a href="#industries" data-i18n="navIndustries" data-analytics-event="nav_click" data-analytics-label="Mobile Industries" class="min-h-11 border-b border-white/10 px-4 py-3 text-slate-200 hover:bg-white/5">Industries</a>
+          <a href="#clients" data-i18n="navCaseStudies" data-analytics-event="nav_click" data-analytics-label="Mobile Case Studies" class="min-h-11 border-b border-white/10 px-4 py-3 text-slate-200 hover:bg-white/5">Case Studies</a>
+          <a href="#why" data-i18n="navAbout" data-analytics-event="nav_click" data-analytics-label="Mobile About Us" class="min-h-11 border-b border-white/10 px-4 py-3 text-slate-200 hover:bg-white/5">About Us</a>
+          <a href="#blog" data-i18n="navBlog" data-analytics-event="nav_click" data-analytics-label="Mobile Blog" class="min-h-11 border-b border-white/10 px-4 py-3 text-slate-200 hover:bg-white/5">Blog</a>
+          <a href="#contact" data-i18n="navContact" data-analytics-event="nav_click" data-analytics-label="Mobile Contact Us" class="min-h-11 px-4 py-3 text-slate-200 hover:bg-white/5">Contact Us</a>
         </nav>
-        <div class="grid grid-cols-5 border-t border-slate-100 bg-slate-50" aria-label="Mobile language switcher">
-          <a href="#" class="inline-flex min-h-11 items-center justify-center border-r border-slate-200 font-mono text-xs uppercase tracking-wide text-slate-700 [&.active]:font-bold [&.active]:text-brand [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="en" data-analytics-event="lang_switch_click_mobile" data-analytics-label="EN" aria-label="English">EN</a>
-          <a href="#" class="inline-flex min-h-11 items-center justify-center border-r border-slate-200 font-mono text-xs uppercase tracking-wide text-slate-700 [&.active]:font-bold [&.active]:text-brand [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="fr" data-analytics-event="lang_switch_click_mobile" data-analytics-label="FR" aria-label="French">FR</a>
-          <a href="#" class="inline-flex min-h-11 items-center justify-center border-r border-slate-200 font-mono text-xs uppercase tracking-wide text-slate-700 [&.active]:font-bold [&.active]:text-brand [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="es" data-analytics-event="lang_switch_click_mobile" data-analytics-label="ES" aria-label="Spanish">ES</a>
-          <a href="#" class="inline-flex min-h-11 items-center justify-center border-r border-slate-200 font-mono text-xs uppercase tracking-wide text-slate-700 [&.active]:font-bold [&.active]:text-brand [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="de" data-analytics-event="lang_switch_click_mobile" data-analytics-label="DE" aria-label="German">DE</a>
-          <a href="#" class="inline-flex min-h-11 items-center justify-center font-mono text-xs uppercase tracking-wide text-slate-700 [&.active]:font-bold [&.active]:text-brand [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="it" data-analytics-event="lang_switch_click_mobile" data-analytics-label="IT" aria-label="Italian">IT</a>
+        <div class="grid grid-cols-5 border-t border-white/10 bg-white/5" aria-label="Mobile language switcher">
+          <a href="#" class="inline-flex min-h-11 items-center justify-center border-r border-white/10 font-mono text-xs uppercase tracking-wide text-slate-300 [&.active]:font-bold [&.active]:text-signal [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="en" data-analytics-event="lang_switch_click_mobile" data-analytics-label="EN" aria-label="English">EN</a>
+          <a href="#" class="inline-flex min-h-11 items-center justify-center border-r border-white/10 font-mono text-xs uppercase tracking-wide text-slate-300 [&.active]:font-bold [&.active]:text-signal [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="fr" data-analytics-event="lang_switch_click_mobile" data-analytics-label="FR" aria-label="French">FR</a>
+          <a href="#" class="inline-flex min-h-11 items-center justify-center border-r border-white/10 font-mono text-xs uppercase tracking-wide text-slate-300 [&.active]:font-bold [&.active]:text-signal [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="es" data-analytics-event="lang_switch_click_mobile" data-analytics-label="ES" aria-label="Spanish">ES</a>
+          <a href="#" class="inline-flex min-h-11 items-center justify-center border-r border-white/10 font-mono text-xs uppercase tracking-wide text-slate-300 [&.active]:font-bold [&.active]:text-signal [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="de" data-analytics-event="lang_switch_click_mobile" data-analytics-label="DE" aria-label="German">DE</a>
+          <a href="#" class="inline-flex min-h-11 items-center justify-center font-mono text-xs uppercase tracking-wide text-slate-300 [&.active]:font-bold [&.active]:text-signal [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="it" data-analytics-event="lang_switch_click_mobile" data-analytics-label="IT" aria-label="Italian">IT</a>
         </div>
       </div>
     </div>
