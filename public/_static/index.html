@@ -104,12 +104,13 @@
       "@type": "OfferCatalog",
       "name": "AI Transformation Capabilities",
       "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Readiness & Opportunity Audit"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Agents & Workflow Automation"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "LLM & Knowledge Integration (RAG)"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Applied AI Product Engineering"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Infrastructure, MLOps & Governance"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fractional AI Strategy & Enablement"}}
+        {"@type": "Offer", "price": "0", "priceCurrency": "USD", "eligibleCustomerType": "https://schema.org/Business", "itemOffered": {"@type": "Service", "name": "AI Architecture & ROI Audit", "description": "A complimentary, private 45-minute technical briefing for a qualified corporate leadership team, led by a senior architect, covering AI opportunity ranking, build-vs-integrate options, and security/governance exposure."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Readiness & Opportunity Audit", "description": "A fixed-scope, senior-engineer-led audit that ranks every AI opportunity in a business by cost, risk, and payback period, so capital goes to the use cases that produce the return."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Agents & Workflow Automation", "description": "Production-grade AI agents that run support, sales operations, and back-office approvals unattended, integrated into existing systems and engineered to enterprise reliability standards."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "LLM & Knowledge Integration (RAG)", "description": "Retrieval-augmented copilots built on a client's own data, with enterprise-grade access controls and an audit trail, keeping data inside the client's governance perimeter."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Applied AI Product Engineering", "description": "AI-native features shipped directly into an existing product by senior engineers who have built mission-critical applications for global brands, without destabilizing the revenue-bearing platform."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Infrastructure, MLOps & Governance", "description": "Secure model deployment, observability, and cost controls that let AI scale in production without scaling risk exposure, built for teams answerable to a board and a compliance function."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fractional AI Strategy & Enablement", "description": "Embedded, fractional AI leadership and hands-on team training, so an organization keeps shipping AI systems long after the engagement ends, with no consultant dependency built in."}}
       ]
     }
   }
@@ -477,7 +478,8 @@
         <a href="#industries" data-i18n="navIndustries" data-analytics-event="nav_click" data-analytics-label="Desktop Industries" class="rounded-full px-3 py-2 font-mono text-xs uppercase tracking-wide text-slate-200 transition-colors hover:bg-white/10 hover:text-white">Industries</a>
         <a href="#clients" data-i18n="navCaseStudies" data-analytics-event="nav_click" data-analytics-label="Desktop Case Studies" class="rounded-full px-3 py-2 font-mono text-xs uppercase tracking-wide text-slate-200 transition-colors hover:bg-white/10 hover:text-white">Case Studies</a>
         <a href="#why" data-i18n="navAbout" data-analytics-event="nav_click" data-analytics-label="Desktop About Us" class="rounded-full px-3 py-2 font-mono text-xs uppercase tracking-wide text-slate-200 transition-colors hover:bg-white/10 hover:text-white">About Us</a>
-        <a href="#contact" data-i18n="navContact" data-analytics-event="nav_click" data-analytics-label="Desktop Contact Us" class="press ml-1 inline-flex min-h-11 items-center rounded-full bg-signal px-6 py-2 font-mono text-xs font-bold uppercase tracking-wide text-indigo-950 shadow-lg shadow-yellow-300/30 transition-shadow hover:shadow-xl hover:shadow-yellow-300/40">Contact Us</a>
+        <a href="#contact" data-i18n="navContact" data-analytics-event="nav_click" data-analytics-label="Desktop Contact Us" class="rounded-full px-3 py-2 font-mono text-xs uppercase tracking-wide text-slate-200 transition-colors hover:bg-white/10 hover:text-white">Contact Us</a>
+        <a href="#briefing" data-i18n="navCharla" data-analytics-event="nav_click" data-analytics-label="Desktop Technical Briefing" class="press ml-1 inline-flex min-h-11 items-center rounded-full bg-signal px-6 py-2 font-mono text-xs font-bold uppercase tracking-wide text-indigo-950 shadow-lg shadow-yellow-300/30 transition-shadow hover:shadow-xl hover:shadow-yellow-300/40">Technical Briefing</a>
       </nav>
 
       <div class="hidden items-center gap-2 lg:inline-flex" aria-label="Language switcher">
@@ -494,6 +496,7 @@
 
       <div id="menuPanel" class="absolute right-3 top-[calc(100%+.5rem)] hidden w-[min(340px,calc(100vw-1.5rem))] overflow-hidden rounded-2xl border border-white/10 bg-night/95 shadow-strong backdrop-blur-lg lg:hidden" aria-hidden="true">
         <nav aria-label="Mobile menu" class="grid">
+          <a href="#briefing" data-i18n="navCharla" data-analytics-event="nav_click" data-analytics-label="Mobile Technical Briefing" class="min-h-11 border-b border-white/10 px-4 py-3 font-bold text-signal hover:bg-white/5">Technical Briefing</a>
           <a href="#services" data-i18n="navServices" data-analytics-event="nav_click" data-analytics-label="Mobile Services" class="min-h-11 border-b border-white/10 px-4 py-3 text-slate-200 hover:bg-white/5">Services</a>
           <a href="#industries" data-i18n="navIndustries" data-analytics-event="nav_click" data-analytics-label="Mobile Industries" class="min-h-11 border-b border-white/10 px-4 py-3 text-slate-200 hover:bg-white/5">Industries</a>
           <a href="#clients" data-i18n="navCaseStudies" data-analytics-event="nav_click" data-analytics-label="Mobile Case Studies" class="min-h-11 border-b border-white/10 px-4 py-3 text-slate-200 hover:bg-white/5">Case Studies</a>
@@ -524,12 +527,13 @@
       </div>
       <div class="relative z-10 mx-auto w-[min(880px,calc(100%-1.5rem))] lg:w-[min(880px,calc(100%-2rem))]">
         <p class="reveal mb-4 font-mono text-xs uppercase tracking-[0.14em] text-slate-200" style="--reveal-delay:0s" data-i18n="heroEyebrow">AI Transformation Partner</p>
-        <h1 class="reveal max-w-[16ch] font-mono text-4xl uppercase leading-[0.95] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl" style="--reveal-delay:.05s" data-i18n="heroTitle">AI Transformation, <span class="text-shimmer">Engineered To Ship_</span></h1>
-        <p class="reveal mt-5 max-w-2xl text-base text-slate-100 sm:text-lg" style="--reveal-delay:.1s" data-i18n="heroCopy">We help businesses adopt AI that works: readiness audits, custom AI agents, and LLM integrations built by senior engineers with 10+ years shipping mission-critical software for global market leaders.</p>
+        <h1 class="reveal max-w-[16ch] font-mono text-4xl uppercase leading-[0.95] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl" style="--reveal-delay:.05s" data-i18n="heroTitle" data-i18n-html="heroTitle">Enterprise AI, <span class="text-shimmer">Engineered For ROI_</span></h1>
+        <p class="reveal mt-5 max-w-xl text-base text-slate-100 sm:text-lg" style="--reveal-delay:.1s" data-i18n="heroCopy">Production AI systems, agents, and LLM integrations, built by senior engineers with 10+ years shipping mission-critical software for global market leaders &mdash; audited and ROI-ranked before a line of code is written.</p>
+        <p class="sr-only" data-i18n="heroSrSummary">LLAAPP is an AI transformation and applied engineering partner for enterprise leadership teams: AI readiness audits, custom AI agents, LLM and RAG integration, and applied AI product engineering, delivered by senior engineers with a decade of mission-critical software engineering experience for organizations including Coca-Cola, the NFL, and Google. Every engagement opens with a fixed-scope AI Architecture &amp; ROI Audit that ranks opportunities by cost, risk, and payback period before any build work begins.</p>
 
         <div class="reveal mt-7 grid gap-3 sm:flex sm:flex-wrap" style="--reveal-delay:.15s">
-          <a class="press inline-flex min-h-11 items-center justify-center rounded-full bg-signal px-6 py-3 font-bold text-indigo-950 shadow-lg shadow-yellow-300/40 transition-shadow duration-300 hover:shadow-xl hover:shadow-yellow-300/50" href="#contact" data-i18n="heroCtaPrimary" data-analytics-event="hero_cta_audit">Book a Free AI Audit</a>
-          <a class="press inline-flex min-h-11 items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3 font-bold text-white backdrop-blur transition-colors duration-300 hover:border-white/60 hover:bg-white/15" href="#services" data-i18n="heroCtaSecondary" data-analytics-event="hero_cta_solutions">See AI Services</a>
+          <a class="press inline-flex min-h-11 items-center justify-center rounded-full bg-signal px-6 py-3 font-bold text-indigo-950 shadow-lg shadow-yellow-300/40 transition-shadow duration-300 hover:shadow-xl hover:shadow-yellow-300/50" href="#briefing" data-i18n="heroCtaPrimary" data-analytics-event="hero_cta_briefing">Request an Enterprise AI Technical Briefing</a>
+          <a class="press inline-flex min-h-11 items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3 font-bold text-white backdrop-blur transition-colors duration-300 hover:border-white/60 hover:bg-white/15" href="#services" data-i18n="heroCtaSecondary" data-analytics-event="hero_cta_solutions">See Engineering Capabilities</a>
         </div>
 
         <div class="reveal mt-10 flex flex-wrap gap-x-8 gap-y-4 border-t border-white/15 pt-6" style="--reveal-delay:.2s">
@@ -563,6 +567,55 @@
       </div>
     </section>
 
+    <section id="briefing" aria-label="Enterprise AI technical briefing" class="relative overflow-hidden bg-slate-50 py-14">
+      <div class="drift-shape pointer-events-none absolute -right-40 -top-16 hidden h-56 w-[36rem] rounded-[2rem] bg-gradient-to-r from-signal via-brand to-indigo-900 opacity-40 blur-[2px] md:block" style="--r:10deg; transform:rotate(10deg); animation-delay:-3s"></div>
+      <div class="relative z-10 mx-auto w-[min(1180px,calc(100%-1.5rem))] lg:w-[min(1180px,calc(100%-2rem))]">
+        <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+          <div>
+            <p class="reveal font-mono text-xs font-bold uppercase tracking-[0.14em] text-brand" data-i18n="charlaEyebrow">Free, For Qualified Leadership Teams</p>
+            <h2 class="reveal mt-2 font-mono text-2xl uppercase tracking-wide text-ink sm:text-3xl" style="--reveal-delay:.05s" data-i18n="charlaTitle">The AI Architecture &amp; ROI Audit</h2>
+            <p class="reveal mt-3 max-w-xl text-slate-600" style="--reveal-delay:.1s" data-i18n="charlaLead">A private, 45-minute working session for your leadership team, led by a senior architect, not an account executive. We apply our impact/cost/risk ranking framework live, to two or three of your actual workflows, so your team leaves with a first-draft opportunity shortlist instead of a slide deck.</p>
+
+            <ul class="mt-6 grid gap-4">
+              <li class="reveal flex gap-3 rounded-xl border border-slate-200 bg-white p-4" style="--reveal-delay:.15s">
+                <span aria-hidden="true" class="mt-0.5 font-mono text-xs font-bold text-brand">01</span>
+                <div>
+                  <p class="font-mono text-xs uppercase tracking-wide text-ink" data-i18n="charlaPoint1Title">Live Opportunity Ranking</p>
+                  <p class="mt-1 text-sm text-slate-600" data-i18n="charlaPoint1Text">A senior architect applies our cost, risk, and payback framework to two or three of your highest-friction workflows in real time, live math on your actual operation, not a template.</p>
+                </div>
+              </li>
+              <li class="reveal flex gap-3 rounded-xl border border-slate-200 bg-white p-4" style="--reveal-delay:.2s">
+                <span aria-hidden="true" class="mt-0.5 font-mono text-xs font-bold text-brand">02</span>
+                <div>
+                  <p class="font-mono text-xs uppercase tracking-wide text-ink" data-i18n="charlaPoint2Title">Build vs. Integrate Assessment</p>
+                  <p class="mt-1 text-sm text-slate-600" data-i18n="charlaPoint2Text">An engineering-level read on whether to extend your current stack, add an LLM/RAG layer, or build a custom agent, with rough cost and complexity ranges you can bring back to your board.</p>
+                </div>
+              </li>
+              <li class="reveal flex gap-3 rounded-xl border border-slate-200 bg-white p-4" style="--reveal-delay:.25s">
+                <span aria-hidden="true" class="mt-0.5 font-mono text-xs font-bold text-brand">03</span>
+                <div>
+                  <p class="font-mono text-xs uppercase tracking-wide text-ink" data-i18n="charlaPoint3Title">Security &amp; Governance Exposure Map</p>
+                  <p class="mt-1 text-sm text-slate-600" data-i18n="charlaPoint3Text">A direct read on where model access, data handling, or vendor lock-in becomes a liability if adoption outpaces your governance, delivered by the person who would own that risk.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="reveal rounded-2xl border border-slate-200 bg-white p-6 shadow-sm lg:sticky lg:top-24" style="--reveal-delay:.15s">
+            <p class="font-mono text-xs font-bold uppercase tracking-wide text-brand" data-i18n="charlaVancouverTitle">The Vancouver Edge</p>
+            <p class="mt-2 text-sm text-slate-600" data-i18n-html="charlaVancouverText">Vancouver isn't a spectator in the AI infrastructure buildout, it's becoming one of its physical centers. TELUS and Westbank are converting the former Hootsuite headquarters in Mount Pleasant into the M3 data centre, backed by the Government of Canada's sovereign AI initiative: up to 13,000 GPUs and 26 megawatts of compute online by the end of 2026. <a href="https://www.canada.ca/en/innovation-science-economic-development/news/2026/05/government-of-canada-and-telus-advance-work-to-build-sovereign-ai-infrastructure.html" target="_blank" rel="noreferrer noopener" class="underline hover:text-slate-800">Source: Government of Canada</a>. The businesses that move now will be ready to run mission-critical AI on sovereign, low-latency compute before their competitors even have a strategy.</p>
+
+            <div class="mt-6 border-t border-slate-200 pt-6">
+              <p class="font-mono text-sm font-bold text-ink" data-i18n="charlaCtaTitle">Your team's first honest conversation about AI.</p>
+              <p class="mt-2 text-sm text-slate-600" data-i18n="charlaCtaText">We only run a limited number of these audits each month, reserved for qualified corporate leadership teams ready to move past AI experimentation.</p>
+              <a href="https://calendly.com/llaapp-solutions/llaapp-com" target="_blank" rel="noreferrer noopener" data-analytics-event="briefing_cta_click" data-analytics-label="Briefing CTA" class="press mt-4 inline-flex min-h-11 w-full items-center justify-center rounded-full bg-signal px-6 py-3 text-center font-bold text-indigo-950 shadow-lg shadow-yellow-300/30 transition-shadow duration-300 hover:shadow-xl hover:shadow-yellow-300/40" data-i18n="charlaCtaButton">Request an Enterprise AI Technical Briefing</a>
+              <p class="mt-2 text-center text-xs text-slate-400" data-i18n="charlaCtaNote">Spots are limited. Qualified corporate teams only.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="services" class="relative overflow-hidden bg-night py-14 text-slate-50">
       <div class="drift-shape pointer-events-none absolute -left-44 bottom-[-5rem] hidden h-48 w-[30rem] rounded-[2rem] bg-gradient-to-r from-signal via-brand to-indigo-900 blur-[2px] md:block" style="--r:13deg; transform:rotate(13deg); animation-delay:-2s"></div>
       <div class="relative z-10 mx-auto w-[min(1180px,calc(100%-1.5rem))] lg:w-[min(1180px,calc(100%-2rem))]">
@@ -572,37 +625,37 @@
           <article class="reveal group relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950 p-4 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1.5 hover:border-brand/60 hover:shadow-[0_20px_40px_-20px_rgba(59,72,255,0.55)]" style="--reveal-delay:.05s">
             <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950 transition-transform duration-500 group-hover:scale-110">01</div>
             <h3 class="font-mono text-xs uppercase tracking-wide text-slate-100" data-i18n="service1Title">AI Readiness &amp; Opportunity Audit</h3>
-            <p class="mt-2 text-sm text-slate-300" data-i18n="service1Desc">A structured audit of your operations to find the highest-ROI AI use cases, ranked by impact, cost, and implementation risk.</p>
+            <p class="mt-2 text-sm text-slate-300" data-i18n="service1Desc">A fixed-scope, senior-engineer-led audit that ranks every AI opportunity in your operation by cost, risk, and payback period, so capital goes to the use cases that produce the return, not the ones that demo well.</p>
             <a class="press absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800 group-hover:translate-x-0.5" href="#contact" aria-label="AI Readiness Audit details" data-analytics-event="service_click" data-analytics-label="AI Readiness Audit">&gt;</a>
           </article>
           <article class="reveal group relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950 p-4 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1.5 hover:border-brand/60 hover:shadow-[0_20px_40px_-20px_rgba(59,72,255,0.55)]" style="--reveal-delay:.1s">
             <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950 transition-transform duration-500 group-hover:scale-110">02</div>
             <h3 class="font-mono text-xs uppercase tracking-wide text-slate-100" data-i18n="service2Title">AI Agents &amp; Workflow Automation</h3>
-            <p class="mt-2 text-sm text-slate-300" data-i18n="service2Desc">Custom AI agents that handle support, sales operations, back-office workflows, and approvals, integrated with the tools you already run.</p>
+            <p class="mt-2 text-sm text-slate-300" data-i18n="service2Desc">Production-grade AI agents that run support, sales operations, and back-office approvals unattended, integrated into the systems you already run, engineered to the same reliability standard as mission-critical enterprise software.</p>
             <a class="press absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800 group-hover:translate-x-0.5" href="#contact" aria-label="AI Agents details" data-analytics-event="service_click" data-analytics-label="AI Agents & Workflow Automation">&gt;</a>
           </article>
           <article class="reveal group relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950 p-4 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1.5 hover:border-brand/60 hover:shadow-[0_20px_40px_-20px_rgba(59,72,255,0.55)]" style="--reveal-delay:.15s">
             <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950 transition-transform duration-500 group-hover:scale-110">03</div>
             <h3 class="font-mono text-xs uppercase tracking-wide text-slate-100" data-i18n="service3Title">LLM &amp; Knowledge Integration (RAG)</h3>
-            <p class="mt-2 text-sm text-slate-300" data-i18n="service3Desc">Retrieval-augmented copilots and internal knowledge assistants built on your own data, with enterprise-grade access controls.</p>
+            <p class="mt-2 text-sm text-slate-300" data-i18n="service3Desc">Retrieval-augmented copilots built on your own data, with enterprise-grade access controls and an audit trail, so your teams get instant answers without your data leaving your governance perimeter.</p>
             <a class="press absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800 group-hover:translate-x-0.5" href="#contact" aria-label="LLM Integration details" data-analytics-event="service_click" data-analytics-label="LLM & Knowledge Integration">&gt;</a>
           </article>
           <article class="reveal group relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950 p-4 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1.5 hover:border-brand/60 hover:shadow-[0_20px_40px_-20px_rgba(59,72,255,0.55)]" style="--reveal-delay:.2s">
             <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950 transition-transform duration-500 group-hover:scale-110">04</div>
             <h3 class="font-mono text-xs uppercase tracking-wide text-slate-100" data-i18n="service4Title">Applied AI Product Engineering</h3>
-            <p class="mt-2 text-sm text-slate-300" data-i18n="service4Desc">AI-native features shipped inside your existing product, built by the same senior engineering team behind mission-critical apps for global brands.</p>
+            <p class="mt-2 text-sm text-slate-300" data-i18n="service4Desc">AI-native features shipped directly into your existing product by the same senior engineering team that has built mission-critical applications for global brands, without destabilizing the platform your revenue runs on.</p>
             <a class="press absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800 group-hover:translate-x-0.5" href="#contact" aria-label="Applied AI Engineering details" data-analytics-event="service_click" data-analytics-label="Applied AI Product Engineering">&gt;</a>
           </article>
           <article class="reveal group relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950 p-4 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1.5 hover:border-brand/60 hover:shadow-[0_20px_40px_-20px_rgba(59,72,255,0.55)]" style="--reveal-delay:.25s">
             <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950 transition-transform duration-500 group-hover:scale-110">05</div>
             <h3 class="font-mono text-xs uppercase tracking-wide text-slate-100" data-i18n="service5Title">AI Infrastructure, MLOps &amp; Governance</h3>
-            <p class="mt-2 text-sm text-slate-300" data-i18n="service5Desc">Secure model deployment, observability, cost control, and governance so AI systems scale safely in production.</p>
+            <p class="mt-2 text-sm text-slate-300" data-i18n="service5Desc">Secure model deployment, observability, and cost controls that let AI scale in production without scaling your risk exposure, built for teams answerable to a board and a compliance function.</p>
             <a class="press absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800 group-hover:translate-x-0.5" href="#contact" aria-label="AI Infrastructure details" data-analytics-event="service_click" data-analytics-label="AI Infrastructure & Governance">&gt;</a>
           </article>
           <article class="reveal group relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950 p-4 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1.5 hover:border-brand/60 hover:shadow-[0_20px_40px_-20px_rgba(59,72,255,0.55)]" style="--reveal-delay:.3s">
             <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950 transition-transform duration-500 group-hover:scale-110">06</div>
             <h3 class="font-mono text-xs uppercase tracking-wide text-slate-100" data-i18n="service6Title">Fractional AI Strategy &amp; Enablement</h3>
-            <p class="mt-2 text-sm text-slate-300" data-i18n="service6Desc">Embedded AI leadership and hands-on team training so your organization keeps building after we hand off.</p>
+            <p class="mt-2 text-sm text-slate-300" data-i18n="service6Desc">Embedded, fractional AI leadership and hands-on team training, so your organization keeps shipping AI systems long after our engagement ends, with no consultant dependency built in.</p>
             <a class="press absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800 group-hover:translate-x-0.5" href="#contact" aria-label="Fractional AI Strategy details" data-analytics-event="service_click" data-analytics-label="Fractional AI Strategy & Enablement">&gt;</a>
           </article>
         </div>
@@ -742,7 +795,7 @@
           </article>
         </div>
         <div class="mt-6">
-          <a class="press inline-flex min-h-11 items-center justify-center rounded-full bg-signal px-6 py-3 font-bold text-indigo-950 shadow-lg shadow-yellow-300/40 transition-shadow duration-300 hover:shadow-xl hover:shadow-yellow-300/50" href="#contact" data-i18n="faqCta" data-analytics-event="faq_cta_click">Talk to Our AI Transformation Team</a>
+          <a class="press inline-flex min-h-11 items-center justify-center rounded-full bg-signal px-6 py-3 font-bold text-indigo-950 shadow-lg shadow-yellow-300/40 transition-shadow duration-300 hover:shadow-xl hover:shadow-yellow-300/50" href="#briefing" data-i18n="faqCta" data-analytics-event="faq_cta_click">Request an Enterprise AI Technical Briefing</a>
         </div>
       </div>
     </section>
@@ -758,13 +811,13 @@
         <p class="reveal mt-2 max-w-2xl text-slate-200" style="--reveal-delay:.12s" data-i18n="directAccessLead">Connect directly with our AI transformation team for rapid-response requirements.</p>
 
         <div class="mt-6 grid gap-4 sm:grid-cols-3">
-          <a href="https://wa.me/16503744225" target="_blank" rel="noreferrer noopener" data-analytics-event="direct_contact_click" data-analytics-label="WhatsApp Highlight" class="press reveal group flex flex-col gap-4 rounded-2xl bg-signal p-6 text-indigo-950 shadow-lg shadow-yellow-300/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-yellow-300/40" style="--reveal-delay:.15s">
+          <a href="https://calendly.com/llaapp-solutions/llaapp-com" target="_blank" rel="noreferrer noopener" data-analytics-event="direct_contact_click" data-analytics-label="Scheduling Highlight" class="press reveal group flex flex-col gap-4 rounded-2xl bg-signal p-6 text-indigo-950 shadow-lg shadow-yellow-300/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-yellow-300/40" style="--reveal-delay:.15s">
             <span class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-indigo-950/10">
-              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.45 1.27 4.9L2 22l5.25-1.38A9.94 9.94 0 0 0 12.04 22c5.52 0 10-4.48 10-10s-4.48-10-10-10Zm0 18.2c-1.6 0-3.13-.43-4.46-1.24l-.32-.19-3.12.82.83-3.04-.2-.31A8.18 8.18 0 0 1 3.8 12c0-4.55 3.7-8.24 8.24-8.24S20.28 7.45 20.28 12s-3.7 8.2-8.24 8.2Zm4.5-6.13c-.25-.12-1.46-.72-1.69-.8-.23-.08-.4-.12-.56.12-.17.25-.65.8-.79.96-.15.17-.29.19-.54.06-.25-.12-1.04-.38-1.98-1.21-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.44.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.48-.01s-.44.06-.67.31c-.23.25-.88.86-.88 2.1s.9 2.44 1.02 2.61c.12.17 1.77 2.7 4.28 3.78.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29Z"></path></svg>
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path><path d="m9 16 2 2 4-4"></path></svg>
             </span>
             <span>
-              <span class="block font-mono text-xs uppercase tracking-wide text-indigo-900">Fastest response</span>
-              <span class="mt-1 block text-lg font-bold" data-i18n="actionWhatsApp">Technical Chat via WhatsApp</span>
+              <span class="block font-mono text-xs uppercase tracking-wide text-indigo-900">No email round-trip</span>
+              <span class="mt-1 block text-lg font-bold" data-i18n="actionSchedule">Book a Technical Briefing</span>
             </span>
           </a>
 
@@ -788,6 +841,7 @@
             </span>
           </a>
         </div>
+        <p class="reveal mt-4 text-sm text-slate-400" style="--reveal-delay:.28s"><span data-i18n="directAccessWhatsAppPrefix">Prefer WhatsApp?</span> <a href="https://wa.me/16503744225" target="_blank" rel="noreferrer noopener" data-analytics-event="direct_contact_click" data-analytics-label="WhatsApp Secondary" class="underline decoration-white/30 underline-offset-2 hover:text-white" data-i18n="directAccessWhatsAppLink">Message us directly</a>.</p>
 
         <p class="reveal mt-6 max-w-2xl text-sm text-slate-300" style="--reveal-delay:.3s" data-i18n="directAccessGeo">Primary service focus: Vancouver &amp; Canada, the United States (San Francisco, Texas, Chicago, and nationwide), and Europe (Germany, Italy, Spain).</p>
 
@@ -860,7 +914,7 @@
     </div>
   </footer>
 
-  <a class="fixed bottom-4 right-4 z-50 hidden min-h-11 items-center rounded-full bg-signal px-4 py-2 font-mono text-xs font-bold uppercase tracking-wide text-indigo-950 shadow-lg shadow-yellow-300/40 lg:inline-flex" href="#contact" data-analytics-event="floating_cta_click" data-i18n="floatCta">Contact Us</a>
+  <a class="fixed bottom-4 right-4 z-50 hidden min-h-11 items-center rounded-full bg-signal px-4 py-2 font-mono text-xs font-bold uppercase tracking-wide text-indigo-950 shadow-lg shadow-yellow-300/40 lg:inline-flex" href="#briefing" data-analytics-event="floating_cta_click" data-i18n="floatCta">Request a Briefing</a>
 
   <nav class="fixed bottom-0 left-0 right-0 z-40 grid grid-cols-3 border-t border-white/15 bg-black/95 backdrop-blur lg:hidden" aria-label="Quick contact actions">
     <a href="tel:+16503744225" data-i18n="actionCall" data-analytics-event="quick_call" class="inline-flex min-h-14 items-center justify-center border-r border-white/10 font-mono text-[11px] uppercase tracking-wide text-slate-100">Call</a>
@@ -964,7 +1018,8 @@
                   text: JSON.stringify({
                     email: "llaapp.solutions@gmail.com",
                     phone: "+1-650-374-4225",
-                    whatsapp: "https://wa.me/16503744225"
+                    whatsapp: "https://wa.me/16503744225",
+                    scheduling: "https://calendly.com/llaapp-solutions/llaapp-com"
                   })
                 }]
               };
