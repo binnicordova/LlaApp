@@ -1,0 +1,10 @@
+# Copy to wrangler.toml and fill in your Cloudflare account/zone details,
+# then `wrangler deploy` from the cloudflare/ directory.
+
+name = "llaapp-markdown-for-agents"
+main = "markdown-for-agents-worker.js"
+compatibility_date = "2026-08-01"
+
+routes = [
+  { pattern = "llaapp.com/*", zone_name = "llaapp.com" }
+]

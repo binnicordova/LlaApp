@@ -1,0 +1,16 @@
+{
+  "protocol": "MPP",
+  "specification": "https://mpp.dev",
+  "note": "MPP (co-authored by Tempo and Stripe: https://github.com/tempoxyz/mpp-specs) is an HTTP authentication scheme, not a well-known-document protocol — it defines no standard discovery file. This document is an LLAAPP-authored pointer to where the real 'Payment' auth-scheme challenge (WWW-Authenticate: Payment ...) can be observed live, provided for agent/crawler convenience.",
+  "provider": "LLAAPP",
+  "monetized_endpoints": [
+    {
+      "path": "/api/premium/market-analysis",
+      "method": "GET",
+      "challenge": "WWW-Authenticate: Payment",
+      "also_accepts": "x402 (X-PAYMENT header, see the JSON body of the same 402 response)",
+      "description": "Demo monetized endpoint used to validate MPP + x402 discovery. Testnet/demo only, not a live product."
+    }
+  ],
+  "updated": "2026-08-15"
+}

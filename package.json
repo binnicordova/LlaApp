@@ -1,0 +1,16 @@
+{
+  "name": "llaapp-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Build tooling for the LLAAPP static marketing site (public/).",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/tailwind-input.css -o ./public/assets/css/tailwind.min.css --config ./tailwind.config.js --minify",
+    "watch:css": "tailwindcss -i ./src/tailwind-input.css -o ./public/assets/css/tailwind.min.css --config ./tailwind.config.js --watch",
+    "publish": "firebase deploy",
+    "prepublish": "npm run build:css",
+    "check-links": "node scripts/check-links.mjs"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}

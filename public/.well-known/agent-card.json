@@ -1,0 +1,82 @@
+{
+  "name": "LLAAPP",
+  "description": "AI transformation partner for growing businesses: AI readiness audits, custom AI agents, and LLM/RAG integration, delivered by senior engineers with 10+ years shipping mission-critical software for global market leaders.",
+  "url": "https://llaapp.com/",
+  "iconUrl": "https://llaapp.com/assets/logo-512x512.png",
+  "documentationUrl": "https://llaapp.com/llms-full.txt",
+  "provider": {
+    "organization": "LLAAPP",
+    "url": "https://llaapp.com"
+  },
+  "version": "1.0.0",
+  "protocolVersion": "0.2.0",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "extensions": [
+      {
+        "uri": "https://github.com/google-agentic-commerce/AP2/v1",
+        "description": "AP2 (Agent Payments Protocol) capability declaration for payment-authorized agent transactions.",
+        "required": false,
+        "params": {
+          "supported": false,
+          "status": "planned",
+          "paymentMethodsSupported": [],
+          "note": "LLAAPP does not yet process payments through AP2; engagements are quoted and invoiced directly. This declaration reserves the capability for future agentic checkout support."
+        }
+      }
+    ]
+  },
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["text/plain", "text/markdown"],
+  "authentication": {
+    "schemes": []
+  },
+  "skills": [
+    {
+      "id": "ai-readiness-audit",
+      "name": "AI Readiness & Opportunity Audit",
+      "description": "Structured audit of business operations to find and rank the highest-ROI AI use cases by impact, cost, and implementation risk.",
+      "tags": ["ai-consulting", "audit", "strategy"],
+      "examples": ["Is my business ready to adopt AI?", "What are our highest-ROI AI use cases?"]
+    },
+    {
+      "id": "ai-agents-workflow-automation",
+      "name": "AI Agents & Workflow Automation",
+      "description": "Custom AI agents for support, sales operations, back-office workflows, and approvals, integrated with a client's existing tools.",
+      "tags": ["ai-agents", "automation"],
+      "examples": ["Build an AI agent for our support queue.", "Automate our back-office approvals with AI."]
+    },
+    {
+      "id": "llm-rag-integration",
+      "name": "LLM & Knowledge Integration (RAG)",
+      "description": "Retrieval-augmented copilots and internal knowledge assistants built on a client's own data, with enterprise-grade access controls.",
+      "tags": ["llm", "rag", "knowledge-base"],
+      "examples": ["Build a copilot over our internal documentation."]
+    },
+    {
+      "id": "applied-ai-product-engineering",
+      "name": "Applied AI Product Engineering",
+      "description": "AI-native features shipped inside a client's existing product by senior engineers.",
+      "tags": ["product-engineering", "ai-features"]
+    },
+    {
+      "id": "ai-infrastructure-mlops-governance",
+      "name": "AI Infrastructure, MLOps & Governance",
+      "description": "Secure model deployment, observability, cost control, and governance for production AI systems.",
+      "tags": ["mlops", "governance", "infrastructure"]
+    },
+    {
+      "id": "fractional-ai-strategy",
+      "name": "Fractional AI Strategy & Enablement",
+      "description": "Embedded AI leadership and hands-on team training for lasting internal capability.",
+      "tags": ["strategy", "enablement", "training"]
+    }
+  ],
+  "contact": {
+    "email": "llaapp.solutions@gmail.com",
+    "whatsapp": "https://wa.me/16503744225",
+    "phone": "+1-650-374-4225"
+  }
+}

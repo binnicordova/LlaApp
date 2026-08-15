@@ -1,0 +1,34 @@
+name: GEO Audit (site-wide crawl)
+
+# Uses the real geodaddy-cli (github.com/borabiricik/geodaddy-cli), the same
+# engine behind https://geodaddy.dev/playground. Unlike a single-URL scan,
+# `--max-pages` puts it in site-wide crawl mode: it follows sitemap.xml
+# first, then falls back to a breadth-first crawl, and checks every link it
+# finds — this is what actually clears the "broken link detection requires
+# site-wide crawl mode" warning instead of just re-scanning the homepage.
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 6 * * 1" # weekly, Monday 06:00 UTC — catches link rot even with no deploys
+  workflow_dispatch:
+
+jobs:
+  geo-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install geodaddy-cli
+        run: |
+          curl -L https://github.com/borabiricik/geodaddy-cli/releases/latest/download/geodaddy-linux-x86_64 -o geodaddy
+          chmod +x geodaddy
+
+      - name: Run site-wide crawl (fails the build under score 95)
+        run: ./geodaddy https://llaapp.com --max-pages 20 --fail-under 95 | tee geodaddy-report.json
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: geodaddy-report
+          path: geodaddy-report.json

@@ -104,5 +104,16 @@
   "meta": {
     "title": "Consultoría de Transformación con IA para Empresas | LLAAPP",
     "description": "LLAAPP ayuda a las empresas a adoptar IA: auditorías de preparación, agentes de IA a medida e integración LLM por ingenieros senior. Atendemos Vancouver, Canadá, EE. UU. y Europa."
-  }
+  },
+  "sourcesTitle": "Referencias",
+  "keyFactsTitle": "Datos Clave",
+  "keyFactsLead": "Cifras fechadas y verificables que respaldan las afirmaciones de esta página.",
+  "keyFactsAttribution": "Datos autodeclarados por LLAAPP a partir de registros internos de contratación, revisados por última vez en agosto de 2026. No auditados de forma independiente.",
+  "source1Text": "<cite>Estadísticas de contratación de LLAAPP</cite> (15+ expertos, 20+ sistemas entregados, 12+ sectores, 80+ clientes): registros internos de contratación, autodeclarados por LLAAPP, revisados por última vez en <time datetime=\"2026-08\">agosto de 2026</time>.",
+  "source2Text": "<cite>Historial de clientes</cite> (Coca-Cola / MiMarket, NFL / NFL+ App TV, ITU Bank App, y otros mencionados en <a href=\"#clients\" class=\"underline hover:text-slate-800\">Confianza a Escala Corporativa</a>): registros de entrega de proyectos de LLAAPP. Aún no hay una página pública de caso de estudio para estos proyectos; contacte a <a href=\"mailto:llaapp.solutions@gmail.com\" class=\"underline hover:text-slate-800\">llaapp.solutions@gmail.com</a> para obtener una referencia verificable.",
+  "source3Text": "<cite>Metodología de ingeniería</cite>: basada en los artículos técnicos publicados por LLAAPP en <a href=\"https://blog.llaapp.com/\" target=\"_blank\" rel=\"noreferrer noopener\" class=\"underline hover:text-slate-800\">blog.llaapp.com</a>, incluidos los artículos mencionados en <a href=\"#blog\" class=\"underline hover:text-slate-800\">Insights de Ingeniería</a> más arriba.",
+  "benchmarksTitle": "Referencias del Sector",
+  "benchmarksLead": "Investigación independiente de terceros sobre por qué la mayoría de las iniciativas de IA se estancan antes de generar retorno, precisamente la brecha que nuestra Auditoría de Preparación para IA busca cerrar.",
+  "benchmark1Text": "Según <cite>McKinsey</cite>, el 88% de las organizaciones ya usa IA en al menos una función de negocio, pero solo alrededor del 6% informa capturar más del 5% del EBIT empresarial gracias a ella, una brecha amplia entre adopción y retorno medible. Fuente: <a href=\"https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai\" target=\"_blank\" rel=\"noreferrer noopener\" class=\"underline hover:text-slate-800\">McKinsey, \"The State of AI\" (encuesta global 2025)</a>.",
+  "benchmark2Text": "Según <cite>Gartner</cite>, se proyecta que los agentes de IA especializados en tareas estarán presentes en el 40% de las aplicaciones empresariales para 2026, frente a menos del 5% en 2025, una adopción acelerada que hace más costoso saltarse una auditoría de preparación antes de construir. Fuente: <a href=\"https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025\" target=\"_blank\" rel=\"noreferrer noopener\" class=\"underline hover:text-slate-800\">Gartner Newsroom, comunicado de prensa (26 de agosto de 2025)</a>."
 }

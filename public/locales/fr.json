@@ -104,5 +104,16 @@
   "meta": {
     "title": "Conseil en transformation par l'IA pour entreprises | LLAAPP",
     "description": "LLAAPP aide les entreprises à adopter l'IA : audits de maturité, agents IA sur mesure et intégration LLM par des ingénieurs seniors. Au service de Vancouver, du Canada, des États-Unis et de l'Europe."
-  }
+  },
+  "sourcesTitle": "Références",
+  "keyFactsTitle": "Chiffres Clés",
+  "keyFactsLead": "Des chiffres datés et vérifiables à l'appui des affirmations de cette page.",
+  "keyFactsAttribution": "Données auto-déclarées par LLAAPP à partir de ses registres internes, mises à jour pour la dernière fois en août 2026. Non auditées de manière indépendante.",
+  "source1Text": "<cite>Statistiques d'engagement LLAAPP</cite> (15+ experts, 20+ systèmes livrés, 12+ secteurs, 80+ clients) : registres internes, auto-déclarés par LLAAPP, mis à jour pour la dernière fois en <time datetime=\"2026-08\">août 2026</time>.",
+  "source2Text": "<cite>Historique des clients</cite> (Coca-Cola / MiMarket, NFL / NFL+ App TV, ITU Bank App, et autres cités dans <a href=\"#clients\" class=\"underline hover:text-slate-800\">Une confiance à l'échelle de l'entreprise</a>) : dossiers de livraison de projets détenus par LLAAPP. Aucune étude de cas publique n'est encore en ligne pour ces projets ; contactez <a href=\"mailto:llaapp.solutions@gmail.com\" class=\"underline hover:text-slate-800\">llaapp.solutions@gmail.com</a> pour une référence vérifiable.",
+  "source3Text": "<cite>Méthodologie d'ingénierie</cite> : issue des articles techniques publiés par LLAAPP sur <a href=\"https://blog.llaapp.com/\" target=\"_blank\" rel=\"noreferrer noopener\" class=\"underline hover:text-slate-800\">blog.llaapp.com</a>, y compris les articles cités ci-dessus dans <a href=\"#blog\" class=\"underline hover:text-slate-800\">Regards d'ingénierie</a>.",
+  "benchmarksTitle": "Repères Sectoriels",
+  "benchmarksLead": "Des études indépendantes de tiers sur les raisons pour lesquelles la plupart des initiatives IA calent avant de porter leurs fruits, l'écart que notre Audit de Maturité IA vise justement à combler.",
+  "benchmark1Text": "Selon <cite>McKinsey</cite>, 88 % des organisations utilisent déjà l'IA dans au moins une fonction métier, mais seulement environ 6 % déclarent en tirer plus de 5 % de l'EBIT de l'entreprise, un écart important entre adoption et retour mesurable. Source : <a href=\"https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai\" target=\"_blank\" rel=\"noreferrer noopener\" class=\"underline hover:text-slate-800\">McKinsey, « The State of AI » (enquête mondiale 2025)</a>.",
+  "benchmark2Text": "Selon <cite>Gartner</cite>, des agents IA spécialisés par tâche devraient équiper 40 % des applications d'entreprise d'ici 2026, contre moins de 5 % en 2025, une adoption rapide qui rend d'autant plus coûteux le fait de se passer d'un audit de maturité avant de construire. Source : <a href=\"https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025\" target=\"_blank\" rel=\"noreferrer noopener\" class=\"underline hover:text-slate-800\">Gartner Newsroom, communiqué de presse (26 août 2025)</a>."
 }

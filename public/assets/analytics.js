@@ -64,9 +64,9 @@ const Analytics = {
         
         const finalParams = { ...defaultParams, ...params };
 
-        if (typeof firebase !== 'undefined' && firebase.analytics) {
+        if (window.__firebaseAnalytics && window.__firebaseLogEvent) {
             try {
-                firebase.analytics().logEvent(name, finalParams);
+                window.__firebaseLogEvent(window.__firebaseAnalytics, name, finalParams);
             } catch (e) {
                 console.error('[Analytics] Error logging to Firebase:', e);
             }
@@ -208,7 +208,7 @@ const Analytics = {
         var elapsedMs = 0;
 
         function tryInit() {
-            if (typeof firebase !== 'undefined' && typeof firebase.analytics === 'function') {
+            if (window.__firebaseAnalytics && window.__firebaseLogEvent) {
                 Analytics.init();
                 return;
             }

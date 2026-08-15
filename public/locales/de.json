@@ -104,5 +104,16 @@
   "meta": {
     "title": "KI-Transformationsberatung für Unternehmen | LLAAPP",
     "description": "LLAAPP hilft Unternehmen bei der KI-Einführung: Readiness-Audits, maßgeschneiderte KI-Agenten und LLM-Integration durch Senior-Engineers. Für Vancouver, Kanada, die USA und Europa."
-  }
+  },
+  "sourcesTitle": "Referenzen",
+  "keyFactsTitle": "Fakten im Überblick",
+  "keyFactsLead": "Datierte, überprüfbare Zahlen zu den Aussagen auf dieser Seite.",
+  "keyFactsAttribution": "Selbstauskunft von LLAAPP aus internen Engagement-Aufzeichnungen, zuletzt geprüft im August 2026. Nicht unabhängig testiert.",
+  "source1Text": "<cite>LLAAPP-Engagement-Statistiken</cite> (15+ Experten, 20+ ausgelieferte Systeme, 12+ Sektoren, 80+ Kunden): interne Aufzeichnungen, Selbstauskunft von LLAAPP, zuletzt geprüft im <time datetime=\"2026-08\">August 2026</time>.",
+  "source2Text": "<cite>Kundenhistorie</cite> (Coca-Cola / MiMarket, NFL / NFL+ App TV, ITU Bank App und weitere unter <a href=\"#clients\" class=\"underline hover:text-slate-800\">Bewährt auf Unternehmensebene</a>): Projektunterlagen von LLAAPP. Für diese Projekte ist noch keine öffentliche Fallstudie verfügbar; kontaktieren Sie <a href=\"mailto:llaapp.solutions@gmail.com\" class=\"underline hover:text-slate-800\">llaapp.solutions@gmail.com</a> für eine überprüfbare Referenz.",
+  "source3Text": "<cite>Engineering-Methodik</cite>: basierend auf den von LLAAPP veröffentlichten Fachartikeln auf <a href=\"https://blog.llaapp.com/\" target=\"_blank\" rel=\"noreferrer noopener\" class=\"underline hover:text-slate-800\">blog.llaapp.com</a>, einschließlich der oben unter <a href=\"#blog\" class=\"underline hover:text-slate-800\">Engineering-Insights</a> genannten Artikel.",
+  "benchmarksTitle": "Branchen-Benchmarks",
+  "benchmarksLead": "Unabhängige Studien Dritter dazu, warum die meisten KI-Initiativen ins Stocken geraten, bevor sie sich auszahlen — genau die Lücke, die unser AI Readiness Audit schließt.",
+  "benchmark1Text": "Laut <cite>McKinsey</cite> nutzen 88% der Organisationen KI bereits in mindestens einer Geschäftsfunktion, doch nur rund 6% berichten von mehr als 5% EBIT-Wirkung dadurch — eine große Lücke zwischen Einführung und messbarem Ergebnis. Quelle: <a href=\"https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai\" target=\"_blank\" rel=\"noreferrer noopener\" class=\"underline hover:text-slate-800\">McKinsey, \"The State of AI\" (globale Umfrage 2025)</a>.",
+  "benchmark2Text": "Laut <cite>Gartner</cite> sollen aufgabenspezifische KI-Agenten bis 2026 in 40% der Unternehmensanwendungen vorkommen, gegenüber weniger als 5% im Jahr 2025 — eine schnelle Verbreitung, die ein Readiness-Audit vor dem Bau umso wichtiger macht. Quelle: <a href=\"https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025\" target=\"_blank\" rel=\"noreferrer noopener\" class=\"underline hover:text-slate-800\">Gartner Newsroom, Pressemitteilung (26. Aug. 2025)</a>."
 }

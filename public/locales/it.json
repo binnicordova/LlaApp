@@ -104,5 +104,16 @@
   "meta": {
     "title": "Consulenza per la Trasformazione IA per Aziende | LLAAPP",
     "description": "LLAAPP aiuta le aziende ad adottare l'IA: audit di readiness, agenti IA su misura e integrazione LLM realizzati da ingegneri senior. Al servizio di Vancouver, Canada, USA ed Europa."
-  }
+  },
+  "sourcesTitle": "Riferimenti",
+  "keyFactsTitle": "Dati Chiave",
+  "keyFactsLead": "Dati datati e verificabili a supporto delle affermazioni presenti in questa pagina.",
+  "keyFactsAttribution": "Dati autodichiarati da LLAAPP sulla base di registri interni, ultimo aggiornamento agosto 2026. Non verificati da terzi indipendenti.",
+  "source1Text": "<cite>Statistiche di ingaggio LLAAPP</cite> (15+ esperti, 20+ sistemi consegnati, 12+ settori, 80+ clienti): registri interni, autodichiarati da LLAAPP, ultimo aggiornamento <time datetime=\"2026-08\">agosto 2026</time>.",
+  "source2Text": "<cite>Storico clienti</cite> (Coca-Cola / MiMarket, NFL / NFL+ App TV, ITU Bank App e altri citati in <a href=\"#clients\" class=\"underline hover:text-slate-800\">Affidabilità a Livello Enterprise</a>): registri di consegna dei progetti conservati da LLAAPP. Per questi progetti non è ancora disponibile una case study pubblica; contattare <a href=\"mailto:llaapp.solutions@gmail.com\" class=\"underline hover:text-slate-800\">llaapp.solutions@gmail.com</a> per un riferimento verificabile.",
+  "source3Text": "<cite>Metodologia di ingegneria</cite>: tratta dagli articoli tecnici pubblicati da LLAAPP su <a href=\"https://blog.llaapp.com/\" target=\"_blank\" rel=\"noreferrer noopener\" class=\"underline hover:text-slate-800\">blog.llaapp.com</a>, inclusi gli articoli citati sopra in <a href=\"#blog\" class=\"underline hover:text-slate-800\">Insight di Ingegneria</a>.",
+  "benchmarksTitle": "Benchmark di Settore",
+  "benchmarksLead": "Ricerche indipendenti di terze parti sul perché la maggior parte delle iniziative IA si arena prima di generare valore, esattamente il divario che il nostro AI Readiness Audit colma.",
+  "benchmark1Text": "Secondo <cite>McKinsey</cite>, l'88% delle organizzazioni usa già l'IA in almeno una funzione aziendale, ma solo circa il 6% dichiara di ottenere oltre il 5% dell'EBIT aziendale grazie ad essa: un ampio divario tra adozione e ritorno misurabile. Fonte: <a href=\"https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai\" target=\"_blank\" rel=\"noreferrer noopener\" class=\"underline hover:text-slate-800\">McKinsey, \"The State of AI\" (sondaggio globale 2025)</a>.",
+  "benchmark2Text": "Secondo <cite>Gartner</cite>, si prevede che gli agenti IA specializzati per compito saranno presenti nel 40% delle applicazioni aziendali entro il 2026, contro meno del 5% nel 2025: un'adozione rapida che rende ancora più costoso saltare un audit di readiness prima di costruire. Fonte: <a href=\"https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025\" target=\"_blank\" rel=\"noreferrer noopener\" class=\"underline hover:text-slate-800\">Gartner Newsroom, comunicato stampa (26 ago 2025)</a>."
 }

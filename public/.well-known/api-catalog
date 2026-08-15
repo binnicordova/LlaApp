@@ -1,0 +1,26 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://llaapp.com/",
+      "describedby": [
+        { "href": "https://llaapp.com/llms.txt", "type": "text/plain" },
+        { "href": "https://llaapp.com/llms-full.txt", "type": "text/plain" }
+      ],
+      "service-desc": [
+        { "href": "https://llaapp.com/.well-known/agent-card.json", "type": "application/json", "title": "A2A-style agent card" },
+        { "href": "https://llaapp.com/.well-known/mcp/server-cards.json", "type": "application/json", "title": "MCP server card(s)" },
+        { "href": "https://llaapp.com/.well-known/agent-skills/index.json", "type": "application/json", "title": "Agent skills index" },
+        { "href": "https://llaapp.com/.well-known/oauth-authorization-server", "type": "application/json", "title": "OAuth 2.0 authorization server metadata (RFC 8414)" },
+        { "href": "https://llaapp.com/.well-known/openid-configuration", "type": "application/json", "title": "OpenID Connect discovery" },
+        { "href": "https://llaapp.com/.well-known/oauth-protected-resource", "type": "application/json", "title": "OAuth 2.0 protected resource metadata (RFC 9728)" },
+        { "href": "https://llaapp.com/.well-known/http-message-signatures-directory", "type": "application/json", "title": "Web Bot Auth / HTTP Message Signatures directory" },
+        { "href": "https://llaapp.com/.well-known/ucp", "type": "application/json", "title": "Universal Commerce Protocol (UCP) profile" },
+        { "href": "https://llaapp.com/.well-known/acp.json", "type": "application/json", "title": "Agentic Commerce Protocol (ACP) discovery" },
+        { "href": "https://llaapp.com/.well-known/mpp.json", "type": "application/json", "title": "Micropayment Protocol (MPP) discovery" }
+      ],
+      "sitemap": [
+        { "href": "https://llaapp.com/sitemap.xml", "type": "application/xml" }
+      ]
+    }
+  ]
+}

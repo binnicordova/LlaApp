@@ -1,0 +1,51 @@
+{
+  "$schema": "https://llaapp.com/.well-known/agent-skills/index.json",
+  "name": "LLAAPP Agent Skills",
+  "description": "Catalog of the service areas an AI agent or assistant can reference when helping a user evaluate or engage LLAAPP for AI transformation work.",
+  "version": "1.0.0",
+  "updated": "2026-08-15",
+  "skills": [
+    {
+      "id": "ai-readiness-audit",
+      "name": "AI Readiness & Opportunity Audit",
+      "description": "Structured audit of business operations to find and rank the highest-ROI AI use cases by impact, cost, and implementation risk.",
+      "url": "https://llaapp.com/#services",
+      "tags": ["audit", "strategy", "ai-consulting"]
+    },
+    {
+      "id": "ai-agents-workflow-automation",
+      "name": "AI Agents & Workflow Automation",
+      "description": "Custom AI agents for support, sales operations, back-office workflows, and approvals, integrated with existing tools.",
+      "url": "https://llaapp.com/#services",
+      "tags": ["ai-agents", "automation"]
+    },
+    {
+      "id": "llm-rag-integration",
+      "name": "LLM & Knowledge Integration (RAG)",
+      "description": "Retrieval-augmented copilots and internal knowledge assistants built on a client's own data, with enterprise-grade access controls.",
+      "url": "https://llaapp.com/#services",
+      "tags": ["llm", "rag"]
+    },
+    {
+      "id": "applied-ai-product-engineering",
+      "name": "Applied AI Product Engineering",
+      "description": "AI-native features shipped inside a client's existing product by senior engineers.",
+      "url": "https://llaapp.com/#services",
+      "tags": ["product-engineering"]
+    },
+    {
+      "id": "ai-infrastructure-mlops-governance",
+      "name": "AI Infrastructure, MLOps & Governance",
+      "description": "Secure model deployment, observability, cost control, and governance for production AI systems.",
+      "url": "https://llaapp.com/#services",
+      "tags": ["mlops", "governance"]
+    },
+    {
+      "id": "fractional-ai-strategy",
+      "name": "Fractional AI Strategy & Enablement",
+      "description": "Embedded AI leadership and hands-on team training for lasting internal capability.",
+      "url": "https://llaapp.com/#services",
+      "tags": ["strategy", "enablement"]
+    }
+  ]
+}

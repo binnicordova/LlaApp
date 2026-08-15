@@ -1,0 +1,28 @@
+{
+  "$schema": "https://llaapp.com/.well-known/mcp/server-cards.json",
+  "version": "1.0.0",
+  "updated": "2026-08-15",
+  "servers": [
+    {
+      "name": "llaapp-contact",
+      "title": "LLAAPP Contact & Services",
+      "description": "Reference server card describing LLAAPP's AI transformation services and contact channels for MCP-aware clients. No live MCP endpoint is deployed yet; this card documents the intended surface.",
+      "status": "planned",
+      "version": "0.1.0",
+      "homepage": "https://llaapp.com/",
+      "documentationUrl": "https://llaapp.com/llms-full.txt",
+      "transport": "streamable-http",
+      "endpoint": null,
+      "capabilities": {
+        "tools": true,
+        "resources": true,
+        "prompts": false
+      },
+      "provider": {
+        "name": "LLAAPP",
+        "url": "https://llaapp.com",
+        "contact": "llaapp.solutions@gmail.com"
+      }
+    }
+  ]
+}
