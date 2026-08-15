@@ -1,0 +1,14 @@
+{
+  "protocol": "ACP",
+  "version": "1.0",
+  "merchant": {
+    "name": "LLAAPP",
+    "url": "https://llaapp.com",
+    "contact": "llaapp.solutions@gmail.com"
+  },
+  "checkout_supported": false,
+  "product_feed_url": null,
+  "engagement_model": "consultation-based-services",
+  "delegate_payment_supported": false,
+  "documentation": "https://llaapp.com/llms-full.txt"
+}

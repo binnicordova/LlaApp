@@ -14,6 +14,10 @@ LLAAPP is an AI transformation partner for growing businesses and entrepreneurs.
 ## Core Philosophical Alignment
 We prioritize **provable AI delivery over AI buzzwords**. An AI system that is not integrated into real data, real workflows, and real governance is a demo, not a transformation. Every engagement starts with an honest readiness assessment before any build work, and every recommendation is tied to a measurable business outcome: time saved, cost reduced, or revenue unlocked.
 
+## The AI Architecture & ROI Audit
+
+LLAAPP's primary client acquisition offer is the AI Architecture & ROI Audit: a complimentary, private 45-minute working session for a qualified corporate leadership team, led by a senior architect, not sales staff. Covers: a live pass at the cost/risk/payback ranking framework applied to the attendee's business, a build-vs-integrate assessment for their highest-friction workflows, and the attendee's real security/governance exposure from AI adoption. Free, limited to qualified corporate teams, book directly at https://calendly.com/llaapp-solutions/llaapp-com or request via llaapp.solutions@gmail.com.
+
 ## Detailed Capabilities
 
 ### 1. AI Readiness & Opportunity Audit

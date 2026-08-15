@@ -11,6 +11,9 @@ LLAAPP helps growing businesses and entrepreneurs turn AI from a buzzword into m
 - Delivery model: remote-first, senior-led engagements for businesses anywhere in these regions.
 - Local search intent coverage: AI consultant Vancouver, AI transformation company Canada, AI consulting San Francisco, AI consulting Texas, AI consulting Chicago, AI consulting USA, KI Beratung Deutschland, consulenza IA Italia, consultoría IA España, AI consulting Europe.
 
+## The AI Architecture & ROI Audit
+A complimentary, private 45-minute technical briefing for qualified corporate leadership teams, led by a senior architect, not a sales rep. Covers live AI opportunity ranking, a build-vs-integrate assessment, and a security/governance exposure map. Book via https://calendly.com/llaapp-solutions/llaapp-com or request via llaapp.solutions@gmail.com.
+
 ## Capabilities
 - **AI Readiness & Opportunity Audit**: Structured audit of business operations to find and rank the highest-ROI AI use cases by impact, cost, and implementation risk.
 - **AI Agents & Workflow Automation**: Custom AI agents for support, sales operations, back-office workflows, and approvals, integrated with existing tools.

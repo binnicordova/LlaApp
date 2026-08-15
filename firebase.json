@@ -4,7 +4,48 @@
     "ignore": [
       "firebase.json",
       "**/.*",
+      "!/.well-known/**",
       "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(jpg|jpeg|png|gif|svg|webp|avif|ico)",
+        "headers": [
+          { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        ]
+      },
+      {
+        "source": "/assets/**/*.@(js|css)",
+        "headers": [
+          { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        ]
+      },
+      {
+        "source": "/",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "<https://llaapp.com/sitemap.xml>; rel=\"sitemap\"; type=\"application/xml\", <https://llaapp.com/llms.txt>; rel=\"alternate\"; type=\"text/plain\", <https://llaapp.com/.well-known/agent-card.json>; rel=\"agent-card\"; type=\"application/json\""
+          }
+        ]
+      },
+      {
+        "source": "/.well-known/api-catalog",
+        "headers": [
+          { "key": "Content-Type", "value": "application/linkset+json" }
+        ]
+      },
+      {
+        "source": "/.well-known/@(oauth-authorization-server|openid-configuration|oauth-protected-resource|http-message-signatures-directory|ucp)",
+        "headers": [
+          { "key": "Content-Type", "value": "application/json" }
+        ]
+      }
+    ],
+    "rewrites": [
+      { "source": "/oauth/**", "function": "llaapp" },
+      { "source": "/api/premium/**", "function": "llaapp" },
+      { "source": "/", "function": "renderHome" }
     ]
   },
   "functions": [

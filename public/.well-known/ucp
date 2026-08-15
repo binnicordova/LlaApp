@@ -1,0 +1,22 @@
+{
+  "protocol": "UCP",
+  "version": "0.1",
+  "provider": {
+    "name": "LLAAPP",
+    "url": "https://llaapp.com",
+    "type": "ProfessionalService",
+    "contact": "llaapp.solutions@gmail.com"
+  },
+  "commerce": {
+    "checkout_supported": false,
+    "catalog_url": null,
+    "engagement_model": "consultation",
+    "conversion_endpoint": "https://llaapp.com/#contact"
+  },
+  "agent_readiness": {
+    "agent_card": "https://llaapp.com/.well-known/agent-card.json",
+    "mcp_server_card": "https://llaapp.com/.well-known/mcp/server-cards.json",
+    "markdown_docs": "https://llaapp.com/llms-full.txt"
+  },
+  "updated": "2026-08-15"
+}
