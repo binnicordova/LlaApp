@@ -4,18 +4,26 @@ Rendered from: [public/index.html](public/index.html)
 
 <img src="public/assets/images/react-native-wgpu_demo.gif" alt="LlaApp demo" width="360" />
 
-## Build High-Performance Mobile Apps That Scale
+## AI Transformation, Engineered to Ship
 
-An enterprise-grade mobile engineering partner delivering secure, scalable applications trusted by global enterprises. Leveraging 10+ years of expertise to support mission-critical systems and millions of users worldwide.
+LLAAPP is an AI transformation partner for growing businesses: AI readiness audits, custom AI agents, and LLM integration, built by senior engineers with 10+ years shipping mission-critical software for global market leaders.
 
-## Services & Capabilities
+## AI Transformation Capabilities
 
-- **Enterprise Mobile Architecture**: Cross-platform strategy, robust backend patterns, and scalable app platforms.
-- **Cross-Platform Development**: React Native senior-led engineering for Android & iOS.
-- **CI/CD & Observability**: Pipelines, monitoring, and performance tooling for production systems.
-- **Security & Compliance**: App-level security, threat modelling, and enterprise governance.
+- **AI Readiness & Opportunity Audit**: Structured audit of business operations to find the highest-ROI AI use cases, ranked by impact, cost, and implementation risk.
+- **AI Agents & Workflow Automation**: Custom AI agents for support, sales operations, back-office workflows, and approvals, integrated with existing tools.
+- **LLM & Knowledge Integration (RAG)**: Retrieval-augmented copilots and internal knowledge assistants built on a client's own data, with enterprise-grade access controls.
+- **Applied AI Product Engineering**: AI-native features shipped inside existing products by the same senior engineering team behind mission-critical apps for global brands.
+- **AI Infrastructure, MLOps & Governance**: Secure model deployment, observability, cost control, and governance for production AI systems.
+- **Fractional AI Strategy & Enablement**: Embedded AI leadership and hands-on team training for lasting internal capability.
 
-## Project Gallery (selected)
+## Where We Work
+
+Vancouver & Canada, the United States (San Francisco, Texas, Chicago, and nationwide), and Europe (Germany, Italy, Spain). Remote-first delivery for businesses anywhere.
+
+## Engineering Foundation (Proof of Delivery Discipline)
+
+Before AI, we earned trust building mission-critical software for major organizations. That same engineering discipline is the foundation every AI system we build stands on.
 
 - [MiMarket (CocaCola)](https://play.google.com/store/apps/details?id=com.mycoke.gulf) — Retail platform for high-volume offline transactions
 - [NFL+ App TV](https://www.nfl.com/apps/) — High-traffic sports engagement platform
@@ -36,7 +44,7 @@ Additional enterprise case studies available upon request. Some projects deliver
 
 - Phone: +1 650 374 4225
 - Talk to an expert: `tel:+16503744225`
-- WhatsApp: [Get a Proposal](https://wa.me/send?phone=16503744225&text=GetAProposal) | [Free Technical Evaluation](https://wa.me/send?phone=16503744225&text=Budget)
+- WhatsApp: [Book a Free AI Audit](https://wa.me/send?phone=16503744225&text=GetAProposal) | [Free AI Readiness Audit](https://wa.me/send?phone=16503744225&text=Budget)
 
 ---
 
