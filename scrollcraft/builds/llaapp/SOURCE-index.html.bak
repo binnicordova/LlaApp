@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI readiness audits, custom AI agents, and custom software for Vancouver and BC companies. Senior engineers, Canadian data residency, SR&amp;ED-documented work.">
+  <!-- 155 chars: within the 120-158 optimal range for search + AI Overviews snippets -->
+  <meta name="keywords" content="ai consultant vancouver, ai consulting vancouver bc, custom software development vancouver, ai transformation british columbia, ai automation vancouver, ai readiness audit vancouver, custom ai agents canada, llm integration consulting canada, canadian data residency ai, sr&amp;ed ai development, ai consulting canada, software consultants metro vancouver, ai consulting surrey burnaby richmond, ai consultant near me, ai consulting usa west coast, generative ai consulting europe">
+  <meta name="robots" content="index, follow">
+  <meta name="geo.region" content="CA-BC">
+  <meta name="geo.placename" content="Vancouver">
+  <meta name="ICBM" content="49.2827, -123.1207">
+  <title>AI Transformation &amp; Custom Software in Vancouver, BC | LLAAPP</title>
+
+  <link rel="canonical" href="https://llaapp.com/">
+  <link rel="alternate" hreflang="en" href="https://llaapp.com/?lang=en">
+  <link rel="alternate" hreflang="es" href="https://llaapp.com/?lang=es">
+  <link rel="alternate" hreflang="de" href="https://llaapp.com/?lang=de">
+  <link rel="alternate" hreflang="it" href="https://llaapp.com/?lang=it">
+  <link rel="alternate" hreflang="fr" href="https://llaapp.com/?lang=fr">
+  <link rel="alternate" hreflang="x-default" href="https://llaapp.com/">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icon-96x96.png">
+  <link rel="apple-touch-icon" href="/assets/icon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://llaapp.com/">
+  <meta property="og:title" content="AI Transformation & Custom Software in Vancouver, BC | LLAAPP">
+  <meta property="og:description" content="AI readiness audits, custom AI agents, and custom software for Vancouver and British Columbia companies. Senior engineers, Canadian data residency, Pacific Time.">
+  <meta property="og:image" content="https://llaapp.com/assets/logo-512x512.png">
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://llaapp.com/">
+  <meta property="twitter:title" content="AI Transformation & Custom Software in Vancouver, BC | LLAAPP">
+  <meta property="twitter:description" content="AI readiness audits, custom AI agents, and custom software for Vancouver and British Columbia companies. Senior engineers, Canadian data residency, Pacific Time.">
+  <meta property="twitter:image" content="https://llaapp.com/assets/logo-512x512.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LLAAPP",
+    "url": "https://llaapp.com",
+    "logo": "https://llaapp.com/assets/logo-512x512.png",
+    "description": "Vancouver, British Columbia AI transformation and custom software partner for mid-market operators: AI readiness audits, custom AI agents, LLM and RAG integration, and custom software engineering, backed by 10+ years of mission-critical software engineering for global market leaders.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Vancouver",
+      "addressRegion": "BC",
+      "addressCountry": "CA"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "llaapp.solutions@gmail.com",
+      "areaServed": ["CA", "US", "DE", "IT", "ES", "Europe", "Global"]
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Vancouver"},
+      {"@type": "AdministrativeArea", "name": "British Columbia"},
+      {"@type": "Country", "name": "Canada"},
+      {"@type": "City", "name": "San Francisco"},
+      {"@type": "AdministrativeArea", "name": "Texas"},
+      {"@type": "City", "name": "Chicago"},
+      {"@type": "Country", "name": "United States"},
+      {"@type": "Country", "name": "Germany"},
+      {"@type": "Country", "name": "Italy"},
+      {"@type": "Country", "name": "Spain"},
+      "Europe"
+    ],
+    "knowsAbout": [
+      "AI Transformation", "Artificial Intelligence Consulting", "AI Readiness Audits", "Custom AI Agents",
+      "LLM Integration", "Retrieval-Augmented Generation", "AI Workflow Automation", "MLOps and AI Governance",
+      "Enterprise Software Engineering", "Cloud Architecture"
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/company/llaapp"
+    ]
+  }
+  </script>
+  <!-- TODO(local-trust): add "streetAddress" and "postalCode" below, and swap the 650 number
+       for a 604/778 line + a llaapp.com email. A Google Business Profile for the Vancouver
+       map pack requires a verifiable street address matching this block exactly. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://llaapp.com/#vancouver",
+    "name": "LLAAPP",
+    "url": "https://llaapp.com",
+    "image": "https://llaapp.com/assets/logo-512x512.png",
+    "logo": "https://llaapp.com/assets/logo-512x512.png",
+    "description": "AI transformation and custom software partner based in Vancouver, British Columbia: AI readiness audits, custom AI agents, LLM and RAG integration, and custom software engineering for mid-market operators, with Canadian data residency and SR&ED-ready technical documentation.",
+    "email": "llaapp.solutions@gmail.com",
+    "telephone": "+1-650-374-4225",
+    "priceRange": "$$$",
+    "currenciesAccepted": "CAD, USD",
+    "paymentAccepted": "Invoice, Bank transfer",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Vancouver",
+      "addressRegion": "BC",
+      "addressCountry": "CA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 49.2827,
+      "longitude": -123.1207
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Vancouver"},
+      {"@type": "City", "name": "Burnaby"},
+      {"@type": "City", "name": "Richmond"},
+      {"@type": "City", "name": "Surrey"},
+      {"@type": "City", "name": "Coquitlam"},
+      {"@type": "City", "name": "North Vancouver"},
+      {"@type": "City", "name": "Victoria"},
+      {"@type": "AdministrativeArea", "name": "British Columbia"},
+      {"@type": "Country", "name": "Canada"}
+    ],
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 49.2827, "longitude": -123.1207},
+      "geoRadius": "100000"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "knowsLanguage": ["en", "es", "fr", "de", "it"],
+    "sameAs": ["https://www.linkedin.com/company/llaapp"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AI Transformation Consulting",
+    "serviceType": "AI Transformation, AI Readiness Audits, Custom AI Agents, and LLM Integration for Businesses",
+    "provider": {
+      "@type": "Organization",
+      "name": "LLAAPP"
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Vancouver"},
+      {"@type": "Country", "name": "Canada"},
+      {"@type": "City", "name": "San Francisco"},
+      {"@type": "AdministrativeArea", "name": "Texas"},
+      {"@type": "City", "name": "Chicago"},
+      {"@type": "Country", "name": "United States"},
+      {"@type": "Country", "name": "Germany"},
+      {"@type": "Country", "name": "Italy"},
+      {"@type": "Country", "name": "Spain"},
+      "Europe",
+      "Global"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "AI Transformation Capabilities",
+      "itemListElement": [
+        {"@type": "Offer", "price": "0", "priceCurrency": "USD", "eligibleCustomerType": "https://schema.org/Business", "itemOffered": {"@type": "Service", "name": "AI Architecture & ROI Audit", "description": "A complimentary, private 45-minute technical briefing for a qualified corporate leadership team, led by a senior architect, covering AI opportunity ranking, build-vs-integrate options, and security/governance exposure."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Readiness & Opportunity Audit", "description": "A fixed-scope, senior-engineer-led audit that ranks every AI opportunity in a business by cost, risk, and payback period, so capital goes to the use cases that produce the return."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Agents & Workflow Automation", "description": "Production-grade AI agents that run support, sales operations, and back-office approvals unattended, integrated into existing systems and engineered to enterprise reliability standards."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "LLM & Knowledge Integration (RAG)", "description": "Retrieval-augmented copilots built on a client's own data, with enterprise-grade access controls and an audit trail, keeping data inside the client's governance perimeter."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Applied AI Product Engineering", "description": "AI-native features shipped directly into an existing product by senior engineers who have built mission-critical applications for global brands, without destabilizing the revenue-bearing platform."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Infrastructure, MLOps & Governance", "description": "Secure model deployment, observability, and cost controls that let AI scale in production without scaling risk exposure, built for teams answerable to a board and a compliance function."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fractional AI Strategy & Enablement", "description": "Embedded, fractional AI leadership and hands-on team training, so an organization keeps shipping AI systems long after the engagement ends, with no consultant dependency built in."}}
+      ]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does an AI transformation consultant actually do for a business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We audit your operations to find the highest-ROI AI use cases, then design and build the AI agents, LLM integrations, or automations that deliver them. We hand off systems your team can run and extend, with documentation and training so results continue after our engagement ends."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I know if my business is ready for AI adoption?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You are ready if you have repeatable manual workflows, unstructured data such as documents, tickets, or emails, or customer-facing processes with predictable questions. We validate readiness with a fixed-scope AI Readiness Audit before recommending any build work, so you invest only where the ROI is clear."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between hiring an AI consultant and just using ChatGPT or Copilot?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Off-the-shelf AI tools like ChatGPT or Copilot help one person at a time. An AI transformation partner integrates AI into your actual systems and data, with security, governance, and reliability built in, so the whole business benefits from AI, not just individual users experimenting on their own."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you build custom AI agents, or only advise on strategy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both. We deliver strategy and AI readiness audits, and our senior engineering team builds and ships the AI agents, RAG systems, and integrations we recommend. It is the same team that has built mission-critical software for global enterprises, so strategy and execution stay fully connected end to end."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does an AI transformation engagement cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Engagements typically start with a fixed-scope AI Readiness Audit, priced flat, followed by phased implementation priced by scope, integrations, and data complexity. You receive a clear, written estimate before any build work begins, so there are no surprise costs once your AI transformation project is underway."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you integrate AI into our existing software instead of rebuilding it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Most engagements add AI capabilities, agents, copilots, and automation into the systems you already run, rather than replacing them outright. This minimizes risk, preserves your existing workflows and data, and shortens time to value compared with a full rebuild of your current software stack."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with small and mid-sized businesses, or only large enterprises?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both. Our engineering discipline was built delivering mission-critical systems for global enterprises like Coca-Cola, the NFL, and major banks, and we apply that same rigor to AI transformation engagements for growing businesses and entrepreneurs, scaling the scope and cost to match your team's size and budget."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which regions does LLAAPP serve for AI consulting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We are based in Vancouver and serve Metro Vancouver, Victoria, and British Columbia in person, plus Canada nationwide. We also work with the US West Coast on Pacific Time and with clients in Germany, Italy, and Spain remotely, with senior engineers in your time zone on every engagement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you keep our data in Canada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We can deploy models, retrieval layers, and application data in Canadian cloud regions so your data stays under Canadian jurisdiction, and we design access controls and audit trails to match your obligations under BC PIPA and PIPEDA. Where a US or EU region is acceptable, we tell you up front what it changes in cost and latency."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does custom AI development qualify for SR&ED tax credits in British Columbia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Custom AI and software development often involves genuine technical uncertainty, which is what the federal SR&ED program and the BC SR&ED tax credit are designed for. We document hypotheses, experiments, and iterations as we build, so your accountant has the technical narrative a claim requires. We are engineers, not tax advisors, so eligibility is confirmed by your own advisor."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you meet clients in person in Vancouver?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Discovery sessions, audit readouts, and milestone reviews can be run on site anywhere in Metro Vancouver, and we keep Pacific Time hours for everything in between. Delivery is remote-first, but the senior engineers making architecture decisions are in your time zone and can be in the room when it matters."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "LLAAPP Engineering Insights",
+    "numberOfItems": 3,
+    "itemListOrder": "https://schema.org/ItemListOrderAscending",
+    "itemListElement": [
+      {
+        "@type": "BlogPosting",
+        "position": 1,
+        "headline": "Strategic Pitfalls in Enterprise Commerce",
+        "description": "Advanced operational insights and practical lessons for scaling high-demand digital architecture.",
+        "url": "https://blog.llaapp.com/2021/06/04/strategic-pitfalls-enterprise-commerce/"
+      },
+      {
+        "@type": "BlogPosting",
+        "position": 2,
+        "headline": "Resilient Cloud Infrastructure Modernization",
+        "description": "Optimizing architectural governance and cost efficiency through distributed cloud-native models.",
+        "url": "https://blog.llaapp.com/2021/05/25/cloud-engineering-llaapp/"
+      },
+      {
+        "@type": "BlogPosting",
+        "position": 3,
+        "headline": "Technical Governance in Distributed Squads",
+        "description": "Enhancing engineering velocity and architectural alignment across cross-functional enterprise programs.",
+        "url": "https://blog.llaapp.com/2021/06/14/agile-technical-governance/"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI Transformation Consulting for Businesses",
+    "description": "AI readiness audits, custom AI agents, and LLM integration for growing businesses, built by senior engineers serving Vancouver, the USA, and Europe.",
+    "image": "https://llaapp.com/assets/logo-512x512.png",
+    "inLanguage": "en",
+    "datePublished": "2026-07-12",
+    "dateModified": "2026-08-15",
+    "author": {
+      "@type": "Organization",
+      "name": "LLAAPP",
+      "url": "https://llaapp.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "LLAAPP",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://llaapp.com/assets/logo-512x512.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://llaapp.com/"
+    },
+    "about": [
+      {"@type": "Thing", "name": "AI Transformation Consulting"},
+      {"@type": "Thing", "name": "AI Readiness Audits"},
+      {"@type": "Thing", "name": "Custom AI Agents"},
+      {"@type": "Thing", "name": "LLM Integration"},
+      {"@type": "Thing", "name": "Retrieval-Augmented Generation (RAG)"},
+      {"@type": "Thing", "name": "AI Workflow Automation"}
+    ],
+    "mentions": [
+      {"@type": "Organization", "name": "Coca-Cola"},
+      {"@type": "Organization", "name": "NFL"},
+      {"@type": "Organization", "name": "Globant"},
+      {"@type": "City", "name": "Vancouver"},
+      {"@type": "Country", "name": "Canada"},
+      {"@type": "Country", "name": "United States"},
+      {"@type": "Country", "name": "Germany"},
+      {"@type": "Country", "name": "Italy"},
+      {"@type": "Country", "name": "Spain"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How LLAAPP Runs an AI Readiness & Opportunity Audit",
+    "description": "The fixed-scope process LLAAPP uses to identify, rank, and plan a business's highest-ROI AI use cases before any build work starts.",
+    "totalTime": "P2W",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Discovery call",
+        "text": "Understand your current operations, tools, data, and goals to scope where AI could plausibly help."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Operations & data audit",
+        "text": "Map workflows, data sources, and pain points across the business to surface candidate AI use cases."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Opportunity ranking",
+        "text": "Score each candidate use case by impact, cost, and implementation risk to find the highest-ROI opportunities."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Roadmap & fixed-scope proposal",
+        "text": "Deliver a written roadmap and a flat-priced proposal for implementation, so there are no surprise costs before build work begins."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Build & ship",
+        "text": "Senior engineers build the recommended AI agents, LLM/RAG integrations, or automations directly into your existing systems."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 6,
+        "name": "Handoff & enablement",
+        "text": "Document the systems and train your team so results continue after the engagement ends."
+      }
+    ]
+  }
+  </script>
+
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+  <link rel="alternate" type="text/plain" title="LLM-friendly version" href="/llms.txt">
+  <link rel="alternate" type="text/plain" title="Full LLM-friendly documentation" href="/llms-full.txt">
+  <link rel="agent-card" type="application/json" title="Agent Card" href="/.well-known/agent-card.json">
+  <link rel="api-catalog" type="application/linkset+json" title="API Catalog" href="/.well-known/api-catalog">
+  <link rel="preload" as="image" href="/assets/ext/images/hero-aurora.svg">
+  <link rel="stylesheet" href="/assets/css/tailwind.min.css?v=20260815">
+  <style>
+    /* Match the hero's tone so overscroll/rubber-band bounce at the top
+       never flashes a light strip in behind the sticky header. */
+    html {
+      background-color: #06080e;
+    }
+
+    main > section:not(:first-child) {
+      content-visibility: auto;
+      contain-intrinsic-size: 1px 900px;
+    }
+
+    img {
+      height: auto;
+    }
+
+    :root {
+      --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.7s var(--ease-spring), transform 0.7s var(--ease-spring);
+      transition-delay: var(--reveal-delay, 0s);
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Header: a soft gradient scrim + progressively-fading blur, not a bar.
+       Both the tint and the blur dissolve to nothing via the same mask, so
+       there is no hard edge where chrome meets content. */
+    .header-fade {
+      background: linear-gradient(to bottom, rgba(6,8,14,0.92) 0%, rgba(6,8,14,0.72) 45%, rgba(6,8,14,0.28) 78%, rgba(6,8,14,0) 100%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      -webkit-mask-image: linear-gradient(to bottom, black 0%, black 45%, transparent 100%);
+      mask-image: linear-gradient(to bottom, black 0%, black 45%, transparent 100%);
+      transition: opacity 0.4s ease;
+    }
+    header.is-scrolled .header-fade {
+      background: linear-gradient(to bottom, rgba(6,8,14,0.97) 0%, rgba(6,8,14,0.85) 55%, rgba(6,8,14,0.35) 85%, rgba(6,8,14,0) 100%);
+    }
+
+    @keyframes driftSlow {
+      0%, 100% { transform: translate3d(0, 0, 0) rotate(var(--r, 0deg)); }
+      50% { transform: translate3d(0, -22px, 0) rotate(calc(var(--r, 0deg) + 2deg)); }
+    }
+    @keyframes shimmer {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+
+    .drift-shape { animation: driftSlow 9s ease-in-out infinite; }
+    .text-shimmer {
+      background: linear-gradient(100deg, #f8fafc 42%, #ffed00 50%, #f8fafc 58%);
+      background-size: 220% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: shimmer 6s linear infinite;
+    }
+
+    /* Hero parallax background */
+    .hero-parallax-layer {
+      will-change: transform;
+    }
+    #neuronCanvas {
+      display: block;
+    }
+
+    /* Industry / capability tiles */
+    .tile-icon {
+      transition: transform 0.5s var(--ease-spring);
+    }
+    a.group:hover .tile-icon, a.group:focus-visible .tile-icon {
+      transform: scale(1.1) translateY(-2px);
+    }
+
+    /* Press feedback (respond on press, not release) */
+    .press:active {
+      transform: scale(0.97);
+      transition: transform 0.1s ease-out;
+    }
+
+    /* Client logo marquee */
+    .logo-marquee {
+      overflow-x: auto;
+      scrollbar-width: thin;
+    }
+    .logo-track {
+      width: max-content;
+    }
+    .logo-track.is-animated {
+      animation: marqueeScroll 46s linear infinite;
+    }
+    .logo-marquee:hover .logo-track.is-animated,
+    .logo-marquee:focus-within .logo-track.is-animated {
+      animation-play-state: paused;
+    }
+    @keyframes marqueeScroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* Consistent, visible keyboard focus everywhere */
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+      outline: 2px solid #3b48ff;
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .drift-shape, .text-shimmer, .logo-track.is-animated {
+        animation: none !important;
+      }
+      .reveal {
+        transition: opacity 0.3s ease !important;
+        transform: none !important;
+      }
+      .press:active {
+        transform: none;
+      }
+      .hero-parallax-layer {
+        transform: none !important;
+      }
+    }
+
+    @media (prefers-reduced-transparency: reduce) {
+      header, #menuPanel {
+        background-color: rgb(6, 8, 14) !important;
+        backdrop-filter: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-night text-ink font-body antialiased pb-[calc(5rem+env(safe-area-inset-bottom))] lg:pb-0">
+  <header class="sticky top-0 z-40">
+    <div class="header-fade pointer-events-none absolute inset-x-0 top-0 h-24 lg:h-28" aria-hidden="true"></div>
+    <div class="relative z-10 mx-auto flex min-h-16 w-[min(1180px,calc(100%-1.5rem))] items-center gap-3 lg:min-h-20 lg:w-[min(1180px,calc(100%-2rem))]">
+      <a href="#home" class="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-[0.1em] text-white" aria-label="Home" data-analytics-event="home_click">
+        <img src="/assets/logo-56x56.png" srcset="/assets/logo-28x28.png 1x, /assets/logo-56x56.png 2x, /assets/logo-84x84.png 3x" alt="LLAAPP logo" width="28" height="28" decoding="async" class="h-7 w-auto rounded">
+        <span>LLAAPP</span>
+      </a>
+
+      <button id="menuToggle" data-analytics-event="mobile_menu_toggle" class="ml-auto inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-white/25 bg-white/10 px-4 text-xs uppercase tracking-wide text-white transition hover:border-white/50 hover:bg-white/15 lg:hidden" aria-expanded="false" aria-controls="menuPanel">Menu</button>
+
+      <nav class="ml-auto hidden items-center gap-1 lg:inline-flex" aria-label="Primary navigation">
+        <a href="#services" data-i18n="navServices" data-analytics-event="nav_click" data-analytics-label="Desktop Services" class="rounded-full px-3 py-2 font-mono text-xs uppercase tracking-wide text-slate-200 transition-colors hover:bg-white/10 hover:text-white">Services</a>
+        <a href="#industries" data-i18n="navIndustries" data-analytics-event="nav_click" data-analytics-label="Desktop Industries" class="rounded-full px-3 py-2 font-mono text-xs uppercase tracking-wide text-slate-200 transition-colors hover:bg-white/10 hover:text-white">Industries</a>
+        <a href="#clients" data-i18n="navCaseStudies" data-analytics-event="nav_click" data-analytics-label="Desktop Case Studies" class="rounded-full px-3 py-2 font-mono text-xs uppercase tracking-wide text-slate-200 transition-colors hover:bg-white/10 hover:text-white">Case Studies</a>
+        <a href="#why" data-i18n="navAbout" data-analytics-event="nav_click" data-analytics-label="Desktop About Us" class="rounded-full px-3 py-2 font-mono text-xs uppercase tracking-wide text-slate-200 transition-colors hover:bg-white/10 hover:text-white">About Us</a>
+        <a href="#contact" data-i18n="navContact" data-analytics-event="nav_click" data-analytics-label="Desktop Contact Us" class="rounded-full px-3 py-2 font-mono text-xs uppercase tracking-wide text-slate-200 transition-colors hover:bg-white/10 hover:text-white">Contact Us</a>
+        <a href="#briefing" data-i18n="navCharla" data-analytics-event="nav_click" data-analytics-label="Desktop Technical Briefing" class="press ml-1 inline-flex min-h-11 items-center rounded-full bg-signal px-6 py-2 font-mono text-xs font-bold uppercase tracking-wide text-indigo-950 shadow-lg shadow-yellow-300/30 transition-shadow hover:shadow-xl hover:shadow-yellow-300/40">Technical Briefing</a>
+      </nav>
+
+      <div class="hidden items-center gap-2 lg:inline-flex" aria-label="Language switcher">
+        <a href="#" class="text-slate-300 hover:text-white [&.active]:font-bold [&.active]:text-signal [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="en" data-analytics-event="lang_switch_click" data-analytics-label="EN" aria-label="English">EN</a>
+        <span class="text-slate-500">|</span>
+        <a href="#" class="text-slate-300 hover:text-white [&.active]:font-bold [&.active]:text-signal [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="fr" data-analytics-event="lang_switch_click" data-analytics-label="FR" aria-label="French">FR</a>
+        <span class="text-slate-500">|</span>
+        <a href="#" class="text-slate-300 hover:text-white [&.active]:font-bold [&.active]:text-signal [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="es" data-analytics-event="lang_switch_click" data-analytics-label="ES" aria-label="Spanish">ES</a>
+        <span class="text-slate-500">|</span>
+        <a href="#" class="text-slate-300 hover:text-white [&.active]:font-bold [&.active]:text-signal [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="de" data-analytics-event="lang_switch_click" data-analytics-label="DE" aria-label="German">DE</a>
+        <span class="text-slate-500">|</span>
+        <a href="#" class="text-slate-300 hover:text-white [&.active]:font-bold [&.active]:text-signal [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="it" data-analytics-event="lang_switch_click" data-analytics-label="IT" aria-label="Italian">IT</a>
+      </div>
+
+      <div id="menuPanel" class="absolute right-3 top-[calc(100%+.5rem)] hidden w-[min(340px,calc(100vw-1.5rem))] overflow-hidden rounded-2xl border border-white/10 bg-night/95 shadow-strong backdrop-blur-lg lg:hidden" aria-hidden="true">
+        <nav aria-label="Mobile menu" class="grid">
+          <a href="#briefing" data-i18n="navCharla" data-analytics-event="nav_click" data-analytics-label="Mobile Technical Briefing" class="min-h-11 border-b border-white/10 px-4 py-3 font-bold text-signal hover:bg-white/5">Technical Briefing</a>
+          <a href="#services" data-i18n="navServices" data-analytics-event="nav_click" data-analytics-label="Mobile Services" class="min-h-11 border-b border-white/10 px-4 py-3 text-slate-200 hover:bg-white/5">Services</a>
+          <a href="#industries" data-i18n="navIndustries" data-analytics-event="nav_click" data-analytics-label="Mobile Industries" class="min-h-11 border-b border-white/10 px-4 py-3 text-slate-200 hover:bg-white/5">Industries</a>
+          <a href="#clients" data-i18n="navCaseStudies" data-analytics-event="nav_click" data-analytics-label="Mobile Case Studies" class="min-h-11 border-b border-white/10 px-4 py-3 text-slate-200 hover:bg-white/5">Case Studies</a>
+          <a href="#why" data-i18n="navAbout" data-analytics-event="nav_click" data-analytics-label="Mobile About Us" class="min-h-11 border-b border-white/10 px-4 py-3 text-slate-200 hover:bg-white/5">About Us</a>
+          <a href="#blog" data-i18n="navBlog" data-analytics-event="nav_click" data-analytics-label="Mobile Blog" class="min-h-11 border-b border-white/10 px-4 py-3 text-slate-200 hover:bg-white/5">Blog</a>
+          <a href="#contact" data-i18n="navContact" data-analytics-event="nav_click" data-analytics-label="Mobile Contact Us" class="min-h-11 px-4 py-3 text-slate-200 hover:bg-white/5">Contact Us</a>
+        </nav>
+        <div class="grid grid-cols-5 border-t border-white/10 bg-white/5" aria-label="Mobile language switcher">
+          <a href="#" class="inline-flex min-h-11 items-center justify-center border-r border-white/10 font-mono text-xs uppercase tracking-wide text-slate-300 [&.active]:font-bold [&.active]:text-signal [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="en" data-analytics-event="lang_switch_click_mobile" data-analytics-label="EN" aria-label="English">EN</a>
+          <a href="#" class="inline-flex min-h-11 items-center justify-center border-r border-white/10 font-mono text-xs uppercase tracking-wide text-slate-300 [&.active]:font-bold [&.active]:text-signal [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="fr" data-analytics-event="lang_switch_click_mobile" data-analytics-label="FR" aria-label="French">FR</a>
+          <a href="#" class="inline-flex min-h-11 items-center justify-center border-r border-white/10 font-mono text-xs uppercase tracking-wide text-slate-300 [&.active]:font-bold [&.active]:text-signal [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="es" data-analytics-event="lang_switch_click_mobile" data-analytics-label="ES" aria-label="Spanish">ES</a>
+          <a href="#" class="inline-flex min-h-11 items-center justify-center border-r border-white/10 font-mono text-xs uppercase tracking-wide text-slate-300 [&.active]:font-bold [&.active]:text-signal [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="de" data-analytics-event="lang_switch_click_mobile" data-analytics-label="DE" aria-label="German">DE</a>
+          <a href="#" class="inline-flex min-h-11 items-center justify-center font-mono text-xs uppercase tracking-wide text-slate-300 [&.active]:font-bold [&.active]:text-signal [&.active]:underline [&.active]:decoration-2 [&.active]:underline-offset-4" data-lang-switch="it" data-analytics-event="lang_switch_click_mobile" data-analytics-label="IT" aria-label="Italian">IT</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <section id="heroSection" class="relative overflow-hidden bg-night py-20 sm:py-24 lg:py-28">
+      <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+        <div class="hero-parallax-layer absolute inset-[-12%]" data-parallax-speed="0.1">
+          <img src="/assets/ext/images/hero-aurora.svg" alt="Abstract aurora-toned gradient background symbolizing AI transformation" width="1600" height="1000" fetchpriority="high" decoding="async" class="h-full w-full object-cover">
+        </div>
+        <canvas id="neuronCanvas" class="absolute inset-0 h-full w-full" role="img" aria-label="Animated visualization of an AI neural network"></canvas>
+        <div class="absolute inset-0 bg-night/55"></div>
+        <div class="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-b from-transparent to-night"></div>
+      </div>
+      <div class="relative z-10 mx-auto w-[min(880px,calc(100%-1.5rem))] lg:w-[min(880px,calc(100%-2rem))]">
+        <p class="reveal mb-4 font-mono text-xs uppercase tracking-[0.14em] text-slate-200" style="--reveal-delay:0s" data-i18n="heroEyebrow">Vancouver, BC &middot; AI &amp; Custom Software Partner</p>
+        <h1 class="reveal max-w-[16ch] font-mono text-4xl uppercase leading-[0.95] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl" style="--reveal-delay:.05s" data-i18n="heroTitle" data-i18n-html="heroTitle">Enterprise AI, <span class="text-shimmer">Engineered For ROI_</span></h1>
+        <p class="reveal mt-5 max-w-xl text-base text-slate-100 sm:text-lg" style="--reveal-delay:.1s" data-i18n="heroCopy">For British Columbia operators running real systems: AI agents, LLM integrations, and custom software built by senior engineers with 10+ years shipping mission-critical software for global market leaders &mdash; audited and ROI-ranked before a line of code is written.</p>
+        <p class="sr-only" data-i18n="heroSrSummary">LLAAPP is a Vancouver, British Columbia AI transformation and custom software partner for mid-market leadership teams: AI readiness audits, custom AI agents, LLM and RAG integration, and custom software engineering, delivered by senior engineers with a decade of mission-critical software engineering experience for organizations including Coca-Cola, the NFL, and Google. Every engagement opens with a fixed-scope AI Architecture &amp; ROI Audit that ranks opportunities by cost, risk, and payback period before any build work begins, and systems can be deployed in Canadian cloud regions so client data stays under Canadian jurisdiction.</p>
+
+        <div class="reveal mt-7 grid gap-3 sm:flex sm:flex-wrap" style="--reveal-delay:.15s">
+          <a class="press inline-flex min-h-11 items-center justify-center rounded-full bg-signal px-6 py-3 font-bold text-indigo-950 shadow-lg shadow-yellow-300/40 transition-shadow duration-300 hover:shadow-xl hover:shadow-yellow-300/50" href="#briefing" data-i18n="heroCtaPrimary" data-analytics-event="hero_cta_briefing">Request an Enterprise AI Technical Briefing</a>
+          <a class="press inline-flex min-h-11 items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3 font-bold text-white backdrop-blur transition-colors duration-300 hover:border-white/60 hover:bg-white/15" href="#services" data-i18n="heroCtaSecondary" data-analytics-event="hero_cta_solutions">See Engineering Capabilities</a>
+        </div>
+
+        <div class="reveal mt-10 flex flex-wrap gap-x-8 gap-y-4 border-t border-white/15 pt-6" style="--reveal-delay:.2s">
+          <div><strong class="font-mono text-2xl text-signal sm:text-3xl">+15</strong><span class="ml-2 text-xs uppercase tracking-wide text-slate-200" data-i18n="stat1">AI &amp; Engineering Experts</span></div>
+          <div><strong class="font-mono text-2xl text-signal sm:text-3xl">+20</strong><span class="ml-2 text-xs uppercase tracking-wide text-slate-200" data-i18n="stat2">Enterprise Systems Delivered</span></div>
+          <div><strong class="font-mono text-2xl text-signal sm:text-3xl">+12</strong><span class="ml-2 text-xs uppercase tracking-wide text-slate-200" data-i18n="stat3">Sectors Covered</span></div>
+          <div><strong class="font-mono text-2xl text-signal sm:text-3xl">+80</strong><span class="ml-2 text-xs uppercase tracking-wide text-slate-200" data-i18n="stat4">Market-Leading Clients</span></div>
+        </div>
+
+        <p class="reveal mt-6 flex items-start gap-2 text-sm text-slate-200" style="--reveal-delay:.28s">
+          <svg class="mt-0.5 h-5 w-5 shrink-0 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M3 12h18"></path>
+            <path d="M12 3c2.5 2.6 3.8 5.8 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.8-3.8-9S9.5 5.6 12 3Z"></path>
+          </svg>
+          <span data-i18n="heroGeoLine">Based in Vancouver, BC. On site across Metro Vancouver &mdash; Burnaby, Richmond, Surrey, Coquitlam, North Vancouver &mdash; and remote on Pacific Time for Canada, the US West Coast, and Europe.</span>
+        </p>
+      </div>
+    </section>
+
+    <section id="tldr" aria-label="Key takeaways" class="relative bg-slate-950 py-10 text-slate-100">
+      <div class="mx-auto w-[min(880px,calc(100%-1.5rem))] lg:w-[min(880px,calc(100%-2rem))]">
+        <p class="font-mono text-xs font-bold uppercase tracking-[0.14em] text-signal" data-i18n="tldrLabel">TL;DR / Key Takeaways</p>
+        <p class="mt-3 text-lg font-semibold leading-snug text-white" data-i18n="tldrAnswer">LLAAPP is a Vancouver, BC AI transformation and custom software partner: we run AI readiness audits, build custom AI agents and LLM and RAG integrations, and ship them into the systems mid-market British Columbia companies already run, delivered by senior engineers, with a Canadian data-residency option.</p>
+        <ul class="mt-4 grid gap-x-6 gap-y-2 text-sm text-slate-300 sm:grid-cols-2">
+          <li class="flex gap-2"><span aria-hidden="true" class="text-signal">&#8226;</span><span data-i18n="tldrPoint1">A fixed-scope AI Readiness Audit identifies your highest-ROI AI use cases before any build work starts.</span></li>
+          <li class="flex gap-2"><span aria-hidden="true" class="text-signal">&#8226;</span><span data-i18n="tldrPoint2">Custom AI agents and workflow automation integrate into the tools you already run, not a rebuild.</span></li>
+          <li class="flex gap-2"><span aria-hidden="true" class="text-signal">&#8226;</span><span data-i18n="tldrPoint3">LLM and RAG integration is built on your own data and can be deployed in Canadian cloud regions, under BC PIPA and PIPEDA.</span></li>
+          <li class="flex gap-2"><span aria-hidden="true" class="text-signal">&#8226;</span><span data-i18n="tldrPoint4">15+ senior AI and engineering experts have delivered 20+ enterprise systems for 80+ clients.</span></li>
+          <li class="flex gap-2"><span aria-hidden="true" class="text-signal">&#8226;</span><span data-i18n="tldrPoint5">Custom AI development can qualify for SR&amp;ED tax credits; we document the work so your accountant can assess a claim.</span></li>
+          <li class="flex gap-2"><span aria-hidden="true" class="text-signal">&#8226;</span><span data-i18n="tldrPoint6">Senior engineers on Pacific Time, in the room across Metro Vancouver, with no offshore hand-off after the sales call.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="vancouver" aria-label="Why British Columbia companies work with LLAAPP" class="relative overflow-hidden bg-white py-14">
+      <div class="drift-shape pointer-events-none absolute -right-48 top-2 hidden h-48 w-[34rem] rounded-[2rem] bg-gradient-to-r from-signal via-brand to-indigo-900 opacity-30 blur-[2px] md:block" style="--r:-9deg; transform:rotate(-9deg); animation-delay:-6s"></div>
+      <div class="relative z-10 mx-auto w-[min(1180px,calc(100%-1.5rem))] lg:w-[min(1180px,calc(100%-2rem))]">
+        <p class="reveal font-mono text-xs font-bold uppercase tracking-[0.14em] text-brand" data-i18n="vanEyebrow">Vancouver, British Columbia</p>
+        <h2 class="reveal mt-2 font-mono text-2xl uppercase tracking-wide text-ink sm:text-3xl" style="--reveal-delay:.05s" data-i18n="vanTitle">Built For BC Operators</h2>
+        <p class="reveal mt-3 max-w-3xl text-slate-600" style="--reveal-delay:.1s" data-i18n="vanLead">Four things a Vancouver leadership team has to resolve before AI gets past the pilot stage: where the data lives, who pays for the R&amp;D, who is actually in the room, and whether procurement can approve the counterparty.</p>
+
+        <div class="mt-6 grid gap-4 md:grid-cols-2">
+          <article class="reveal rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-colors duration-300 hover:border-brand/40 hover:bg-white" style="--reveal-delay:.15s">
+            <h3 class="font-mono text-xs uppercase tracking-wide text-ink" data-i18n="van1Title">Your data stays in Canada</h3>
+            <p class="mt-2 text-sm text-slate-600" data-i18n="van1Text">We deploy models, retrieval layers, and application data in Canadian cloud regions when your governance requires it, and design access controls and audit trails to match your obligations under BC PIPA and PIPEDA, so legal and IT can sign off without a residency exception.</p>
+          </article>
+          <article class="reveal rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-colors duration-300 hover:border-brand/40 hover:bg-white" style="--reveal-delay:.2s">
+            <h3 class="font-mono text-xs uppercase tracking-wide text-ink" data-i18n="van2Title">SR&amp;ED-documented engineering</h3>
+            <p class="mt-2 text-sm text-slate-600" data-i18n="van2Text">Custom AI work frequently involves real technical uncertainty, which is what the federal SR&amp;ED program and the BC tax credit exist for. We keep hypotheses, experiments, and iteration logs from day one so your accountant has the technical narrative a claim needs. We are engineers, not tax advisors; your advisor confirms eligibility.</p>
+          </article>
+          <article class="reveal rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-colors duration-300 hover:border-brand/40 hover:bg-white" style="--reveal-delay:.25s">
+            <h3 class="font-mono text-xs uppercase tracking-wide text-ink" data-i18n="van3Title">Pacific Time, in the room</h3>
+            <p class="mt-2 text-sm text-slate-600" data-i18n="van3Text">Senior engineers in your time zone, on site across Metro Vancouver for working sessions and milestone reviews, and overlapping the full US West Coast business day. No twelve-hour lag, and no hand-off to a different team after the sales call.</p>
+          </article>
+          <article class="reveal rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-colors duration-300 hover:border-brand/40 hover:bg-white" style="--reveal-delay:.3s">
+            <h3 class="font-mono text-xs uppercase tracking-wide text-ink" data-i18n="van4Title">Procurement-ready from the first call</h3>
+            <p class="mt-2 text-sm text-slate-600" data-i18n="van4Text">Fixed-scope, flat-priced audits, a written estimate before any build work, verifiable references on request, and a British Columbia counterparty: the paperwork a credit union, health authority, or public body needs before a purchase order gets issued.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="briefing" aria-label="Enterprise AI technical briefing" class="relative overflow-hidden bg-slate-50 py-14">
+      <div class="drift-shape pointer-events-none absolute -right-40 -top-16 hidden h-56 w-[36rem] rounded-[2rem] bg-gradient-to-r from-signal via-brand to-indigo-900 opacity-40 blur-[2px] md:block" style="--r:10deg; transform:rotate(10deg); animation-delay:-3s"></div>
+      <div class="relative z-10 mx-auto w-[min(1180px,calc(100%-1.5rem))] lg:w-[min(1180px,calc(100%-2rem))]">
+        <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+          <div>
+            <p class="reveal font-mono text-xs font-bold uppercase tracking-[0.14em] text-brand" data-i18n="charlaEyebrow">Free, For Qualified Leadership Teams</p>
+            <h2 class="reveal mt-2 font-mono text-2xl uppercase tracking-wide text-ink sm:text-3xl" style="--reveal-delay:.05s" data-i18n="charlaTitle">The AI Architecture &amp; ROI Audit</h2>
+            <p class="reveal mt-3 max-w-xl text-slate-600" style="--reveal-delay:.1s" data-i18n="charlaLead">A private, 45-minute working session for your leadership team, led by a senior architect, not an account executive. We apply our impact/cost/risk ranking framework live, to two or three of your actual workflows, so your team leaves with a first-draft opportunity shortlist instead of a slide deck.</p>
+
+            <ul class="mt-6 grid gap-4">
+              <li class="reveal flex gap-3 rounded-xl border border-slate-200 bg-white p-4" style="--reveal-delay:.15s">
+                <span aria-hidden="true" class="mt-0.5 font-mono text-xs font-bold text-brand">01</span>
+                <div>
+                  <p class="font-mono text-xs uppercase tracking-wide text-ink" data-i18n="charlaPoint1Title">Live Opportunity Ranking</p>
+                  <p class="mt-1 text-sm text-slate-600" data-i18n="charlaPoint1Text">A senior architect applies our cost, risk, and payback framework to two or three of your highest-friction workflows in real time, live math on your actual operation, not a template.</p>
+                </div>
+              </li>
+              <li class="reveal flex gap-3 rounded-xl border border-slate-200 bg-white p-4" style="--reveal-delay:.2s">
+                <span aria-hidden="true" class="mt-0.5 font-mono text-xs font-bold text-brand">02</span>
+                <div>
+                  <p class="font-mono text-xs uppercase tracking-wide text-ink" data-i18n="charlaPoint2Title">Build vs. Integrate Assessment</p>
+                  <p class="mt-1 text-sm text-slate-600" data-i18n="charlaPoint2Text">An engineering-level read on whether to extend your current stack, add an LLM/RAG layer, or build a custom agent, with rough cost and complexity ranges you can bring back to your board.</p>
+                </div>
+              </li>
+              <li class="reveal flex gap-3 rounded-xl border border-slate-200 bg-white p-4" style="--reveal-delay:.25s">
+                <span aria-hidden="true" class="mt-0.5 font-mono text-xs font-bold text-brand">03</span>
+                <div>
+                  <p class="font-mono text-xs uppercase tracking-wide text-ink" data-i18n="charlaPoint3Title">Security &amp; Governance Exposure Map</p>
+                  <p class="mt-1 text-sm text-slate-600" data-i18n="charlaPoint3Text">A direct read on where model access, data handling, or vendor lock-in becomes a liability if adoption outpaces your governance, delivered by the person who would own that risk.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="reveal rounded-2xl border border-slate-200 bg-white p-6 shadow-sm lg:sticky lg:top-24" style="--reveal-delay:.15s">
+            <p class="font-mono text-xs font-bold uppercase tracking-wide text-brand" data-i18n="charlaVancouverTitle">The Vancouver Edge</p>
+            <p class="mt-2 text-sm text-slate-600" data-i18n-html="charlaVancouverText">Vancouver isn't a spectator in the AI infrastructure buildout, it's becoming one of its physical centers. TELUS and Westbank are converting the former Hootsuite headquarters in Mount Pleasant into the M3 data centre, backed by the Government of Canada's sovereign AI initiative: up to 13,000 GPUs and 26 megawatts of compute online by the end of 2026. <a href="https://www.canada.ca/en/innovation-science-economic-development/news/2026/05/government-of-canada-and-telus-advance-work-to-build-sovereign-ai-infrastructure.html" target="_blank" rel="noreferrer noopener" class="underline hover:text-slate-800">Source: Government of Canada</a>. The businesses that move now will be ready to run mission-critical AI on sovereign, low-latency compute before their competitors even have a strategy.</p>
+
+            <div class="mt-6 border-t border-slate-200 pt-6">
+              <p class="font-mono text-sm font-bold text-ink" data-i18n="charlaCtaTitle">Your team's first honest conversation about AI.</p>
+              <p class="mt-2 text-sm text-slate-600" data-i18n="charlaCtaText">We only run a limited number of these audits each month, reserved for qualified corporate leadership teams ready to move past AI experimentation.</p>
+              <a href="https://calendly.com/llaapp-solutions/llaapp-com" target="_blank" rel="noreferrer noopener" data-analytics-event="briefing_cta_click" data-analytics-label="Briefing CTA" class="press mt-4 inline-flex min-h-11 w-full items-center justify-center rounded-full bg-signal px-6 py-3 text-center font-bold text-indigo-950 shadow-lg shadow-yellow-300/30 transition-shadow duration-300 hover:shadow-xl hover:shadow-yellow-300/40" data-i18n="charlaCtaButton">Request an Enterprise AI Technical Briefing</a>
+              <p class="mt-2 text-center text-xs text-slate-400" data-i18n="charlaCtaNote">Spots are limited. Qualified corporate teams only.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="relative overflow-hidden bg-night py-14 text-slate-50">
+      <div class="drift-shape pointer-events-none absolute -left-44 bottom-[-5rem] hidden h-48 w-[30rem] rounded-[2rem] bg-gradient-to-r from-signal via-brand to-indigo-900 blur-[2px] md:block" style="--r:13deg; transform:rotate(13deg); animation-delay:-2s"></div>
+      <div class="relative z-10 mx-auto w-[min(1180px,calc(100%-1.5rem))] lg:w-[min(1180px,calc(100%-2rem))]">
+        <h2 class="reveal font-mono text-2xl uppercase tracking-wide" data-i18n="capabilitiesTitle">AI Transformation Capabilities</h2>
+        <p class="reveal mt-3 max-w-3xl text-slate-200" style="--reveal-delay:.05s" data-i18n="capabilitiesLead">Six ways we help growing businesses adopt AI that produces measurable results, not just pilots.</p>
+        <div class="relative mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <article class="reveal group relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950 p-4 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1.5 hover:border-brand/60 hover:shadow-[0_20px_40px_-20px_rgba(59,72,255,0.55)]" style="--reveal-delay:.05s">
+            <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950 transition-transform duration-500 group-hover:scale-110">01</div>
+            <h3 class="font-mono text-xs uppercase tracking-wide text-slate-100" data-i18n="service1Title">AI Readiness &amp; Opportunity Audit</h3>
+            <p class="mt-2 text-sm text-slate-300" data-i18n="service1Desc">A fixed-scope, senior-engineer-led audit that ranks every AI opportunity in your operation by cost, risk, and payback period, so capital goes to the use cases that produce the return, not the ones that demo well.</p>
+            <a class="press absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800 group-hover:translate-x-0.5" href="#contact" aria-label="AI Readiness Audit details" data-analytics-event="service_click" data-analytics-label="AI Readiness Audit">&gt;</a>
+          </article>
+          <article class="reveal group relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950 p-4 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1.5 hover:border-brand/60 hover:shadow-[0_20px_40px_-20px_rgba(59,72,255,0.55)]" style="--reveal-delay:.1s">
+            <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950 transition-transform duration-500 group-hover:scale-110">02</div>
+            <h3 class="font-mono text-xs uppercase tracking-wide text-slate-100" data-i18n="service2Title">AI Agents &amp; Workflow Automation</h3>
+            <p class="mt-2 text-sm text-slate-300" data-i18n="service2Desc">Production-grade AI agents that run support, sales operations, and back-office approvals unattended, integrated into the systems you already run, engineered to the same reliability standard as mission-critical enterprise software.</p>
+            <a class="press absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800 group-hover:translate-x-0.5" href="#contact" aria-label="AI Agents details" data-analytics-event="service_click" data-analytics-label="AI Agents & Workflow Automation">&gt;</a>
+          </article>
+          <article class="reveal group relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950 p-4 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1.5 hover:border-brand/60 hover:shadow-[0_20px_40px_-20px_rgba(59,72,255,0.55)]" style="--reveal-delay:.15s">
+            <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950 transition-transform duration-500 group-hover:scale-110">03</div>
+            <h3 class="font-mono text-xs uppercase tracking-wide text-slate-100" data-i18n="service3Title">LLM &amp; Knowledge Integration (RAG)</h3>
+            <p class="mt-2 text-sm text-slate-300" data-i18n="service3Desc">Retrieval-augmented copilots built on your own data, with enterprise-grade access controls and an audit trail, so your teams get instant answers without your data leaving your governance perimeter.</p>
+            <a class="press absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800 group-hover:translate-x-0.5" href="#contact" aria-label="LLM Integration details" data-analytics-event="service_click" data-analytics-label="LLM & Knowledge Integration">&gt;</a>
+          </article>
+          <article class="reveal group relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950 p-4 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1.5 hover:border-brand/60 hover:shadow-[0_20px_40px_-20px_rgba(59,72,255,0.55)]" style="--reveal-delay:.2s">
+            <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950 transition-transform duration-500 group-hover:scale-110">04</div>
+            <h3 class="font-mono text-xs uppercase tracking-wide text-slate-100" data-i18n="service4Title">Applied AI Product Engineering</h3>
+            <p class="mt-2 text-sm text-slate-300" data-i18n="service4Desc">AI-native features shipped directly into your existing product by the same senior engineering team that has built mission-critical applications for global brands, without destabilizing the platform your revenue runs on.</p>
+            <a class="press absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800 group-hover:translate-x-0.5" href="#contact" aria-label="Applied AI Engineering details" data-analytics-event="service_click" data-analytics-label="Applied AI Product Engineering">&gt;</a>
+          </article>
+          <article class="reveal group relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950 p-4 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1.5 hover:border-brand/60 hover:shadow-[0_20px_40px_-20px_rgba(59,72,255,0.55)]" style="--reveal-delay:.25s">
+            <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950 transition-transform duration-500 group-hover:scale-110">05</div>
+            <h3 class="font-mono text-xs uppercase tracking-wide text-slate-100" data-i18n="service5Title">AI Infrastructure, MLOps &amp; Governance</h3>
+            <p class="mt-2 text-sm text-slate-300" data-i18n="service5Desc">Secure model deployment, observability, and cost controls that let AI scale in production without scaling your risk exposure, built for teams answerable to a board and a compliance function.</p>
+            <a class="press absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800 group-hover:translate-x-0.5" href="#contact" aria-label="AI Infrastructure details" data-analytics-event="service_click" data-analytics-label="AI Infrastructure & Governance">&gt;</a>
+          </article>
+          <article class="reveal group relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950 p-4 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1.5 hover:border-brand/60 hover:shadow-[0_20px_40px_-20px_rgba(59,72,255,0.55)]" style="--reveal-delay:.3s">
+            <div class="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-signal to-amber-400 font-mono text-xs font-bold text-indigo-950 transition-transform duration-500 group-hover:scale-110">06</div>
+            <h3 class="font-mono text-xs uppercase tracking-wide text-slate-100" data-i18n="service6Title">Fractional AI Strategy &amp; Enablement</h3>
+            <p class="mt-2 text-sm text-slate-300" data-i18n="service6Desc">Embedded, fractional AI leadership and hands-on team training, so your organization keeps shipping AI systems long after our engagement ends, with no consultant dependency built in.</p>
+            <a class="press absolute bottom-4 right-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-400 text-slate-100 transition hover:bg-slate-800 group-hover:translate-x-0.5" href="#contact" aria-label="Fractional AI Strategy details" data-analytics-event="service_click" data-analytics-label="Fractional AI Strategy & Enablement">&gt;</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="industries" class="relative overflow-hidden bg-slate-100 py-14">
+      <div class="drift-shape pointer-events-none absolute -right-52 top-4 hidden h-56 w-[40rem] rounded-[2rem] bg-gradient-to-r from-signal via-brand to-indigo-900 blur-[2px] md:block" style="--r:-12deg; transform:rotate(-12deg); animation-delay:-4s"></div>
+      <div class="relative z-10 mx-auto w-[min(1180px,calc(100%-1.5rem))] lg:w-[min(1180px,calc(100%-2rem))]">
+        <h2 class="reveal font-mono text-2xl uppercase tracking-wide" data-i18n="sectorsTitle">Strategic Sectors</h2>
+        <p class="reveal mt-3 max-w-3xl text-slate-600" style="--reveal-delay:.05s" data-i18n="sectorsLead">We apply AI where British Columbia's operating complexity and data volume make the payback clearest: ports and logistics, financial services, health, resources, and the built environment.</p>
+        <div class="mt-6 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+          <a class="reveal group relative block min-h-36 overflow-hidden rounded-xl bg-gradient-to-br from-indigo-950 via-brand to-indigo-800 press" style="--reveal-delay:.05s" href="#contact" data-analytics-event="industry_click" data-analytics-label="Financial services and credit unions">
+            <span class="pointer-events-none absolute inset-0 opacity-[0.15] [background-image:radial-gradient(circle,white_1px,transparent_1px)] [background-size:16px_16px]"></span>
+            <span class="tile-icon absolute right-3 top-3 text-white/90"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10 12 4l9 6"></path><path d="M5 10v9M10 10v9M14 10v9M19 10v9"></path><path d="M3 19h18"></path></svg></span>
+            <span class="flex min-h-36 items-end p-4"><span data-i18n="ind1" class="text-sm font-bold text-white drop-shadow">Financial services &amp; credit unions</span></span>
+          </a>
+          <a class="reveal group relative block min-h-36 overflow-hidden rounded-xl bg-gradient-to-br from-amber-500 via-signal to-amber-300 press" style="--reveal-delay:.1s" href="#contact" data-analytics-event="industry_click" data-analytics-label="Retail and consumer brands">
+            <span class="pointer-events-none absolute inset-0 opacity-[0.18] [background-image:radial-gradient(circle,black_1px,transparent_1px)] [background-size:16px_16px]"></span>
+            <span class="tile-icon absolute right-3 top-3 text-indigo-950"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg></span>
+            <span class="flex min-h-36 items-end p-4"><span data-i18n="ind2" class="text-sm font-bold text-indigo-950 drop-shadow">Retail &amp; consumer brands</span></span>
+          </a>
+          <a class="reveal group relative block min-h-36 overflow-hidden rounded-xl bg-gradient-to-br from-emerald-700 via-emerald-500 to-teal-400 press" style="--reveal-delay:.15s" href="#contact" data-analytics-event="industry_click" data-analytics-label="Natural resources and energy">
+            <span class="pointer-events-none absolute inset-0 opacity-[0.15] [background-image:radial-gradient(circle,white_1px,transparent_1px)] [background-size:16px_16px]"></span>
+            <span class="tile-icon absolute right-3 top-3 text-white/90"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 7.5 8.5-4 8.5 4-8.5 4-8.5-4Z"></path><path d="M3.5 7.5v9l8.5 4 8.5-4v-9"></path><path d="M12 11.5v9"></path></svg></span>
+            <span class="flex min-h-36 items-end p-4"><span data-i18n="ind3" class="text-sm font-bold text-white drop-shadow">Natural resources &amp; energy</span></span>
+          </a>
+          <a class="reveal group relative block min-h-36 overflow-hidden rounded-xl bg-gradient-to-br from-slate-900 via-slate-700 to-slate-500 press" style="--reveal-delay:.2s" href="#contact" data-analytics-event="industry_click" data-analytics-label="Ports, logistics and transportation">
+            <span class="pointer-events-none absolute inset-0 opacity-[0.15] [background-image:radial-gradient(circle,white_1px,transparent_1px)] [background-size:16px_16px]"></span>
+            <span class="tile-icon absolute right-3 top-3 text-white/90"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3z"></path><path d="M14 10h4l3 3v3h-7z"></path><circle cx="7.5" cy="18" r="1.6"></circle><circle cx="17.5" cy="18" r="1.6"></circle></svg></span>
+            <span class="flex min-h-36 items-end p-4"><span data-i18n="ind4" class="text-sm font-bold text-white drop-shadow">Ports, logistics &amp; transportation</span></span>
+          </a>
+          <a class="reveal group relative block min-h-36 overflow-hidden rounded-xl bg-gradient-to-br from-rose-700 via-rose-500 to-orange-400 press" style="--reveal-delay:.25s" href="#contact" data-analytics-event="industry_click" data-analytics-label="Health and life sciences">
+            <span class="pointer-events-none absolute inset-0 opacity-[0.15] [background-image:radial-gradient(circle,white_1px,transparent_1px)] [background-size:16px_16px]"></span>
+            <span class="tile-icon absolute right-3 top-3 text-white/90"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"></path></svg></span>
+            <span class="flex min-h-36 items-end p-4"><span data-i18n="ind5" class="text-sm font-bold text-white drop-shadow">Health &amp; life sciences</span></span>
+          </a>
+          <a class="reveal group relative block min-h-36 overflow-hidden rounded-xl bg-gradient-to-br from-indigo-900 via-violet-700 to-fuchsia-500 press" style="--reveal-delay:.3s" href="#contact" data-analytics-event="industry_click" data-analytics-label="Construction and manufacturing">
+            <span class="pointer-events-none absolute inset-0 opacity-[0.15] [background-image:radial-gradient(circle,white_1px,transparent_1px)] [background-size:16px_16px]"></span>
+            <span class="tile-icon absolute right-3 top-3 text-white/90"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6 8 12l2 2-6 6"></path><path d="M16 8a3 3 0 1 0-4-4l-1.5 1.5 4 4L16 8Z"></path><path d="m14 10 6 6-2 2-6-6"></path></svg></span>
+            <span class="flex min-h-36 items-end p-4"><span data-i18n="ind6" class="text-sm font-bold text-white drop-shadow">Construction &amp; manufacturing</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="why" class="bg-night py-14 text-slate-100">
+      <div class="mx-auto w-[min(1180px,calc(100%-1.5rem))] text-center lg:w-[min(1180px,calc(100%-2rem))]">
+        <h2 class="reveal font-mono text-2xl uppercase tracking-wide" data-i18n="institutionalExpertise">Engineering Pedigree, Applied To AI</h2>
+        <p class="reveal mx-auto mt-3 max-w-3xl text-slate-300" style="--reveal-delay:.05s" data-i18n="institutionalLead">A decade of mission-critical engineering discipline, security, scale, and reliability, now the foundation every AI system we build stands on.</p>
+        <div class="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div class="reveal border-t border-white/20 pt-3 transition-colors duration-500 hover:border-signal" style="--reveal-delay:.1s"><strong class="block font-mono text-4xl leading-none text-signal">+15</strong><span class="text-xs uppercase tracking-wide text-slate-400" data-i18n="stat1">AI &amp; Engineering Experts</span></div>
+          <div class="reveal border-t border-white/20 pt-3 transition-colors duration-500 hover:border-signal" style="--reveal-delay:.18s"><strong class="block font-mono text-4xl leading-none text-signal">+20</strong><span class="text-xs uppercase tracking-wide text-slate-400" data-i18n="stat2">Enterprise Systems Delivered</span></div>
+          <div class="reveal border-t border-white/20 pt-3 transition-colors duration-500 hover:border-signal" style="--reveal-delay:.26s"><strong class="block font-mono text-4xl leading-none text-signal">+12</strong><span class="text-xs uppercase tracking-wide text-slate-400" data-i18n="stat3">Sectors Covered</span></div>
+          <div class="reveal border-t border-white/20 pt-3 transition-colors duration-500 hover:border-signal" style="--reveal-delay:.34s"><strong class="block font-mono text-4xl leading-none text-signal">+80</strong><span class="text-xs uppercase tracking-wide text-slate-400" data-i18n="stat4">Market-Leading Clients</span></div>
+        </div>
+        <p class="reveal mt-4 text-xs text-slate-500" style="--reveal-delay:.4s">
+          Figures reflect LLAAPP engagement history as of <time datetime="2026-08">August 2026</time>. See <a href="#sources" class="underline hover:text-slate-300">key facts &amp; references</a>.
+        </p>
+      </div>
+    </section>
+
+    <section id="clients" class="relative bg-slate-100 py-16">
+      <div class="pointer-events-none absolute left-0 top-0 h-24 w-full bg-gradient-to-br from-brand/20 to-transparent"></div>
+      <div class="relative z-10 mx-auto w-[min(1180px,calc(100%-1.5rem))] lg:w-[min(1180px,calc(100%-2rem))]">
+        <h2 class="reveal font-mono text-2xl uppercase tracking-wide" data-i18n="clientsTitle">Trusted At Enterprise Scale</h2>
+        <p class="reveal mt-3 max-w-3xl text-slate-600" style="--reveal-delay:.05s" data-i18n="clientsLead">Before AI, we earned trust building mission-critical software for these organizations. That same engineering discipline is the foundation every AI system we build stands on.</p>
+        <div class="logo-marquee reveal mt-8 pb-2" style="--reveal-delay:.1s">
+          <div class="logo-track flex gap-4">
+            <a href="https://www.coca-colacompany.com/" title="Coca-Cola" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Coca-Cola" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-cocacola.svg" alt="Coca-Cola logo" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">Coca-Cola</span></a>
+            <a href="https://www.nfl.com/" title="NFL" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="NFL" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-nfl.svg" alt="NFL logo" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">NFL</span></a>
+            <a href="https://www.globant.com/" title="Globant" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Globant" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-globant.svg" alt="Globant logo" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">Globant</span></a>
+            <a href="https://platanitos.com/" title="Platanitos" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Platanitos" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-platanitos.svg" alt="Platanitos logo" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">Platanitos</span></a>
+            <a href="https://www.gpigroup.com/" title="GPI Group" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="GPI Group" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-gpi.svg" alt="GPI Group logo" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">GPI Group</span></a>
+            <a href="https://www.google.com/" title="Google" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Google" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-google.svg" alt="Google logo" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">Google</span></a>
+            <a href="https://www.microsoft.com/" title="Microsoft" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Microsoft" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-microsoft.svg" alt="Microsoft logo" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">Microsoft</span></a>
+            <a href="https://www.amazon.com/" title="Amazon" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Amazon" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-amazon.svg" alt="Amazon logo" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">Amazon</span></a>
+            <a href="https://cloud.google.com/" title="Google Cloud" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Google Cloud" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-google-cloud.svg" alt="Google Cloud logo" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">Google Cloud</span></a>
+            <a href="https://www.viabcp.com/" title="BCP" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="BCP" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-bcp.png" alt="BCP logo" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">BCP</span></a>
+            <a href="https://www.apple.com/" title="Apple" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="Apple" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-apple.svg" alt="Apple logo" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">Apple</span></a>
+            <a href="http://www.digesa.minsa.gob.pe/" title="DIGESA" target="_blank" rel="noopener" data-analytics-event="client_logo_click" data-analytics-label="DIGESA" class="group flex min-w-40 flex-col items-center rounded-2xl border border-slate-200 bg-white px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/10"><img src="/assets/ext/images/logo-digesa-minsa.png" alt="DIGESA logo" width="120" height="32" loading="lazy" decoding="async" class="h-8 w-auto object-contain grayscale transition-all duration-500 group-hover:grayscale-0"><span class="mt-3 text-center font-mono text-[10px] uppercase tracking-wide text-slate-600">DIGESA</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="relative overflow-hidden bg-slate-100 py-14">
+      <div class="drift-shape pointer-events-none absolute -left-40 -top-16 hidden h-44 w-[32rem] rounded-[1.75rem] bg-gradient-to-r from-signal via-brand to-indigo-900 blur-[2px] md:block" style="--r:-14deg; transform:rotate(-14deg); animation-delay:-1s"></div>
+      <div class="relative z-10 mx-auto w-[min(1180px,calc(100%-1.5rem))] lg:w-[min(1180px,calc(100%-2rem))]">
+        <h2 class="reveal font-mono text-2xl uppercase tracking-wide" data-i18n="blogTitle">Engineering Insights</h2>
+        <p class="reveal mt-3 max-w-3xl text-slate-600" style="--reveal-delay:.05s" data-i18n="blogLead">The engineering discipline behind our AI transformation work, from the field.</p>
+        <div class="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <article class="reveal group overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-xl" style="--reveal-delay:.05s"><a class="block" href="https://blog.llaapp.com/2021/06/04/strategic-pitfalls-enterprise-commerce/" target="_blank" rel="noreferrer noopener" data-analytics-event="blog_article_click" data-analytics-label="Strategic Pitfalls in Enterprise Commerce"><span class="block overflow-hidden"><img src="/assets/ext/images/blog-ecommerce.jpg" alt="Ecommerce lessons" width="900" height="506" loading="lazy" decoding="async" fetchpriority="low" class="aspect-video w-full object-cover transition-transform duration-700 ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-110"></span><div class="p-4"><h3 class="font-mono text-sm uppercase" data-i18n="blog1Title">Strategic Pitfalls in Enterprise Commerce</h3><p class="mt-2 text-sm text-slate-600" data-i18n="blog1Desc">Advanced operational insights and practical lessons for scaling high-demand digital architecture.</p></div></a></article>
+          <article class="reveal group overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-xl" style="--reveal-delay:.15s"><a class="block" href="https://blog.llaapp.com/2021/05/25/cloud-engineering-llaapp/" target="_blank" rel="noreferrer noopener" data-analytics-event="blog_article_click" data-analytics-label="Resilient Cloud Infrastructure Modernization"><span class="block overflow-hidden"><img src="/assets/ext/images/blog-cloud.jpg" alt="Cloud migration" width="900" height="506" loading="lazy" decoding="async" fetchpriority="low" class="aspect-video w-full object-cover transition-transform duration-700 ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-110"></span><div class="p-4"><h3 class="font-mono text-sm uppercase" data-i18n="blog2Title">Resilient Cloud Infrastructure Modernization</h3><p class="mt-2 text-sm text-slate-600" data-i18n="blog2Desc">Optimizing architectural governance and cost efficiency through distributed cloud-native models.</p></div></a></article>
+          <article class="reveal group overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-xl" style="--reveal-delay:.25s"><a class="block" href="https://blog.llaapp.com/2021/06/14/agile-technical-governance/" target="_blank" rel="noreferrer noopener" data-analytics-event="blog_article_click" data-analytics-label="Technical Governance in Distributed Squads"><span class="block overflow-hidden"><img src="/assets/ext/images/blog-agile.jpg" alt="Agile squads" width="900" height="506" loading="lazy" decoding="async" fetchpriority="low" class="aspect-video w-full object-cover transition-transform duration-700 ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-110"></span><div class="p-4"><h3 class="font-mono text-sm uppercase" data-i18n="blog3Title">Technical Governance in Distributed Squads</h3><p class="mt-2 text-sm text-slate-600" data-i18n="blog3Desc">Enhancing engineering velocity and architectural alignment across cross-functional enterprise programs.</p></div></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="relative bg-white py-14">
+      <div class="drift-shape pointer-events-none absolute right-[-8rem] top-[-4rem] hidden h-48 w-[30rem] rounded-[1.75rem] bg-gradient-to-br from-signal/90 via-brand/80 to-indigo-900/80 blur-[2px] md:block" style="--r:18deg; transform:rotate(18deg); animation-delay:-3s"></div>
+      <div class="relative z-10 mx-auto w-[min(1180px,calc(100%-1.5rem))] lg:w-[min(1180px,calc(100%-2rem))]">
+        <h2 class="reveal font-mono text-2xl uppercase tracking-wide" data-i18n="faqTitle">AI Questions From BC Leadership Teams</h2>
+        <p class="reveal mt-3 max-w-3xl text-slate-600" style="--reveal-delay:.05s" data-i18n="faqLead">Common questions from operators and leadership teams in Vancouver and across British Columbia evaluating AI adoption.</p>
+        <div class="reveal mt-6 grid gap-4 md:grid-cols-2" style="--reveal-delay:.1s">
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-colors duration-300 hover:border-brand/40 hover:bg-white">
+            <h3 class="font-mono text-xs uppercase tracking-wide text-slate-800" data-i18n="faq1Q">What does an AI transformation consultant actually do?</h3>
+            <p class="mt-2 text-sm text-slate-700" data-i18n="faq1A">We audit your operations to find the highest-ROI AI use cases, then design and build the AI agents, LLM integrations, or automations that deliver them. We hand off systems your team can run and extend, with documentation and training so results continue after our engagement ends.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-colors duration-300 hover:border-brand/40 hover:bg-white">
+            <h3 class="font-mono text-xs uppercase tracking-wide text-slate-800" data-i18n="faq2Q">How do I know if my business is ready for AI?</h3>
+            <p class="mt-2 text-sm text-slate-700" data-i18n="faq2A">You are ready if you have repeatable manual workflows, unstructured data such as documents, tickets, or emails, or customer-facing processes with predictable questions. We validate readiness with a fixed-scope AI Readiness Audit before recommending any build work, so you invest only where the ROI is clear.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-colors duration-300 hover:border-brand/40 hover:bg-white">
+            <h3 class="font-mono text-xs uppercase tracking-wide text-slate-800" data-i18n="faq3Q">How is this different from just using ChatGPT or Copilot?</h3>
+            <p class="mt-2 text-sm text-slate-700" data-i18n="faq3A">Off-the-shelf AI tools like ChatGPT or Copilot help one person at a time. An AI transformation partner integrates AI into your actual systems and data, with security, governance, and reliability built in, so the whole business benefits from AI, not just individual users experimenting on their own.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-colors duration-300 hover:border-brand/40 hover:bg-white">
+            <h3 class="font-mono text-xs uppercase tracking-wide text-slate-800" data-i18n="faq4Q">Do you build custom AI agents, or only advise on strategy?</h3>
+            <p class="mt-2 text-sm text-slate-700" data-i18n="faq4A">Both. We deliver strategy and AI readiness audits, and our senior engineering team builds and ships the AI agents, RAG systems, and integrations we recommend. It is the same team that has built mission-critical software for global enterprises, so strategy and execution stay fully connected end to end.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-colors duration-300 hover:border-brand/40 hover:bg-white">
+            <h3 class="font-mono text-xs uppercase tracking-wide text-slate-800" data-i18n="faq5Q">How much does an AI transformation engagement cost?</h3>
+            <p class="mt-2 text-sm text-slate-700" data-i18n="faq5A">Engagements typically start with a fixed-scope AI Readiness Audit, priced flat, followed by phased implementation priced by scope, integrations, and data complexity. You receive a clear, written estimate before any build work begins, so there are no surprise costs once your AI transformation project is underway.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-colors duration-300 hover:border-brand/40 hover:bg-white">
+            <h3 class="font-mono text-xs uppercase tracking-wide text-slate-800" data-i18n="faq6Q">Can you add AI to our existing software instead of rebuilding?</h3>
+            <p class="mt-2 text-sm text-slate-700" data-i18n="faq6A">Yes. Most engagements add AI capabilities, agents, copilots, and automation into the systems you already run, rather than replacing them outright. This minimizes risk, preserves your existing workflows and data, and shortens time to value compared with a full rebuild of your current software stack.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-colors duration-300 hover:border-brand/40 hover:bg-white">
+            <h3 class="font-mono text-xs uppercase tracking-wide text-slate-800" data-i18n="faq7Q">Do you work with small businesses, or only large enterprises?</h3>
+            <p class="mt-2 text-sm text-slate-700" data-i18n="faq7A">Both. Our engineering discipline was built delivering mission-critical systems for global enterprises like Coca-Cola, the NFL, and major banks, and we apply that same rigor to AI transformation engagements for growing businesses and entrepreneurs, scaling the scope and cost to match your team's size and budget.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-colors duration-300 hover:border-brand/40 hover:bg-white">
+            <h3 class="font-mono text-xs uppercase tracking-wide text-slate-800" data-i18n="faq8Q">Which regions do you serve for AI consulting?</h3>
+            <p class="mt-2 text-sm text-slate-700" data-i18n="faq8A">We are based in Vancouver and serve Metro Vancouver, Victoria, and British Columbia in person, plus Canada nationwide. We also work with the US West Coast on Pacific Time and with clients in Germany, Italy, and Spain remotely, with senior engineers in your time zone on every engagement.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-colors duration-300 hover:border-brand/40 hover:bg-white">
+            <h3 class="font-mono text-xs uppercase tracking-wide text-slate-800" data-i18n="faq9Q">Can you keep our data in Canada?</h3>
+            <p class="mt-2 text-sm text-slate-700" data-i18n="faq9A">Yes. We can deploy models, retrieval layers, and application data in Canadian cloud regions so your data stays under Canadian jurisdiction, and we design access controls and audit trails to match your obligations under BC PIPA and PIPEDA. Where a US or EU region is acceptable, we tell you up front what it changes in cost and latency.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-colors duration-300 hover:border-brand/40 hover:bg-white">
+            <h3 class="font-mono text-xs uppercase tracking-wide text-slate-800" data-i18n="faq10Q">Does custom AI development qualify for SR&amp;ED tax credits?</h3>
+            <p class="mt-2 text-sm text-slate-700" data-i18n="faq10A">Custom AI and software development often involves genuine technical uncertainty, which is what the federal SR&amp;ED program and the BC SR&amp;ED tax credit are designed for. We document hypotheses, experiments, and iterations as we build, so your accountant has the technical narrative a claim requires. We are engineers, not tax advisors, so eligibility is confirmed by your own advisor.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-colors duration-300 hover:border-brand/40 hover:bg-white">
+            <h3 class="font-mono text-xs uppercase tracking-wide text-slate-800" data-i18n="faq11Q">Do you meet clients in person in Vancouver?</h3>
+            <p class="mt-2 text-sm text-slate-700" data-i18n="faq11A">Yes. Discovery sessions, audit readouts, and milestone reviews can be run on site anywhere in Metro Vancouver, and we keep Pacific Time hours for everything in between. Delivery is remote-first, but the senior engineers making architecture decisions are in your time zone and can be in the room when it matters.</p>
+          </article>
+        </div>
+        <div class="mt-6">
+          <a class="press inline-flex min-h-11 items-center justify-center rounded-full bg-signal px-6 py-3 font-bold text-indigo-950 shadow-lg shadow-yellow-300/40 transition-shadow duration-300 hover:shadow-xl hover:shadow-yellow-300/50" href="#briefing" data-i18n="faqCta" data-analytics-event="faq_cta_click">Request an Enterprise AI Technical Briefing</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="relative overflow-hidden bg-night py-16 text-white lg:py-20">
+      <div class="drift-shape pointer-events-none absolute bottom-[-5.5rem] right-[-7rem] hidden h-64 w-[28rem] rounded-[1.75rem] bg-gradient-to-br from-signal via-brand to-indigo-900 blur-[2px] md:block" style="--r:-15deg; transform:rotate(-15deg); animation-delay:-5s"></div>
+      <div class="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-indigo-900 via-brand to-signal"></div>
+      <div class="relative z-10 mx-auto w-[min(1180px,calc(100%-1.5rem))] lg:w-[min(1180px,calc(100%-2rem))]">
+        <h2 class="reveal font-mono text-2xl uppercase tracking-wide text-white" data-i18n="contactTitle">Start Your AI Transformation</h2>
+        <p class="reveal mt-3 max-w-2xl text-slate-200" style="--reveal-delay:.05s" data-i18n="contactLead">Tell us where AI could save time, cut cost, or unlock new revenue in your business. We respond with a clear, honest assessment, not a sales pitch.</p>
+
+        <p class="reveal mt-8 font-mono text-xs font-bold uppercase tracking-wide text-signal" style="--reveal-delay:.1s" data-i18n="directAccess">Direct Technical Access</p>
+        <p class="reveal mt-2 max-w-2xl text-slate-200" style="--reveal-delay:.12s" data-i18n="directAccessLead">Connect directly with our AI transformation team for rapid-response requirements.</p>
+
+        <div class="mt-6 grid gap-4 sm:grid-cols-3">
+          <a href="https://calendly.com/llaapp-solutions/llaapp-com" target="_blank" rel="noreferrer noopener" data-analytics-event="direct_contact_click" data-analytics-label="Scheduling Highlight" class="press reveal group flex flex-col gap-4 rounded-2xl bg-signal p-6 text-indigo-950 shadow-lg shadow-yellow-300/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-yellow-300/40" style="--reveal-delay:.15s">
+            <span class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-indigo-950/10">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path><path d="m9 16 2 2 4-4"></path></svg>
+            </span>
+            <span>
+              <span class="block font-mono text-xs uppercase tracking-wide text-indigo-900">No email round-trip</span>
+              <span class="mt-1 block text-lg font-bold" data-i18n="actionSchedule">Book a Technical Briefing</span>
+            </span>
+          </a>
+
+          <a href="mailto:llaapp.solutions@gmail.com" data-analytics-event="direct_contact_click" data-analytics-label="Email Highlight" class="press reveal group flex flex-col gap-4 rounded-2xl border border-white/15 bg-white/5 p-6 text-white transition-all duration-300 hover:-translate-y-1 hover:border-white/35 hover:bg-white/10" style="--reveal-delay:.2s">
+            <span class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/10">
+              <svg class="h-5 w-5 text-signal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
+            </span>
+            <span>
+              <span class="block font-mono text-xs uppercase tracking-wide text-slate-200">Email</span>
+              <span class="mt-1 block break-all text-lg font-bold text-white">llaapp.solutions@gmail.com</span>
+            </span>
+          </a>
+
+          <a href="tel:+16503744225" data-analytics-event="direct_contact_click" data-analytics-label="Phone Highlight" class="press reveal group flex flex-col gap-4 rounded-2xl border border-white/15 bg-white/5 p-6 text-white transition-all duration-300 hover:-translate-y-1 hover:border-white/35 hover:bg-white/10" style="--reveal-delay:.25s">
+            <span class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/10">
+              <svg class="h-5 w-5 text-signal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"></path></svg>
+            </span>
+            <span>
+              <span class="block font-mono text-xs uppercase tracking-wide text-slate-200">Direct line</span>
+              <span class="mt-1 block text-lg font-bold text-white">+1 (650) 374-4225</span>
+            </span>
+          </a>
+        </div>
+        <p class="reveal mt-4 text-sm text-slate-400" style="--reveal-delay:.28s"><span data-i18n="directAccessWhatsAppPrefix">Prefer WhatsApp?</span> <a href="https://wa.me/16503744225" target="_blank" rel="noreferrer noopener" data-analytics-event="direct_contact_click" data-analytics-label="WhatsApp Secondary" class="underline decoration-white/30 underline-offset-2 hover:text-white" data-i18n="directAccessWhatsAppLink">Message us directly</a>.</p>
+
+        <p class="reveal mt-6 max-w-2xl text-sm text-slate-300" style="--reveal-delay:.3s" data-i18n="directAccessGeo">Based in Vancouver, BC. Primary service focus: Metro Vancouver and British Columbia, Canada nationwide, and the US West Coast on Pacific Time, with selected engagements in Germany, Italy, and Spain.</p>
+
+        <div class="reveal mt-10 border-t border-white/10 pt-8" style="--reveal-delay:.35s">
+          <h3 class="font-mono text-xs uppercase tracking-wide text-signal" data-i18n="standardsTitle">How We Work</h3>
+          <ul class="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+            <li class="text-sm text-slate-200" data-i18n="standard1">Secure-by-design AI architecture, your data is never used to train third-party models without consent</li>
+            <li class="text-sm text-slate-200" data-i18n="standard2">Weekly measurable-outcomes reporting, not vanity metrics</li>
+            <li class="text-sm text-slate-200" data-i18n="standard3">Senior engineers on every engagement, no offshore hand-off after the sales call</li>
+            <li class="text-sm text-slate-200" data-i18n="standard4">Canadian data residency on request, with SR&amp;ED-ready technical documentation from day one</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources" aria-label="Key facts and references" class="bg-slate-50 py-10 text-sm text-slate-600">
+      <div class="mx-auto w-[min(1180px,calc(100%-1.5rem))] lg:w-[min(1180px,calc(100%-2rem))]">
+        <h2 class="font-mono text-xs uppercase tracking-wide text-slate-500" data-i18n="keyFactsTitle">Key Facts</h2>
+        <p class="mt-2 max-w-2xl text-slate-500" data-i18n="keyFactsLead">Dated, verifiable figures behind the claims on this page.</p>
+        <dl class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-lg border border-slate-200 bg-white p-4">
+            <dt class="font-mono text-xs uppercase tracking-wide text-slate-500" data-i18n="stat1">AI &amp; Engineering Experts</dt>
+            <dd class="mt-1 font-mono text-2xl text-brand">15+ <span class="font-sans text-xs font-normal text-slate-400">(<time datetime="2026-08">Aug 2026</time>)</span></dd>
+          </div>
+          <div class="rounded-lg border border-slate-200 bg-white p-4">
+            <dt class="font-mono text-xs uppercase tracking-wide text-slate-500" data-i18n="stat2">Enterprise Systems Delivered</dt>
+            <dd class="mt-1 font-mono text-2xl text-brand">20+ <span class="font-sans text-xs font-normal text-slate-400">(<time datetime="2026-08">Aug 2026</time>)</span></dd>
+          </div>
+          <div class="rounded-lg border border-slate-200 bg-white p-4">
+            <dt class="font-mono text-xs uppercase tracking-wide text-slate-500" data-i18n="stat3">Sectors Covered</dt>
+            <dd class="mt-1 font-mono text-2xl text-brand">12+ <span class="font-sans text-xs font-normal text-slate-400">(<time datetime="2026-08">Aug 2026</time>)</span></dd>
+          </div>
+          <div class="rounded-lg border border-slate-200 bg-white p-4">
+            <dt class="font-mono text-xs uppercase tracking-wide text-slate-500" data-i18n="stat4">Market-Leading Clients</dt>
+            <dd class="mt-1 font-mono text-2xl text-brand">80+ <span class="font-sans text-xs font-normal text-slate-400">(<time datetime="2026-08">Aug 2026</time>)</span></dd>
+          </div>
+        </dl>
+        <p class="mt-2 text-xs text-slate-400" data-i18n="keyFactsAttribution">Self-reported by LLAAPP from internal engagement records, last reviewed August 2026. Not independently audited.</p>
+
+        <h2 class="mt-8 font-mono text-xs uppercase tracking-wide text-slate-500" data-i18n="benchmarksTitle">Industry Benchmarks</h2>
+        <p class="mt-2 max-w-2xl text-slate-500" data-i18n="benchmarksLead">Independent, third-party research on why most AI adoption stalls before it pays off, which is the gap our AI Readiness Audit exists to close.</p>
+        <ul class="mt-3 grid gap-2 pl-5 list-disc">
+          <li data-i18n-html="benchmark1Text">According to <cite>McKinsey</cite>, 88% of organizations now use AI in at least one business function, yet only about 6% report capturing more than 5% of enterprise EBIT from it — a wide gap between adoption and measurable ROI. Source: <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noreferrer noopener" class="underline hover:text-slate-800">McKinsey, "The State of AI" (2025 global survey)</a>.</li>
+          <li data-i18n-html="benchmark2Text">According to <cite>Gartner</cite>, task-specific AI agents are projected to appear in 40% of enterprise applications by 2026, up from less than 5% in 2025 — fast adoption that raises the cost of skipping a readiness audit before building. Source: <a href="https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025" target="_blank" rel="noreferrer noopener" class="underline hover:text-slate-800">Gartner Newsroom, press release (Aug 26, 2025)</a>.</li>
+        </ul>
+
+        <h2 class="mt-8 font-mono text-xs uppercase tracking-wide text-slate-500" data-i18n="sourcesTitle">References</h2>
+        <ol class="mt-3 grid gap-2 pl-5 list-decimal">
+          <li id="source-1" data-i18n-html="source1Text"><cite>LLAAPP engagement statistics</cite> (15+ experts, 20+ systems delivered, 12+ sectors, 80+ clients): internal engagement records, self-reported by LLAAPP, last reviewed <time datetime="2026-08">August 2026</time>.</li>
+          <li id="source-2" data-i18n-html="source2Text"><cite>Client engagement history</cite> (Coca-Cola / MiMarket, NFL / NFL+ App TV, ITU Bank App, and others named under <a href="#clients" class="underline hover:text-slate-800">Trusted At Enterprise Scale</a>): project delivery records held by LLAAPP. No public case-study page is live yet for these engagements; contact <a href="mailto:llaapp.solutions@gmail.com" class="underline hover:text-slate-800">llaapp.solutions@gmail.com</a> for a verifiable reference.</li>
+          <li id="source-3" data-i18n-html="source3Text"><cite>Engineering methodology</cite>: derived from LLAAPP's published engineering insights at <a href="https://blog.llaapp.com/" target="_blank" rel="noreferrer noopener" class="underline hover:text-slate-800">blog.llaapp.com</a>, including the articles referenced under <a href="#blog" class="underline hover:text-slate-800">Engineering Insights</a> above.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-black py-5 pb-10 text-slate-100 lg:pb-5">
+    <div class="mx-auto grid w-[min(1180px,calc(100%-1.5rem))] gap-4 lg:w-[min(1180px,calc(100%-2rem))] lg:grid-cols-[1fr_auto] lg:items-center">
+      <div>
+        <a href="#home" data-analytics-event="footer_click" data-analytics-label="Footer Logo" class="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-[0.1em]">
+          <img src="/assets/logo-56x56.png" srcset="/assets/logo-28x28.png 1x, /assets/logo-56x56.png 2x, /assets/logo-84x84.png 3x" alt="LLAAPP logo" width="24" height="24" loading="lazy" decoding="async" class="h-6 w-auto rounded">
+          <span>LLAAPP</span>
+        </a>
+        <small class="mt-2 block text-sm text-slate-400" data-i18n="footerTagline">AI transformation, custom software, and applied AI engineering. Vancouver, British Columbia.</small>
+        <div class="mt-3 text-sm font-bold text-signal"><a href="mailto:llaapp.solutions@gmail.com" data-analytics-event="footer_click" data-analytics-label="Footer Email">llaapp.solutions@gmail.com</a></div>
+      </div>
+      <div class="flex flex-wrap items-center gap-3 text-sm text-slate-400 lg:justify-end">
+        <small><a href="tel:+16503744225" data-analytics-event="footer_click" data-analytics-label="Footer Phone">+1 (650) 374-4225</a></small>
+        <small>Copyright <span id="year"></span></small>
+      </div>
+    </div>
+  </footer>
+
+  <a class="fixed bottom-4 right-4 z-50 hidden min-h-11 items-center rounded-full bg-signal px-4 py-2 font-mono text-xs font-bold uppercase tracking-wide text-indigo-950 shadow-lg shadow-yellow-300/40 lg:inline-flex" href="#briefing" data-analytics-event="floating_cta_click" data-i18n="floatCta">Request a Briefing</a>
+
+  <nav class="fixed bottom-0 left-0 right-0 z-40 grid grid-cols-3 border-t border-white/15 bg-black/95 backdrop-blur lg:hidden" aria-label="Quick contact actions">
+    <a href="tel:+16503744225" data-i18n="actionCall" data-analytics-event="quick_call" class="inline-flex min-h-14 items-center justify-center border-r border-white/10 font-mono text-[11px] uppercase tracking-wide text-slate-100">Call</a>
+    <a href="https://wa.me/16503744225" target="_blank" rel="noreferrer noopener" data-i18n="actionWhatsApp" data-analytics-event="quick_whatsapp" class="inline-flex min-h-14 items-center justify-center border-r border-white/10 font-mono text-[11px] uppercase tracking-wide text-slate-100">WhatsApp</a>
+    <a href="#contact" data-i18n="actionContact" data-analytics-event="quick_contact" class="inline-flex min-h-14 items-center justify-center font-mono text-[11px] uppercase tracking-wide text-slate-100">Contact</a>
+  </nav>
+
+  <script>
+    (function () {
+      var menuToggle = document.getElementById("menuToggle");
+      var menuPanel = document.getElementById("menuPanel");
+
+      function closeMenu() {
+        if (!menuPanel || !menuToggle) return;
+        menuPanel.classList.add("hidden");
+        menuPanel.setAttribute("aria-hidden", "true");
+        menuToggle.setAttribute("aria-expanded", "false");
+      }
+
+      function openMenu() {
+        if (!menuPanel || !menuToggle) return;
+        menuPanel.classList.remove("hidden");
+        menuPanel.setAttribute("aria-hidden", "false");
+        menuToggle.setAttribute("aria-expanded", "true");
+      }
+
+      if (menuToggle && menuPanel) {
+        menuToggle.addEventListener("click", function () {
+          var expanded = menuToggle.getAttribute("aria-expanded") === "true";
+          expanded ? closeMenu() : openMenu();
+        });
+
+        menuPanel.querySelectorAll("a").forEach(function (item) {
+          item.addEventListener("click", closeMenu);
+        });
+
+        document.addEventListener("click", function (event) {
+          if (!menuPanel.contains(event.target) && !menuToggle.contains(event.target)) closeMenu();
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") closeMenu();
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.innerWidth >= 1024) closeMenu();
+        });
+      }
+
+      // WebMCP: register read-only, side-effect-free in-page tools for
+      // MCP-aware browsers/agents. `navigator.modelContext` is an emerging,
+      // experimental proposal (webmachinelearning WebMCP explainer) — the
+      // exact API shape may still change, so this is feature-detected and
+      // fails silently on browsers that don't support it. Tools only ever
+      // read data already present on this page; none submit forms, send
+      // messages, or otherwise act on the user's behalf.
+      if (window.navigator && "modelContext" in window.navigator) {
+        try {
+          var SERVICES = [
+            { id: "ai-readiness-audit", name: "AI Readiness & Opportunity Audit", description: "Structured audit of business operations to find the highest-ROI AI use cases, ranked by impact, cost, and implementation risk." },
+            { id: "ai-agents-workflow-automation", name: "AI Agents & Workflow Automation", description: "Custom AI agents that handle support, sales operations, back-office workflows, and approvals, integrated with the tools you already run." },
+            { id: "llm-rag-integration", name: "LLM & Knowledge Integration (RAG)", description: "Retrieval-augmented copilots and internal knowledge assistants built on your own data, with enterprise-grade access controls." },
+            { id: "applied-ai-product-engineering", name: "Applied AI Product Engineering", description: "AI-native features shipped inside your existing product, built by senior engineers." },
+            { id: "ai-infrastructure-mlops-governance", name: "AI Infrastructure, MLOps & Governance", description: "Secure model deployment, observability, cost control, and governance so AI systems scale safely in production." },
+            { id: "fractional-ai-strategy", name: "Fractional AI Strategy & Enablement", description: "Embedded AI leadership and hands-on team training so your organization keeps building after we hand off." }
+          ];
+
+          var FAQ = Array.prototype.map.call(document.querySelectorAll("#faq article"), function (article) {
+            return {
+              question: (article.querySelector("h3") || {}).textContent || "",
+              answer: (article.querySelector("p") || {}).textContent || ""
+            };
+          });
+
+          navigator.modelContext.registerTool({
+            name: "list_llaapp_services",
+            description: "List LLAAPP's AI transformation service offerings with short descriptions.",
+            inputSchema: { type: "object", properties: {}, additionalProperties: false },
+            async execute() {
+              return { content: [{ type: "text", text: JSON.stringify(SERVICES) }] };
+            }
+          });
+
+          navigator.modelContext.registerTool({
+            name: "get_llaapp_faq",
+            description: "Return LLAAPP's frequently asked questions and answers about AI transformation consulting.",
+            inputSchema: { type: "object", properties: {}, additionalProperties: false },
+            async execute() {
+              return { content: [{ type: "text", text: JSON.stringify(FAQ) }] };
+            }
+          });
+
+          navigator.modelContext.registerTool({
+            name: "get_llaapp_contact",
+            description: "Return LLAAPP's public contact channels (email, phone, WhatsApp).",
+            inputSchema: { type: "object", properties: {}, additionalProperties: false },
+            async execute() {
+              return {
+                content: [{
+                  type: "text",
+                  text: JSON.stringify({
+                    email: "llaapp.solutions@gmail.com",
+                    phone: "+1-650-374-4225",
+                    whatsapp: "https://wa.me/16503744225",
+                    scheduling: "https://calendly.com/llaapp-solutions/llaapp-com"
+                  })
+                }]
+              };
+            }
+          });
+        } catch (err) {
+          console.warn("WebMCP tool registration skipped:", err);
+        }
+      }
+
+      var yearEl = document.getElementById("year");
+      if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+      var siteHeader = document.querySelector("header");
+      if (siteHeader) {
+        var onScroll = function () {
+          siteHeader.classList.toggle("is-scrolled", window.scrollY > 8);
+        };
+        onScroll();
+        window.addEventListener("scroll", onScroll, { passive: true });
+      }
+
+      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var heroSection = document.getElementById("heroSection");
+      var parallaxLayers = document.querySelectorAll(".hero-parallax-layer");
+
+      if (heroSection && parallaxLayers.length && !reduceMotion) {
+        var parallaxTicking = false;
+        var updateParallax = function () {
+          var rect = heroSection.getBoundingClientRect();
+          if (rect.bottom > 0 && rect.top < window.innerHeight) {
+            var scrolled = -rect.top;
+            parallaxLayers.forEach(function (layer) {
+              var speed = parseFloat(layer.getAttribute("data-parallax-speed")) || 0;
+              layer.style.transform = "translate3d(0," + (scrolled * speed) + "px,0)";
+            });
+          }
+          parallaxTicking = false;
+        };
+        updateParallax();
+        window.addEventListener("scroll", function () {
+          if (!parallaxTicking) {
+            requestAnimationFrame(updateParallax);
+            parallaxTicking = true;
+          }
+        }, { passive: true });
+      }
+
+      // Neuron network background: a lightweight canvas particle system.
+      // Only animates while the hero is on-screen and the tab is visible, and
+      // is skipped entirely (static single frame) when motion is reduced.
+      var neuronCanvas = document.getElementById("neuronCanvas");
+      if (neuronCanvas && heroSection) {
+        var ctx = neuronCanvas.getContext("2d");
+        var nodes = [];
+        var rafId = null;
+        var isRunning = false;
+        var dpr = Math.min(window.devicePixelRatio || 1, 1.75);
+        var cssWidth = 0;
+        var cssHeight = 0;
+        var LINK_DIST = 130;
+
+        function nodeCount(width, height) {
+          var base = Math.round((width * height) / 15000);
+          var cap = width < 640 ? 30 : 70;
+          return Math.max(16, Math.min(base, cap));
+        }
+
+        function buildNodes(width, height) {
+          var count = nodeCount(width, height);
+          var list = [];
+          for (var i = 0; i < count; i++) {
+            list.push({
+              x: Math.random() * width,
+              y: Math.random() * height,
+              vx: (Math.random() - 0.5) * 0.25,
+              vy: (Math.random() - 0.5) * 0.25,
+              accent: Math.random() < 0.12
+            });
+          }
+          return list;
+        }
+
+        function resize() {
+          cssWidth = heroSection.clientWidth;
+          cssHeight = heroSection.clientHeight;
+          neuronCanvas.width = Math.round(cssWidth * dpr);
+          neuronCanvas.height = Math.round(cssHeight * dpr);
+          neuronCanvas.style.width = cssWidth + "px";
+          neuronCanvas.style.height = cssHeight + "px";
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          nodes = buildNodes(cssWidth, cssHeight);
+        }
+
+        function drawFrame() {
+          ctx.clearRect(0, 0, cssWidth, cssHeight);
+
+          for (var i = 0; i < nodes.length; i++) {
+            for (var j = i + 1; j < nodes.length; j++) {
+              var dx = nodes[i].x - nodes[j].x;
+              var dy = nodes[i].y - nodes[j].y;
+              var dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < LINK_DIST) {
+                ctx.strokeStyle = "rgba(179, 190, 255," + ((1 - dist / LINK_DIST) * 0.22).toFixed(3) + ")";
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(nodes[i].x, nodes[i].y);
+                ctx.lineTo(nodes[j].x, nodes[j].y);
+                ctx.stroke();
+              }
+            }
+          }
+
+          for (var n = 0; n < nodes.length; n++) {
+            var node = nodes[n];
+            ctx.fillStyle = node.accent ? "rgba(255, 237, 0, 0.75)" : "rgba(255, 255, 255, 0.55)";
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, node.accent ? 2.2 : 1.6, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        }
+
+        function stepFrame() {
+          for (var i = 0; i < nodes.length; i++) {
+            var node = nodes[i];
+            node.x += node.vx;
+            node.y += node.vy;
+            if (node.x < 0 || node.x > cssWidth) node.vx *= -1;
+            if (node.y < 0 || node.y > cssHeight) node.vy *= -1;
+          }
+          drawFrame();
+          rafId = requestAnimationFrame(stepFrame);
+        }
+
+        function start() {
+          if (isRunning || reduceMotion) return;
+          isRunning = true;
+          rafId = requestAnimationFrame(stepFrame);
+        }
+
+        function stop() {
+          isRunning = false;
+          if (rafId) cancelAnimationFrame(rafId);
+          rafId = null;
+        }
+
+        resize();
+        drawFrame();
+
+        if (!reduceMotion) {
+          var resizeTicking = false;
+          var heroVisible = false;
+
+          window.addEventListener("resize", function () {
+            if (resizeTicking) return;
+            resizeTicking = true;
+            requestAnimationFrame(function () {
+              resize();
+              drawFrame();
+              resizeTicking = false;
+            });
+          }, { passive: true });
+
+          document.addEventListener("visibilitychange", function () {
+            if (document.hidden) {
+              stop();
+            } else if (heroVisible) {
+              start();
+            }
+          });
+
+          if ("IntersectionObserver" in window) {
+            var heroObserver = new IntersectionObserver(function (entries) {
+              entries.forEach(function (entry) {
+                heroVisible = entry.isIntersecting;
+                if (heroVisible && !document.hidden) {
+                  start();
+                } else {
+                  stop();
+                }
+              });
+            }, { threshold: 0 });
+            heroObserver.observe(heroSection);
+          } else {
+            heroVisible = true;
+            start();
+          }
+        }
+      }
+
+      // Client logo marquee: duplicate the track for a seamless loop, but
+      // only when motion is allowed — reduced-motion users keep a single,
+      // manually scrollable row with no hidden duplicates.
+      var logoTrack = document.querySelector(".logo-track");
+      if (logoTrack && !reduceMotion) {
+        Array.from(logoTrack.children).forEach(function (item) {
+          var clone = item.cloneNode(true);
+          clone.setAttribute("aria-hidden", "true");
+          clone.setAttribute("tabindex", "-1");
+          var link = clone.tagName === "A" ? clone : clone.querySelector("a");
+          if (link) link.setAttribute("tabindex", "-1");
+          logoTrack.appendChild(clone);
+        });
+        logoTrack.classList.add("is-animated");
+      }
+
+      var revealTargets = document.querySelectorAll(".reveal");
+      if (revealTargets.length) {
+        if ("IntersectionObserver" in window) {
+          var revealObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+          revealTargets.forEach(function (el) { revealObserver.observe(el); });
+        } else {
+          revealTargets.forEach(function (el) { el.classList.add("is-visible"); });
+        }
+      }
+    })();
+  </script>
+
+  <script>
+    (function () {
+      function loadScript(src, onDone) {
+        var script = document.createElement("script");
+        script.src = src;
+        script.async = false;
+        script.onload = function () {
+          if (typeof onDone === "function") onDone();
+        };
+        document.body.appendChild(script);
+      }
+
+      function loadDeferredScripts() {
+        loadScript("/assets/i18n.js?v=20260815", function () {
+          // i18n.js also bootstraps itself, but call init as a safeguard when loaded after DOM ready.
+          if (window.i18n && typeof window.i18n.setupSwitcher === "function") {
+            window.i18n.setupSwitcher();
+            window.i18n.updateActiveSwitcher(window.i18n.currentLanguage);
+          }
+
+          initFirebaseAnalytics();
+        });
+      }
+
+      // Modular Firebase SDK (loaded as native ES modules from the Firebase CDN)
+      // instead of the firebase-*-compat.js bundles: smaller, tree-shaken, and
+      // avoids the duplicate-module bytes the compat build ships.
+      function initFirebaseAnalytics() {
+        fetch("/__/firebase/init.json")
+          .then(function (res) { return res.json(); })
+          .then(function (firebaseConfig) {
+            return Promise.all([
+              import("https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"),
+              import("https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js")
+            ]).then(function (mods) {
+              var appModule = mods[0];
+              var analyticsModule = mods[1];
+              var app = appModule.initializeApp(firebaseConfig);
+              window.__firebaseAnalytics = analyticsModule.getAnalytics(app);
+              window.__firebaseLogEvent = analyticsModule.logEvent;
+              loadScript("/assets/analytics.js?v=20260815");
+            });
+          })
+          .catch(function (err) {
+            console.warn("[Firebase] analytics init skipped:", err);
+          });
+      }
+
+      if ("requestIdleCallback" in window) {
+        requestIdleCallback(loadDeferredScripts, { timeout: 2500 });
+      } else {
+        window.addEventListener("load", function () {
+          setTimeout(loadDeferredScripts, 0);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

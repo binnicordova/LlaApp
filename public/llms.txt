@@ -1,15 +1,17 @@
-# LLAAPP | AI Transformation Consulting for Businesses
+# LLAAPP.com | AI Transformation & Custom Software in Vancouver, BC
 
-> Need help adopting AI in your business? LLAAPP is an AI transformation partner: AI readiness audits, custom AI agents, LLM/RAG integration, and applied AI product engineering, delivered by senior engineers with 10+ years shipping mission-critical software for global market leaders.
+> Need help adopting AI in your business? LLAAPP.com is a Vancouver, British Columbia AI transformation and custom software studio founded and led by Binni Cordova (Founder & Principal Engineer): AI readiness audits, custom AI agents, LLM/RAG integration, and custom software engineering, delivered by senior engineers with 10+ years shipping mission-critical software for global market leaders, with Canadian data residency available and SR&ED-ready technical documentation.
 
 ## Summary
-LLAAPP helps growing businesses and entrepreneurs turn AI from a buzzword into measurable operational results. We run AI readiness audits, build custom AI agents and workflow automation, integrate LLMs and retrieval-augmented generation (RAG) into existing systems, and provide fractional AI strategy and enablement. Our AI delivery is backed by a decade of enterprise-grade software engineering discipline.
+LLAAPP helps mid-market operators in Vancouver and across British Columbia turn AI from a buzzword into measurable operational results. We run AI readiness audits, build custom AI agents and workflow automation, integrate LLMs and retrieval-augmented generation (RAG) into existing systems, and provide fractional AI strategy and enablement. Our AI delivery is backed by a decade of enterprise-grade software engineering discipline.
 
 ## Geographic Relevance
 - Headquarters: Vancouver, British Columbia, Canada.
-- Primary service regions: Vancouver and Canada nationwide; the United States, with concentrated demand in San Francisco, Texas, and Chicago, and nationwide coverage; and Europe, with concentrated demand in Germany, Italy, and Spain.
-- Delivery model: remote-first, senior-led engagements for businesses anywhere in these regions.
-- Local search intent coverage: AI consultant Vancouver, AI transformation company Canada, AI consulting San Francisco, AI consulting Texas, AI consulting Chicago, AI consulting USA, KI Beratung Deutschland, consulenza IA Italia, consultoría IA España, AI consulting Europe.
+- Primary service region: Metro Vancouver (Vancouver, Burnaby, Richmond, Surrey, Coquitlam, North Vancouver), Victoria, and British Columbia, served in person; Canada nationwide.
+- Secondary regions: the US West Coast on Pacific Time (and nationwide remotely), plus selected engagements in Germany, Italy, and Spain.
+- Delivery model: remote-first, senior-led engagements, with on-site working sessions across Metro Vancouver and Pacific Time working hours.
+- Local advantages: deployment in Canadian cloud regions for data residency under BC PIPA and PIPEDA; SR&ED-ready technical documentation for federal and BC tax credit claims; a British Columbia counterparty for procurement.
+- Local search intent coverage: AI consultant Vancouver, AI consulting Vancouver BC, custom software development Vancouver, AI transformation British Columbia, AI automation Vancouver, Canadian data residency AI, SR&ED AI development, AI consulting Canada, AI consulting USA West Coast, KI Beratung Deutschland, consulenza IA Italia, consultoría IA España.
 
 ## The AI Architecture & ROI Audit
 A complimentary, private 45-minute technical briefing for qualified corporate leadership teams, led by a senior architect, not a sales rep. Covers live AI opportunity ranking, a build-vs-integrate assessment, and a security/governance exposure map. Book via https://calendly.com/llaapp-solutions/llaapp-com or request via llaapp.solutions@gmail.com.
@@ -30,13 +32,16 @@ A complimentary, private 45-minute technical briefing for qualified corporate le
 - How much does an AI transformation engagement cost?
 - Can you add AI to our existing software instead of rebuilding it?
 - Do you work with small and mid-sized businesses, or only large enterprises?
-- Who can help my company adopt AI in Vancouver, Canada, the USA, or Europe?
+- Can an AI consultant keep our data in Canada under BC PIPA and PIPEDA?
+- Does custom AI development qualify for SR&ED tax credits in British Columbia?
+- Do you meet clients in person in Vancouver?
+- Who can help my company adopt AI in Vancouver, British Columbia, or elsewhere in Canada?
 
 ## Engineering Foundation (Proof of Delivery Discipline)
-Before AI, LLAAPP earned trust building mission-critical software for major organizations, including Coca-Cola (MiMarket retail platform), the NFL (NFL+ App TV), and a global banking application (ITU Bank App). That same engineering discipline, security, scale, reliability, is the foundation every AI system LLAAPP builds stands on.
+Before founding LLAAPP.com, Binni Cordova helped build mission-critical software used at scale, including Coca-Cola, the NFL app, a global banking application (ITU), Platanitos, Saludables and PickPointer. These are products he contributed to as an engineer, not engagements delivered by LLAAPP.com; the specific role on each is available on request. That engineering discipline, security, scale, reliability, is the foundation every system LLAAPP.com builds stands on.
 
 ## Strategic Sectors
-Banking & Finance, Retail & Ecommerce, Consumer Goods (CPG), Logistics & Transportation, Healthcare & Pharma, Manufacturing.
+Financial Services & Credit Unions, Retail & Consumer Brands, Natural Resources & Energy, Ports, Logistics & Transportation, Health & Life Sciences, Construction & Manufacturing.
 
 ## Institutional Expertise
 - **Scale**: 15+ senior AI and engineering experts.

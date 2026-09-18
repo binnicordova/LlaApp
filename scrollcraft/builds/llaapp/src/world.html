@@ -1,0 +1,228 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>html,body{margin:0;background:#06080e}canvas{display:block}</style>
+<canvas id="c"></canvas>
+<script>
+const SHEETS = [
+  { key:'nfl',        cols:8, rows:8, cw:120, ch:260 },
+  { key:'mimarket',   cols:8, rows:8, cw:120, ch:249 },
+  { key:'itu',        cols:8, rows:8, cw:120, ch:214 },
+  { key:'platanitos', cols:8, rows:8, cw:120, ch:214 },
+  { key:'saludables', cols:8, rows:8, cw:120, ch:260 },
+  { key:'pickpointer',cols:8, rows:8, cw:120, ch:214 },
+  { key:'tokai',      cols:8, rows:8, cw:120, ch:260 }
+];
+const TOTAL_Z = 190;
+let W=1600,H=900,MOBILE=false,FOCAL=900,HY=0.52,imgs={};
+
+function setup(w,h,mobile){
+  W=w;H=h;MOBILE=!!mobile;
+  FOCAL = MOBILE ? 760 : 900;
+  HY = MOBILE ? 0.46 : 0.52;          // phones get a higher horizon: more world, less empty sky
+  const c=document.getElementById('c'); c.width=W; c.height=H;
+}
+window.LOAD = async function(){
+  await Promise.all(SHEETS.map(s=>new Promise((res,rej)=>{
+    const i=new Image(); i.onload=()=>{imgs[s.key]=i;res()}; i.onerror=rej; i.src='sheets/'+s.key+'.png';
+  })));
+  return true;
+};
+
+const smooth=(a,b,t)=>{t=Math.max(0,Math.min(1,(t-a)/(b-a)));return t*t*(3-2*t)};
+const mix=(a,b,t)=>a+(b-a)*t;
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+
+function terrain(x,z){
+  return 3.4*Math.sin(x*0.055+z*0.028)
+       + 2.0*Math.sin(x*0.021-z*0.016+1.7)
+       + 1.1*Math.sin(x*0.105+z*0.062+4.2)
+       + 0.6*Math.sin(x*0.185-z*0.121+2.3);
+}
+const coastAt = z => 34*Math.sin(z*0.0105) + 14*Math.sin(z*0.043+1.1) - 4;
+
+// the single continuous camera path
+function camYAt(T){
+  if(T<0.22) return mix(15.5,11.0,smooth(0,0.22,T));
+  if(T<0.44) return mix(11.0,4.2,smooth(0.22,0.44,T));
+  if(T<0.60) return mix(4.2,-7.5,smooth(0.44,0.60,T));
+  if(T<0.86) return mix(-7.5,-11.0,smooth(0.60,0.86,T));
+  return mix(-11.0,-5.0,smooth(0.86,1,T));
+}
+const cam = T => ({ camZ:T*TOTAL_Z, camY:camYAt(T) });
+const camYAtZ = z => camYAt(clamp(z/TOTAL_Z,0,1));
+
+const landAmp    = T => 1-smooth(0.42,0.60,T);
+const latticeAmt = T => smooth(0.46,0.64,T)*(1-smooth(0.90,1,T)*0.8);
+
+function proj(x,y,z,c){
+  const dz=z-c.camZ;
+  if(dz<=0.6) return null;
+  const s=FOCAL/dz;
+  return { x:W/2+x*s, y:H*HY+(c.camY-y)*s, s, dz };
+}
+
+function bg(ctx,T){
+  const under=smooth(0.36,0.56,T), dawn=smooth(0.88,1,T);
+  const g=ctx.createLinearGradient(0,0,0,H);
+  const c1=[mix(38,5,under),mix(50,8,under),mix(64,14,under)];
+  const c2=[mix(20,3,under),mix(27,6,under),mix(37,11,under)];
+  const c3=[mix(10,2,under),mix(14,4,under),mix(20,8,under)];
+  g.addColorStop(0,`rgb(${c1.map(Math.round)})`);
+  g.addColorStop(0.5,`rgb(${c2.map(Math.round)})`);
+  g.addColorStop(1,`rgb(${c3.map(Math.round)})`);
+  ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+  if(dawn>0){
+    const d=ctx.createLinearGradient(0,H*(HY-0.16),0,H*(HY+0.06));
+    d.addColorStop(0,'rgba(255,237,0,0)');
+    d.addColorStop(0.5,`rgba(255,237,0,${(0.10*dawn).toFixed(3)})`);
+    d.addColorStop(1,'rgba(255,237,0,0)');
+    ctx.fillStyle=d; ctx.fillRect(0,0,W,H);
+  }
+}
+
+// Rows are spaced geometrically in depth, which distributes them evenly up the
+// screen. Uniform z spacing piles every row on the horizon and explodes the
+// near ones off the frame.
+function rowDepths(n,near,far){
+  const out=[],k=Math.pow(far/near,1/(n-1));
+  let d=near; for(let i=0;i<n;i++){ out.push(d); d*=k; }
+  return out;
+}
+
+function drawField(ctx,T,c){
+  const amp=landAmp(T), lat=latticeAmt(T);
+  const N=MOBILE?54:64;
+  const depths=rowDepths(N, MOBILE?7:8, MOBILE?300:380);
+  ctx.lineWidth=MOBILE?1.0:1.1;
+  for(let i=N-1;i>=0;i--){
+    const dz=depths[i], z=c.camZ+dz, s=FOCAL/dz;
+    const fade=Math.pow(1-i/(N-1),0.62);
+    const xmax=(W*0.60)/s, step=xmax/(MOBILE?34:46);
+    let began=false; ctx.beginPath();
+    for(let x=-xmax;x<=xmax;x+=step){
+      const land = 1-smooth(-5,5,x-coastAt(z));   // soft shore, not a cliff edge
+      let y = mix(terrain(x*0.35,z*0.35)*amp*0.10, terrain(x,z)*amp+1.2*amp, land);
+      if(lat>0){
+        const base=camYAtZ(z)-3.4;
+        const grid=0.85*Math.sin(x*0.40)*Math.sin(z*0.34);
+        y=mix(y,base+grid,lat);
+      }
+      const p=proj(x,y,z,c);
+      if(!p){began=false;continue}
+      if(p.y<-H||p.y>H*2.2){began=false;continue}
+      if(!began){ctx.moveTo(p.x,p.y);began=true}else ctx.lineTo(p.x,p.y);
+    }
+    const a=0.06+0.50*fade;
+    ctx.strokeStyle=`rgba(${Math.round(mix(128,206,fade))},${Math.round(mix(150,222,fade))},${Math.round(mix(172,238,fade))},${a.toFixed(3)})`;
+    ctx.stroke();
+  }
+  if(lat>0.05){
+    ctx.lineWidth=1;
+    const ds=rowDepths(16, 10, 110);
+    const strut=lat*(1-smooth(0.82,0.92,T));
+    for(const dz of ds){
+      const z=c.camZ+dz, s=FOCAL/dz, xmax=(W*0.52)/s;
+      const base=camYAtZ(z)-3.4;
+      for(let x=-xmax;x<=xmax;x+=xmax/(MOBILE?4:7)){
+        const a=proj(x,base-0.9,z,c), b=proj(x,base+0.9,z,c);
+        if(!a||!b) continue;
+        ctx.strokeStyle=`rgba(158,182,204,${(0.30*strut*(1-dz/120)).toFixed(3)})`;
+        ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke();
+      }
+    }
+  }
+}
+
+// The sea surface. The frame where it passes the camera is the turn of the page.
+function drawSurface(ctx,T,c){
+  const vis=smooth(0.28,0.40,T)*(1-smooth(0.58,0.72,T));
+  if(vis<=0.01) return;
+  const below=c.camY<0;
+  const N=MOBILE?30:38, depths=rowDepths(N, MOBILE?7:8, MOBILE?190:240);
+  ctx.lineWidth=1;
+  for(let i=N-1;i>=0;i--){
+    const dz=depths[i], z=c.camZ+dz, s=FOCAL/dz;
+    const fade=Math.pow(1-i/(N-1),0.7);
+    const xmax=(W*0.58)/s;
+    let began=false; ctx.beginPath();
+    for(let x=-xmax;x<=xmax;x+=xmax/38){
+      const ripple=0.16*Math.sin(x*0.30+z*0.22)+0.10*Math.sin(x*0.13-z*0.41);
+      const p=proj(x,ripple,z,c);
+      if(!p){began=false;continue}
+      if(p.y<-H||p.y>H*2.2){began=false;continue}
+      if(!began){ctx.moveTo(p.x,p.y);began=true}else ctx.lineTo(p.x,p.y);
+    }
+    const a=(below?0.34:0.20)*fade*vis;
+    ctx.strokeStyle=below?`rgba(226,238,248,${a.toFixed(3)})`:`rgba(150,178,200,${a.toFixed(3)})`;
+    ctx.stroke();
+  }
+}
+
+// ---- the proof wall: real shipped software, surfacing out of the dark ------
+// curated: enterprise-credible work only. Consumer live-gifting UI is off-message
+// for a page a credit union or health authority is reading.
+const PANE_KEYS=['nfl','mimarket','itu','platanitos','saludables','pickpointer'];
+function panes(){
+  const off = MOBILE ? [-2.1,2.2,-2.4,2.0,-1.7,2.4] : [-4.4,4.2,-6.0,5.4,-2.8,5.8];
+  return PANE_KEYS.map((key,i)=>({ key, x:off[i], z:118+i*8.8, dy:(i%3)-1, t:i }));
+}
+function roundRect(ctx,x,y,w,h,r){
+  ctx.beginPath(); ctx.moveTo(x+r,y);
+  ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r);
+  ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath();
+}
+function drawPanes(ctx,T,c,frame){
+  const gate=smooth(0.56,0.63,T);
+  if(gate<=0.01) return;
+  const drawn=[];
+  for(const p of panes()){
+    const dz=p.z-c.camZ;
+    if(dz<=3.0||dz>40) continue;
+    const rise=smooth(34,16,dz);
+    const meta=SHEETS.find(s=>s.key===p.key);
+    const lift = MOBILE ? 2.7 : 0;
+    const y=camYAtZ(p.z)+lift+p.dy*(MOBILE?0.35:0.55)+(1-rise)*-4.0;
+    const a=proj(p.x,y,p.z,c);
+    if(!a) continue;
+    const wS=a.s*(MOBILE?2.55:2.6), hS=wS*(meta.ch/meta.cw);
+    const fade=gate*rise*smooth(3.4,7.5,dz)*(1-smooth(32,40,dz));
+    if(fade<=0.01) continue;
+    drawn.push({a,wS,hS,fade,meta,p,dz});
+  }
+  drawn.sort((m,n)=>n.dz-m.dz);
+  for(const d of drawn){
+    const {a,wS,hS,fade,meta,p}=d;
+    const x0=a.x-wS/2,y0=a.y-hS/2,r=Math.max(3,wS*0.08);
+    ctx.save(); ctx.globalAlpha=fade;
+    ctx.shadowColor='rgba(2,4,8,0.9)'; ctx.shadowBlur=wS*0.45; ctx.shadowOffsetY=wS*0.12;
+    ctx.fillStyle='#0a0d14'; roundRect(ctx,x0,y0,wS,hS,r); ctx.fill(); ctx.restore();
+    ctx.save(); ctx.globalAlpha=fade; roundRect(ctx,x0,y0,wS,hS,r); ctx.clip();
+    const n=meta.cols*meta.rows, idx=(Math.floor(frame*0.6)+p.t*9)%n;
+    ctx.drawImage(imgs[meta.key],(idx%meta.cols)*meta.cw,Math.floor(idx/meta.cols)*meta.ch,meta.cw,meta.ch,x0,y0,wS,hS);
+    ctx.restore();
+    ctx.save(); ctx.globalAlpha=fade*0.8;
+    ctx.strokeStyle='rgba(228,238,246,0.38)'; ctx.lineWidth=1;
+    roundRect(ctx,x0+0.5,y0+0.5,wS-1,hS-1,r); ctx.stroke(); ctx.restore();
+  }
+}
+
+function veil(ctx){
+  const g=ctx.createLinearGradient(0,0,0,H);
+  g.addColorStop(0,'rgba(6,8,14,0.30)');
+  g.addColorStop(0.45,'rgba(6,8,14,0.00)');
+  g.addColorStop(1,'rgba(6,8,14,0.34)');
+  ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+  const r=ctx.createRadialGradient(W/2,H*0.5,Math.min(W,H)*0.34,W/2,H*0.5,Math.max(W,H)*0.80);
+  r.addColorStop(0,'rgba(0,0,0,0)'); r.addColorStop(1,'rgba(0,0,0,0.38)');
+  ctx.fillStyle=r; ctx.fillRect(0,0,W,H);
+}
+
+window.drawFrame=function(T,frame){
+  const ctx=document.getElementById('c').getContext('2d');
+  const c=cam(T);
+  ctx.clearRect(0,0,W,H);
+  bg(ctx,T); drawField(ctx,T,c); drawSurface(ctx,T,c); drawPanes(ctx,T,c,frame); veil(ctx);
+  return true;
+};
+window.setup=setup;
+</script>
