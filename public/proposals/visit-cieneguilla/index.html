@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light">
+<title>Ruta de una Reserva — Visit Cieneguilla</title>
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/icon-96x96.png">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+
+  /* Paleta de tema claro único y deliberado: piedra cálida del valle,
+     ciruela de buganvilla para la estructura, magenta para el paso humano,
+     pizarra para lo confirmado. */
+  :root {
+    --bg: #F6F2F3;
+    --surface: #FFFFFF;
+    --surface-2: #EFE8EB;
+    --ink: #2A1E26;
+    --ink-2: #5E5058;
+    --ink-3: #8D7F87;
+    --line: #E5DCE0;
+    --line-strong: #C9BCC3;
+    --plum: #6B2148;
+    --plum-soft: #F4E6EC;
+    --magenta: #C21E63;
+    --magenta-soft: #FBE7F0;
+    --magenta-line: #EBA9C7;
+    --slate: #2E5C75;
+    --slate-soft: #E3EDF2;
+    --llaapp: #3b48ff;
+    --shadow: 0 1px 2px rgba(42,30,38,.05), 0 8px 24px rgba(42,30,38,.07);
+
+    --f-display: Optima, "Gill Sans", "Gill Sans MT", Avenir, "Segoe UI", system-ui, sans-serif;
+    --f-body: "Iowan Old Style", Charter, Georgia, "Times New Roman", serif;
+    --f-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  }
+
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: var(--f-body); font-size: 17px; line-height: 1.62;
+    margin: 0; padding: 0 20px 80px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  img { max-width: 100%; display: block; }
+  a { color: var(--plum); }
+  :focus-visible { outline: 2px solid var(--magenta); outline-offset: 3px; border-radius: 3px; }
+
+  .brandbar {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 20px; flex-wrap: wrap; padding: 28px 0 0;
+  }
+  .client { display: flex; align-items: center; gap: 14px; }
+  .client img { width: 54px; height: auto; border-radius: 6px; }
+  .client-name { display: flex; flex-direction: column; line-height: 1.25; }
+  .client-name .n { font-family: var(--f-display); font-weight: 600; font-size: 1rem; }
+  .client-name .s { font-family: var(--f-mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); }
+  .byline {
+    font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--ink-3); text-align: right; line-height: 1.7;
+  }
+  .byline b { color: var(--llaapp); font-weight: 600; letter-spacing: .12em; }
+
+  header.top {
+    display: flex; flex-direction: column; gap: 14px;
+    padding: 44px 0 40px; border-bottom: 1px solid var(--line);
+  }
+  .eyebrow {
+    font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--ink-3);
+  }
+  h1 {
+    font-family: var(--f-display); font-size: clamp(2.4rem, 7vw, 3.6rem);
+    line-height: 1.04; font-weight: 600; letter-spacing: -.015em;
+    margin: 0; text-wrap: balance; color: var(--plum);
+  }
+  .lead { font-size: 1.12rem; color: var(--ink-2); margin: 0; max-width: 62ch; }
+
+  section { padding: 56px 0 0; }
+  h2 {
+    font-family: var(--f-display); font-size: 1.62rem; font-weight: 600;
+    letter-spacing: -.01em; margin: 0 0 10px; text-wrap: balance; color: var(--plum);
+  }
+  h3 { font-family: var(--f-display); font-size: 1.12rem; font-weight: 600; margin: 0 0 6px; }
+  p { margin: 0 0 16px; max-width: 66ch; }
+  .muted { color: var(--ink-2); }
+
+  .fig-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 28px 0 0; }
+  @media (max-width: 760px) { .fig-pair { grid-template-columns: 1fr; gap: 36px; } }
+  figure {
+    margin: 0; background: var(--surface); border: 1px solid var(--line);
+    border-radius: 5px; padding: 18px 16px 14px; overflow-x: auto;
+  }
+  figure svg { display: block; width: 100%; height: auto; }
+  figcaption {
+    font-family: var(--f-mono); font-size: 11.5px; line-height: 1.5; color: var(--ink-3);
+    margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line);
+  }
+  figcaption b { color: var(--ink-2); font-weight: 600; }
+  .fig-solo { margin: 28px 0 0; }
+
+  .d-box { fill: var(--surface-2); stroke: var(--line-strong); stroke-width: 1; }
+  .d-box-slate { fill: var(--slate-soft); stroke: var(--slate); stroke-width: 1.4; }
+  .d-box-mag { fill: var(--magenta-soft); stroke: var(--magenta); stroke-width: 1.8; }
+  .d-line { stroke: var(--line-strong); stroke-width: 1.4; fill: none; }
+  .d-line-mag { stroke: var(--magenta); stroke-width: 1.8; fill: none; }
+  .d-lane { stroke: var(--line); stroke-width: 1; stroke-dasharray: 3 4; }
+  .d-node { fill: var(--surface); stroke: var(--plum); stroke-width: 2; }
+  .d-t { font-family: var(--f-display); font-size: 11.5px; fill: var(--ink); }
+  .d-t-sm { font-family: var(--f-display); font-size: 10px; fill: var(--ink-2); }
+  .d-t-lane { font-family: var(--f-mono); font-size: 10px; letter-spacing: .11em; fill: var(--ink-3); }
+  .d-t-mag { font-family: var(--f-display); font-size: 11.5px; fill: var(--magenta); font-weight: 600; }
+  .d-t-slate { font-family: var(--f-display); font-size: 11.5px; fill: var(--slate); font-weight: 600; }
+  .d-t-amt { font-family: var(--f-display); font-size: 13.5px; font-weight: 600; fill: var(--ink); }
+  .d-t-amt-mag { font-family: var(--f-display); font-size: 13.5px; font-weight: 600; fill: var(--magenta); }
+  .d-t-amt-slate { font-family: var(--f-display); font-size: 13.5px; font-weight: 600; fill: var(--slate); }
+  .d-node-mag { fill: var(--magenta); stroke: none; }
+  .d-node-slate { fill: var(--slate); stroke: none; }
+  .d-node-plain { fill: var(--line-strong); stroke: none; }
+  .d-label-bg { fill: var(--surface); }
+  .d-arrow { fill: var(--line-strong); }
+  .d-arrow-mag { fill: var(--magenta); }
+
+  .stats {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: var(--line); border: 1px solid var(--line);
+    border-radius: 5px; overflow: hidden; margin: 36px 0 0;
+  }
+  @media (max-width: 620px) { .stats { grid-template-columns: 1fr; } }
+  .stat { background: var(--surface); padding: 22px 20px; display: flex; flex-direction: column; gap: 4px; }
+  .stat .n {
+    font-family: var(--f-display); font-size: 2.05rem; font-weight: 600; line-height: 1;
+    letter-spacing: -.02em; font-variant-numeric: tabular-nums; color: var(--slate);
+  }
+  .stat .n.acc { color: var(--magenta); }
+  .stat .k { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .11em; text-transform: uppercase; color: var(--ink-3); }
+  .stat .d { font-size: .93rem; color: var(--ink-2); line-height: 1.45; }
+
+  .catalog { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 28px 0 0; }
+  @media (max-width: 780px) { .catalog { grid-template-columns: repeat(2, 1fr); gap: 14px; } }
+  @media (max-width: 480px) { .catalog { grid-template-columns: 1fr; } }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 6px;
+    overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow);
+  }
+  .card .ph { aspect-ratio: 3 / 2; overflow: hidden; background: var(--surface-2); }
+  .card .ph img { width: 100%; height: 100%; object-fit: cover; }
+  .card .body { padding: 12px 13px 13px; display: flex; flex-direction: column; gap: 7px; flex: 1; }
+  .card .nm { font-family: var(--f-display); font-weight: 600; font-size: .98rem; line-height: 1.25; }
+  .card .loc { font-family: var(--f-mono); font-size: 9.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+  .chips { display: flex; flex-wrap: wrap; gap: 4px; }
+  .chip {
+    font-family: var(--f-mono); font-size: 9.5px; letter-spacing: .04em;
+    background: var(--surface-2); color: var(--ink-2);
+    padding: 2px 6px; border-radius: 3px; white-space: nowrap;
+  }
+  .chip.pool { background: var(--slate-soft); color: var(--slate); }
+  .card .foot {
+    margin-top: auto; padding-top: 9px; border-top: 1px solid var(--line);
+    display: flex; align-items: baseline; justify-content: space-between; gap: 8px;
+  }
+  .card .price { font-family: var(--f-display); font-weight: 600; font-size: 1rem; font-variant-numeric: tabular-nums; }
+  .card .price small { font-family: var(--f-mono); font-size: 9.5px; font-weight: 400; color: var(--ink-3); letter-spacing: .05em; }
+  .card .cta {
+    font-family: var(--f-mono); font-size: 9.5px; letter-spacing: .08em; text-transform: uppercase;
+    background: var(--plum); color: #fff; padding: 5px 9px; border-radius: 3px; white-space: nowrap;
+  }
+
+  .disclaimer {
+    font-family: var(--f-mono); font-size: 11.5px; line-height: 1.6; color: var(--ink-3);
+    margin: 16px 0 0; padding: 12px 14px;
+    background: var(--surface); border: 1px dashed var(--line-strong); border-radius: 5px;
+  }
+
+  .flow3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 28px 0 0; }
+  @media (max-width: 780px) { .flow3 { grid-template-columns: 1fr; gap: 20px; } }
+  .screen {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+    overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column;
+  }
+  .screen .bar {
+    display: flex; align-items: center; gap: 6px; padding: 8px 11px;
+    border-bottom: 1px solid var(--line); background: var(--surface-2);
+  }
+  .screen .bar span { width: 7px; height: 7px; border-radius: 50%; background: var(--line-strong); }
+  .screen .bar em {
+    margin-left: 6px; font-style: normal; font-family: var(--f-mono);
+    font-size: 9.5px; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-3);
+  }
+  .screen .in { padding: 13px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .screen .thumb { aspect-ratio: 16 / 9; border-radius: 4px; overflow: hidden; background: var(--surface-2); }
+  .screen .thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .screen h4 { font-family: var(--f-display); font-size: .95rem; font-weight: 600; margin: 0; }
+  .screen .row {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    font-family: var(--f-mono); font-size: 10.5px; color: var(--ink-2);
+    padding: 6px 8px; background: var(--surface-2); border-radius: 4px;
+  }
+  .screen .row b { color: var(--ink); font-weight: 600; }
+  .screen .row.promo { background: var(--slate-soft); color: var(--slate); }
+  .screen .row.pay { background: var(--magenta-soft); color: var(--magenta); }
+  .screen .row.pay b { color: var(--magenta); }
+  .screen .hint {
+    font-family: var(--f-mono); font-size: 9.5px; line-height: 1.5;
+    color: var(--ink-3); padding: 0 2px;
+  }
+  .screen .row.promo b { color: var(--slate); }
+  .screen .field {
+    font-family: var(--f-mono); font-size: 10.5px; color: var(--ink-3);
+    padding: 8px 9px; border: 1px solid var(--line-strong); border-radius: 4px;
+  }
+  .screen .field b { display: block; color: var(--ink); font-size: 11.5px; font-weight: 600; margin-top: 2px; }
+  .screen .btn {
+    text-align: center; font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .09em;
+    text-transform: uppercase; padding: 9px; border-radius: 4px; margin-top: auto; color: #fff;
+  }
+  .screen .btn.pay { background: var(--magenta); }
+  .screen .btn.go { background: var(--plum); }
+  .step-tag {
+    font-family: var(--f-mono); font-size: 10px; letter-spacing: .11em; text-transform: uppercase;
+    color: var(--ink-3); margin: 0 0 7px;
+  }
+  .step-tag b { color: var(--plum); font-weight: 600; }
+
+  ol.steps { list-style: none; margin: 30px 0 0; padding: 0; }
+  ol.steps > li { display: grid; grid-template-columns: 52px 1fr; column-gap: 20px; padding-bottom: 26px; position: relative; }
+  ol.steps > li::before {
+    content: ""; position: absolute; left: 25px; top: 30px; bottom: -4px; width: 1px; background: var(--line);
+  }
+  ol.steps > li:last-child::before { display: none; }
+  .marker {
+    width: 52px; height: 30px; display: flex; align-items: center; justify-content: center;
+    font-family: var(--f-mono); font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums;
+    border-radius: 3px; background: var(--surface-2); color: var(--ink-2); border: 1px solid var(--line);
+  }
+  li.act .marker { background: var(--magenta-soft); color: var(--magenta); border-color: var(--magenta-line); }
+  .step-body { padding-top: 2px; }
+  .who {
+    display: inline-block; font-family: var(--f-mono); font-size: 10px; letter-spacing: .11em;
+    text-transform: uppercase; padding: 3px 7px; border-radius: 3px; margin-bottom: 8px;
+  }
+  .who.huesped { background: var(--plum-soft); color: var(--plum); }
+  .who.sistema { background: var(--surface-2); color: var(--ink-2); }
+  .who.ustedes { background: var(--magenta-soft); color: var(--magenta); }
+  .step-body p { margin: 0 0 8px; }
+  .part { font-family: var(--f-mono); font-size: 11.5px; line-height: 1.55; color: var(--ink-3); margin: 0; }
+  .part b { color: var(--magenta); font-weight: 600; }
+  .part.none b { color: var(--slate); font-weight: 600; }
+
+  .callout {
+    background: var(--magenta-soft); border: 1px solid var(--magenta-line);
+    border-radius: 5px; padding: 22px 24px; margin: 28px 0 0;
+  }
+  .callout h3 { color: var(--magenta); }
+  .callout p:last-child { margin-bottom: 0; }
+  .note {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 5px; padding: 20px 22px; margin: 24px 0 0;
+  }
+  .note ul { margin: 0; padding-left: 20px; }
+  .note li { margin-bottom: 7px; }
+  .note li:last-child { margin-bottom: 0; }
+
+  .quote {
+    border-left: 3px solid var(--magenta); background: var(--surface);
+    padding: 16px 20px; margin: 22px 0; border-radius: 0 5px 5px 0;
+  }
+  .quote p { margin: 0; }
+
+  footer.end {
+    margin-top: 60px; padding-top: 26px; border-top: 1px solid var(--line);
+    display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap;
+    font-family: var(--f-mono); font-size: 11.5px; line-height: 1.75; color: var(--ink-3);
+  }
+  footer.end .sig b { color: var(--llaapp); letter-spacing: .12em; }
+  footer.end a { color: var(--ink-2); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="brandbar">
+  <div class="client">
+    <img src="img/logo-visitcieneguilla.png" alt="Logotipo de Visit Cieneguilla" width="54">
+    <span class="client-name">
+      <span class="n">Visit Cieneguilla</span>
+      <span class="s">Casas de campo</span>
+    </span>
+  </div>
+  <div class="byline">Propuesta preparada por<br><b>LLAAPP</b> &middot; Binni Cordova</div>
+</div>
+
+<header class="top">
+  <div class="eyebrow">Plataforma de reservas &middot; Documento de propuesta</div>
+  <h1>Ruta de una Reserva</h1>
+  <p class="lead">Cómo se mueve una reserva desde que el huésped abre su celular hasta que ustedes lo reciben en la casa &mdash; y exactamente en qué parte del camino ustedes tienen que intervenir.</p>
+</header>
+
+<section>
+  <h2>Lo que cambia</h2>
+  <p class="muted">Hoy, cada reserva existe porque alguien de su equipo la conversa. Con la plataforma, la reserva se arma sola y ustedes solo la aprueban. Es la misma reserva; cambia quién hace el trabajo de llegar hasta ella.</p>
+
+  <div class="fig-pair">
+    <figure>
+      <svg viewBox="0 0 460 484" role="img" aria-label="Diagrama: hoy cada reserva cruza seis veces entre el huésped y el equipo por WhatsApp.">
+        <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="d-arrow"/></marker></defs>
+        <text x="70" y="20" class="d-t-lane" text-anchor="middle">EL HUÉSPED</text>
+        <text x="390" y="20" class="d-t-lane" text-anchor="middle">USTEDES</text>
+        <line x1="70" y1="34" x2="70" y2="466" class="d-lane"/>
+        <line x1="390" y1="34" x2="390" y2="466" class="d-lane"/>
+        <line x1="70" y1="70" x2="390" y2="132" class="d-line" marker-end="url(#ah)"/>
+        <line x1="390" y1="132" x2="70" y2="194" class="d-line" marker-end="url(#ah)"/>
+        <line x1="70" y1="194" x2="390" y2="256" class="d-line" marker-end="url(#ah)"/>
+        <line x1="390" y1="256" x2="70" y2="318" class="d-line" marker-end="url(#ah)"/>
+        <line x1="70" y1="318" x2="390" y2="380" class="d-line" marker-end="url(#ah)"/>
+        <line x1="390" y1="380" x2="70" y2="442" class="d-line" marker-end="url(#ah)"/>
+        <rect x="145" y="92" width="170" height="17" class="d-label-bg"/>
+        <text x="230" y="105" class="d-t-sm" text-anchor="middle">«¿tienen casa libre el 14?»</text>
+        <rect x="163" y="154" width="134" height="17" class="d-label-bg"/>
+        <text x="230" y="167" class="d-t-sm" text-anchor="middle">«déjeme revisar…»</text>
+        <rect x="155" y="216" width="150" height="17" class="d-label-bg"/>
+        <text x="230" y="229" class="d-t-sm" text-anchor="middle">«¿cuánto por 3 días?»</text>
+        <rect x="140" y="278" width="180" height="17" class="d-label-bg"/>
+        <text x="230" y="291" class="d-t-sm" text-anchor="middle">«le calculo y le mando fotos»</text>
+        <rect x="138" y="340" width="184" height="17" class="d-label-bg"/>
+        <text x="230" y="353" class="d-t-sm" text-anchor="middle">«ya le transferí, acá el voucher»</text>
+        <rect x="152" y="402" width="156" height="17" class="d-label-bg"/>
+        <text x="230" y="415" class="d-t-sm" text-anchor="middle">«confirmado, lo anoto»</text>
+        <circle cx="70" cy="70" r="6" class="d-node"/><circle cx="390" cy="132" r="6" class="d-node"/>
+        <circle cx="70" cy="194" r="6" class="d-node"/><circle cx="390" cy="256" r="6" class="d-node"/>
+        <circle cx="70" cy="318" r="6" class="d-node"/><circle cx="390" cy="380" r="6" class="d-node"/>
+        <circle cx="70" cy="442" r="6" class="d-node"/>
+      </svg>
+      <figcaption><b>HOY, POR WHATSAPP.</b> Seis idas y vueltas por cada reserva, a cualquier hora del día. Y las consultas que nunca se convierten en reserva cuestan exactamente lo mismo.</figcaption>
+    </figure>
+
+    <figure>
+      <svg viewBox="0 0 460 484" role="img" aria-label="Diagrama: con la plataforma, de cinco pasos de la reserva el equipo solo interviene en uno, la validación de la transferencia.">
+        <defs>
+          <marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="d-arrow"/></marker>
+          <marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="d-arrow-mag"/></marker>
+        </defs>
+        <text x="80" y="20" class="d-t-lane" text-anchor="middle">EL HUÉSPED</text>
+        <text x="230" y="20" class="d-t-lane" text-anchor="middle">EL SISTEMA</text>
+        <text x="385" y="20" class="d-t-lane" text-anchor="middle">USTEDES</text>
+        <line x1="80" y1="34" x2="80" y2="466" class="d-lane"/>
+        <line x1="230" y1="34" x2="230" y2="466" class="d-lane"/>
+        <line x1="385" y1="34" x2="385" y2="466" class="d-lane"/>
+        <path d="M 80 122 L 80 140 L 230 140 L 230 158" class="d-line" marker-end="url(#ah2)"/>
+        <path d="M 230 214 L 230 232 L 80 232 L 80 250" class="d-line" marker-end="url(#ah2)"/>
+        <path d="M 80 306 L 80 324 L 385 324 L 385 342" class="d-line-mag" marker-end="url(#ahm)"/>
+        <path d="M 385 404 L 385 422 L 230 422 L 230 440" class="d-line-mag" marker-end="url(#ahm)"/>
+        <rect x="18" y="66" width="124" height="56" rx="4" class="d-box-slate"/>
+        <text x="80" y="88" class="d-t" text-anchor="middle">Entra y elige</text>
+        <text x="80" y="104" class="d-t" text-anchor="middle">casa y días</text>
+        <rect x="168" y="158" width="124" height="56" rx="4" class="d-box"/>
+        <text x="230" y="180" class="d-t" text-anchor="middle">Precio y promoción</text>
+        <text x="230" y="196" class="d-t" text-anchor="middle">calculados solos</text>
+        <rect x="18" y="250" width="124" height="56" rx="4" class="d-box-slate"/>
+        <text x="80" y="272" class="d-t" text-anchor="middle">Adelanta el 50%</text>
+        <text x="80" y="288" class="d-t" text-anchor="middle">por transferencia</text>
+        <rect x="323" y="342" width="124" height="62" rx="4" class="d-box-mag"/>
+        <text x="385" y="365" class="d-t-mag" text-anchor="middle">Validan el abono</text>
+        <text x="385" y="382" class="d-t-sm" text-anchor="middle">ventana de 30 min</text>
+        <rect x="168" y="440" width="124" height="34" rx="4" class="d-box"/>
+        <text x="230" y="461" class="d-t-slate" text-anchor="middle">Reserva confirmada</text>
+      </svg>
+      <figcaption><b>CON LA PLATAFORMA.</b> El huésped avanza solo hasta el final. El único recuadro que les pertenece es el magenta: confirmar que la transferencia llegó.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <h2>Su participación, en números</h2>
+  <div class="stats">
+    <div class="stat">
+      <div class="k">Hoy</div><div class="n">6</div>
+      <div class="d">mensajes que su equipo escribe por cada reserva que se cierra.</div>
+    </div>
+    <div class="stat">
+      <div class="k">Con la plataforma</div><div class="n acc">1</div>
+      <div class="d">acción suya frente a la pantalla: verificar el abono y aprobarlo.</div>
+    </div>
+    <div class="stat">
+      <div class="k">100 reservas al mes</div><div class="n acc">3.5 h</div>
+      <div class="d">de trabajo total frente a la pantalla, repartidas en todo el mes.</div>
+    </div>
+  </div>
+  <p class="part" style="margin-top:14px">Referencia: 100 reservas &times; 2 minutos de verificación cada una. Hoy, esas mismas 100 reservas representan más de 30 horas de conversación, sin contar las consultas que nunca terminan en alquiler.</p>
+</section>
+
+<section>
+  <h2>Sus casas, dentro del sistema</h2>
+  <p class="muted">Estas son sus trece propiedades publicadas tal como las verá el huésped al entrar: foto, capacidad, metraje, habitaciones y precio, todo en una sola pantalla y sin escribirle a nadie. Los datos de cada casa son los suyos, tomados de su web actual.</p>
+
+  <div class="catalog">
+    <article class="card"><div class="ph"><img src="img/casa-la-fortaleza.webp" alt="Casa La Fortaleza Cieneguilla" loading="lazy" width="840" height="560"></div><div class="body"><div><div class="nm">Casa La Fortaleza</div><div class="loc">Cieneguilla, Lima</div></div><div class="chips"><span class="chip">34 PAX</span><span class="chip">5000 m²</span><span class="chip">8 HAB</span><span class="chip pool">PISCINA</span></div><div class="foot"><span class="price">S/ 2,800 <small>/ día</small></span><span class="cta">Reservar</span></div></div></article>
+    <article class="card"><div class="ph"><img src="img/casa-blanca.webp" alt="Casa Blanca" loading="lazy" width="840" height="560"></div><div class="body"><div><div class="nm">Casa Blanca</div><div class="loc">Cieneguilla, Lima</div></div><div class="chips"><span class="chip">33 PAX</span><span class="chip">2700 m²</span><span class="chip">9 HAB</span><span class="chip pool">PISCINA</span></div><div class="foot"><span class="price">S/ 2,600 <small>/ día</small></span><span class="cta">Reservar</span></div></div></article>
+    <article class="card"><div class="ph"><img src="img/casa-bali.webp" alt="Casa Bali" loading="lazy" width="840" height="560"></div><div class="body"><div><div class="nm">Casa Bali</div><div class="loc">Cieneguilla, Lima</div></div><div class="chips"><span class="chip">30 PAX</span><span class="chip">3000 m²</span><span class="chip">9 HAB</span><span class="chip pool">PISCINA</span></div><div class="foot"><span class="price">S/ 2,400 <small>/ día</small></span><span class="cta">Reservar</span></div></div></article>
+    <article class="card"><div class="ph"><img src="img/casa-sol-radiante.webp" alt="Casa Sol Radiante" loading="lazy" width="840" height="560"></div><div class="body"><div><div class="nm">Casa Sol Radiante</div><div class="loc">Cieneguilla, Lima</div></div><div class="chips"><span class="chip">30 PAX</span><span class="chip">1800 m²</span><span class="chip">9 HAB</span><span class="chip pool">PISCINA</span></div><div class="foot"><span class="price">S/ 2,300 <small>/ día</small></span><span class="cta">Reservar</span></div></div></article>
+    <article class="card"><div class="ph"><img src="img/casa-royales.webp" alt="Casa Royales" loading="lazy" width="840" height="560"></div><div class="body"><div><div class="nm">Casa Royales</div><div class="loc">Cieneguilla, Lima</div></div><div class="chips"><span class="chip">23 PAX</span><span class="chip">1500 m²</span><span class="chip">6 HAB</span><span class="chip pool">PISCINA</span></div><div class="foot"><span class="price">S/ 1,800 <small>/ día</small></span><span class="cta">Reservar</span></div></div></article>
+    <article class="card"><div class="ph"><img src="img/casa-sol-de-oro.webp" alt="Casa Sol de Oro" loading="lazy" width="840" height="560"></div><div class="body"><div><div class="nm">Casa Sol de Oro</div><div class="loc">Cieneguilla, Lima</div></div><div class="chips"><span class="chip">22 PAX</span><span class="chip">600 m²</span><span class="chip">6 HAB</span><span class="chip pool">PISCINA</span></div><div class="foot"><span class="price">S/ 1,650 <small>/ día</small></span><span class="cta">Reservar</span></div></div></article>
+    <article class="card"><div class="ph"><img src="img/casa-colca-suite.webp" alt="Colca Casa Suite" loading="lazy" width="840" height="560"></div><div class="body"><div><div class="nm">Colca Casa Suite</div><div class="loc">Cieneguilla, Lima</div></div><div class="chips"><span class="chip">18 PAX</span><span class="chip">3000 m²</span><span class="chip">6 HAB</span><span class="chip pool">PISCINA</span></div><div class="foot"><span class="price">S/ 1,400 <small>/ día</small></span><span class="cta">Reservar</span></div></div></article>
+    <article class="card"><div class="ph"><img src="img/casa-valentina.webp" alt="Casa Valentina" loading="lazy" width="840" height="560"></div><div class="body"><div><div class="nm">Casa Valentina</div><div class="loc">Cieneguilla, Lima</div></div><div class="chips"><span class="chip">17 PAX</span><span class="chip">2500 m²</span><span class="chip">5 HAB</span><span class="chip pool">PISCINA</span></div><div class="foot"><span class="price">S/ 1,300 <small>/ día</small></span><span class="cta">Reservar</span></div></div></article>
+    <article class="card"><div class="ph"><img src="img/casa-la-cumbre.webp" alt="Casa La Cumbre" loading="lazy" width="840" height="560"></div><div class="body"><div><div class="nm">Casa La Cumbre</div><div class="loc">Cieneguilla, Lima</div></div><div class="chips"><span class="chip">15 PAX</span><span class="chip">1500 m²</span><span class="chip">3 HAB</span><span class="chip pool">PISCINA</span></div><div class="foot"><span class="price">S/ 1,100 <small>/ día</small></span><span class="cta">Reservar</span></div></div></article>
+    <article class="card"><div class="ph"><img src="img/casa-golden-house.webp" alt="Golden House" loading="lazy" width="840" height="560"></div><div class="body"><div><div class="nm">Golden House</div><div class="loc">Cieneguilla, Lima</div></div><div class="chips"><span class="chip">14 PAX</span><span class="chip">1200 m²</span><span class="chip">7 HAB</span><span class="chip pool">PISCINA</span></div><div class="foot"><span class="price">S/ 1,050 <small>/ día</small></span><span class="cta">Reservar</span></div></div></article>
+    <article class="card"><div class="ph"><img src="img/casa-el-bosque.webp" alt="El Bosque" loading="lazy" width="840" height="560"></div><div class="body"><div><div class="nm">El Bosque</div><div class="loc">Cieneguilla, Lima</div></div><div class="chips"><span class="chip">12 PAX</span><span class="chip">1200 m²</span><span class="chip">5 HAB</span><span class="chip pool">PISCINA</span></div><div class="foot"><span class="price">S/ 950 <small>/ día</small></span><span class="cta">Reservar</span></div></div></article>
+    <article class="card"><div class="ph"><img src="img/casa-jazmin.webp" alt="Casa Jazmín" loading="lazy" width="840" height="560"></div><div class="body"><div><div class="nm">Casa Jazmín</div><div class="loc">Cieneguilla, Lima</div></div><div class="chips"><span class="chip">12 PAX</span><span class="chip">2500 m²</span><span class="chip">4 HAB</span><span class="chip pool">PISCINA</span></div><div class="foot"><span class="price">S/ 900 <small>/ día</small></span><span class="cta">Reservar</span></div></div></article>
+    <article class="card"><div class="ph"><img src="img/casa-colca-villas-deluxe.webp" alt="Colca Villas Deluxe" loading="lazy" width="840" height="560"></div><div class="body"><div><div class="nm">Colca Villas Deluxe</div><div class="loc">Cieneguilla, Lima</div></div><div class="chips"><span class="chip">8 PAX</span><span class="chip">700 m²</span><span class="chip">3 HAB</span><span class="chip pool">PISCINA</span></div><div class="foot"><span class="price">S/ 700 <small>/ día</small></span><span class="cta">Reservar</span></div></div></article>
+  </div>
+
+  <p class="disclaimer">Los precios que aparecen arriba son <strong>de ejemplo</strong>, puestos solo para mostrar cómo se ve la pantalla. Las tarifas reales las definen ustedes desde el panel, día por día, y pueden cambiarlas por rango de fechas cuando quieran. Fotos y datos tomados de visitcieneguilla.com.</p>
+</section>
+
+<section>
+  <h2>Reservar en tres pantallas</h2>
+  <p class="muted">Así se ve el camino completo del huésped, con una de sus casas como ejemplo. Sin registro, sin contraseña y sin esperar respuesta de nadie.</p>
+
+  <div class="flow3">
+    <div>
+      <p class="step-tag"><b>Paso 1</b> &middot; Elige</p>
+      <div class="screen">
+        <div class="bar"><span></span><span></span><span></span><em>Casas de campo</em></div>
+        <div class="in">
+          <div class="thumb"><img src="img/casa-la-fortaleza.webp" alt="Casa La Fortaleza" loading="lazy" width="840" height="560"></div>
+          <h4>Casa La Fortaleza</h4>
+          <div class="row"><span>Capacidad</span><b>34 personas</b></div>
+          <div class="row"><span>Días</span><b>14, 15 y 16 nov</b></div>
+          <div class="btn go">Continuar</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <p class="step-tag"><b>Paso 2</b> &middot; Ve el precio</p>
+      <div class="screen">
+        <div class="bar"><span></span><span></span><span></span><em>Su reserva</em></div>
+        <div class="in">
+          <div class="row"><span>3 días &times; S/ 2,800</span><b>S/ 8,400</b></div>
+          <div class="row promo"><span>Promoción 3x2</span><b>&minus; S/ 2,800</b></div>
+          <div class="row"><span>Total de la reserva</span><b>S/ 5,600</b></div>
+          <div class="row pay"><span>Adelanto ahora (50%)</span><b>S/ 2,800</b></div>
+          <div class="field">Su número de celular<b>9 9 9 &nbsp; 9 9 9 &nbsp; 9 9 9</b></div>
+          <div class="btn go">Continuar</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <p class="step-tag"><b>Paso 3</b> &middot; Transfiere</p>
+      <div class="screen">
+        <div class="bar"><span></span><span></span><span></span><em>Pago por transferencia</em></div>
+        <div class="in">
+          <div class="field">Transferir a<b>Visit Cieneguilla S.A.C.</b></div>
+          <div class="field">Cuenta corriente soles<b>194&nbsp;0000&nbsp;0000&nbsp;00</b></div>
+          <div class="row pay"><span>Adelanto exacto</span><b>S/ 2,800</b></div>
+          <div class="field">N.° de operación de su banco<b>0 0 1 2 3 4 5 6 7</b></div>
+          <div class="hint">El saldo de S/ 2,800 y la garantía de S/ 1,000 se pagan en la casa el día de llegada.</div>
+          <div class="btn pay">Enviar reserva</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="disclaimer">Pantallas de muestra con datos de ejemplo. El descuento 3x2 se calcula solo: el huésped elige tres días y el sistema cobra dos, sin que nadie tenga que cotizarlo. Al enviar, el huésped ve que su reserva se confirma dentro de los 30 minutos siguientes.</p>
+</section>
+
+<section>
+  <h2>El dinero, en tres momentos</h2>
+  <p class="muted">La reserva no se cobra toda de golpe, y así es como sus clientes ya están acostumbrados a pagar: la mitad por adelantado para asegurar la fecha, y el resto al llegar a la casa, junto con la garantía. La plataforma solo interviene en el primer momento; los otros dos siguen ocurriendo en el counter, como hasta hoy.</p>
+
+  <figure class="fig-solo">
+    <svg viewBox="0 0 480 380" role="img" aria-label="Diagrama del flujo de dinero: adelanto del 50% en línea al reservar, saldo del 50% más garantía en el counter el día de llegada, y devolución de la garantía al terminar.">
+      <line x1="50" y1="80" x2="50" y2="320" class="d-line"/>
+
+      <rect x="85" y="40" width="380" height="80" rx="4" class="d-box-mag"/>
+      <text x="105" y="66" class="d-t-lane">AL RESERVAR &middot; EN LÍNEA</text>
+      <text x="105" y="90" class="d-t-amt-mag">Adelanto del 50% &mdash; S/ 2,800</text>
+      <text x="105" y="108" class="d-t-sm">por transferencia bancaria, validado por ustedes</text>
+
+      <rect x="85" y="160" width="380" height="80" rx="4" class="d-box"/>
+      <text x="105" y="186" class="d-t-lane">DÍA DE LLEGADA &middot; EN EL COUNTER</text>
+      <text x="105" y="210" class="d-t-amt">Saldo S/ 2,800 + garantía S/ 1,000</text>
+      <text x="105" y="228" class="d-t-sm">se cobran en la casa, fuera de la plataforma</text>
+
+      <rect x="85" y="280" width="380" height="80" rx="4" class="d-box-slate"/>
+      <text x="105" y="306" class="d-t-lane">AL TERMINAR &middot; EN EL COUNTER</text>
+      <text x="105" y="330" class="d-t-amt-slate">Garantía devuelta &mdash; S/ 1,000</text>
+      <text x="105" y="348" class="d-t-sm">tras revisar el estado de la casa</text>
+
+      <circle cx="50" cy="80" r="8" class="d-node-mag"/>
+      <circle cx="50" cy="200" r="8" class="d-node-plain"/>
+      <circle cx="50" cy="320" r="8" class="d-node-slate"/>
+    </svg>
+    <figcaption><b>MONTOS DE EJEMPLO.</b> Solo el primer momento ocurre dentro de la plataforma. El saldo y la garantía se cobran y se devuelven en efectivo en el counter, exactamente como lo hacen hoy: el sistema los muestra y lleva la cuenta, pero nunca toca ese dinero.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2>Paso a paso</h2>
+  <p class="muted">Estos son los siete momentos por los que pasa cada reserva. Al costado de cada uno está quién lo hace y qué se espera de ustedes.</p>
+  <ol class="steps">
+    <li><div class="marker">01</div><div class="step-body">
+      <span class="who huesped">El huésped</span>
+      <h3>Encuentra la casa</h3>
+      <p>Abre la web o la aplicación desde su celular y ve el catálogo completo: fotos, capacidad, distribución de habitaciones, precio real y qué días están libres. Sin escribir a nadie y sin esperar respuesta.</p>
+      <p class="part none">Participación de ustedes: <b>ninguna.</b> El catálogo responde a las 11 de la noche igual que al mediodía.</p>
+    </div></li>
+    <li><div class="marker">02</div><div class="step-body">
+      <span class="who sistema">El sistema</span>
+      <h3>Arma el precio</h3>
+      <p>El huésped marca sus días y el sistema calcula el total al instante, con el precio que ustedes cargaron para cada fecha. Si eligió tres días, la promoción 3x2 se aplica sola, sin que nadie la cotice.</p>
+      <p class="part none">Participación de ustedes: <b>ninguna.</b> Los precios los cargaron una vez en el calendario del panel; el sistema los aplica siempre igual.</p>
+    </div></li>
+    <li><div class="marker">03</div><div class="step-body">
+      <span class="who huesped">El huésped</span>
+      <h3>Adelanta el 50%</h3>
+      <p>Escribe su número de celular &mdash; sin crear cuenta ni contraseña &mdash;, transfiere el adelanto exacto a la cuenta bancaria que ustedes configuraron y pega el número de operación que le devolvió su banco. En pantalla ve con claridad cuánto está pagando ahora y cuánto le tocará pagar en la casa. Las fechas quedan apartadas de inmediato para que nadie más las tome.</p>
+      <p class="part none">Participación de ustedes: <b>ninguna</b> en este momento.</p>
+    </div></li>
+    <li class="act"><div class="marker">04</div><div class="step-body">
+      <span class="who ustedes">Ustedes</span>
+      <h3>Verifican el abono</h3>
+      <p>La reserva entra a la cola de validación con el monto, el número de operación y un contador de cuánto lleva esperando. Una persona de su equipo lo compara con el movimiento en su cuenta bancaria y aprueba o rechaza. Toma unos dos minutos, dentro de una ventana objetivo de 30.</p>
+      <p>Solo quien tiene el rol de validar puede además cancelar una reserva, para que ninguna reserva ya confirmada se anule por error desde otro usuario del panel.</p>
+      <p class="part">Participación de ustedes: <b>este paso, y solo este, frente a la pantalla.</b> Todo lo demás ocurre en la casa, como siempre.</p>
+    </div></li>
+    <li><div class="marker">05</div><div class="step-body">
+      <span class="who sistema">El sistema</span>
+      <h3>Confirma al huésped</h3>
+      <p>Apenas ustedes aprueban, la reserva queda confirmada y el huésped recibe por SMS un código de cuatro dígitos. Con su número de celular y ese código puede consultar su reserva cuando quiera, sin volver a escribirles.</p>
+      <p class="part none">Participación de ustedes: <b>ninguna.</b> Se acabaron los «¿me confirma que llegó el pago?» del día siguiente.</p>
+    </div></li>
+    <li><div class="marker">06</div><div class="step-body">
+      <span class="who ustedes">Ustedes</span>
+      <h3>Reciben al huésped y cobran en el counter</h3>
+      <p>En el panel ven el calendario de llegadas de la semana: qué casa, qué días, cuántas personas, con qué teléfono contactarlas y cuánto queda por cobrar. El día de la llegada reciben el saldo del 50% y la garantía en el counter, y lo marcan como cobrado en el panel.</p>
+      <p class="part none">Participación de ustedes: <b>la de siempre</b> &mdash; recibir y cobrar en la casa. El sistema solo les dice el monto exacto sin que tengan que buscarlo.</p>
+    </div></li>
+    <li><div class="marker">07</div><div class="step-body">
+      <span class="who ustedes">Ustedes</span>
+      <h3>Devuelven la garantía</h3>
+      <p>Al terminar la estadía revisan el estado de la casa y devuelven la garantía en el counter. En el panel la marcan como devuelta y la reserva queda cerrada, con todo su historial en un solo lugar.</p>
+      <p class="part none">Participación de ustedes: <b>la de siempre.</b> La revisión de la casa la hace su equipo; el sistema solo deja constancia de que la garantía se devolvió.</p>
+    </div></li>
+  </ol>
+</section>
+
+<section>
+  <h2>Por qué transferencia y no pasarela de pago</h2>
+  <p class="muted">Esta es la decisión que más dinero les ahorra, y queremos dejarla por escrito. Hoy no existe en el mercado peruano una pasarela de pago por debajo del <strong>3% + IGV</strong>, y todas exigen constituirse formalmente como comercio. Sobre su volumen de temporada alta, esa comisión representa cerca de <strong>USD 1,800 al mes</strong> &mdash; más de USD 21,000 al año &mdash; saliendo directamente de su margen.</p>
+
+  <div class="quote">
+    <p>La alternativa que implementamos es la misma que usan las casas de cambio digitales como Kambista, que procesan miles de transferencias al día con validación humana: el huésped transfiere, ingresa su número de operación, y una persona de su equipo confirma el abono.</p>
+  </div>
+
+  <p class="muted">Son montos altos &mdash; de S/ 900 a S/ 9,000 por reserva &mdash; y precisamente por eso conviene que una persona los apruebe. Dos minutos de revisión protegen un margen que ninguna pasarela les va a devolver.</p>
+
+  <figure class="fig-solo">
+    <svg viewBox="0 0 480 436" role="img" aria-label="Diagrama del paso de validación: la reserva queda pendiente, el equipo verifica el abono en su cuenta bancaria dentro de 30 minutos, y aprueba o rechaza.">
+      <defs>
+        <marker id="ah3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="d-arrow"/></marker>
+        <marker id="ahm3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="d-arrow-mag"/></marker>
+      </defs>
+      <rect x="115" y="14" width="250" height="52" rx="4" class="d-box"/>
+      <text x="240" y="36" class="d-t" text-anchor="middle">El huésped transfirió y pegó</text>
+      <text x="240" y="53" class="d-t" text-anchor="middle">su número de operación</text>
+      <line x1="240" y1="66" x2="240" y2="94" class="d-line" marker-end="url(#ah3)"/>
+      <rect x="115" y="94" width="250" height="52" rx="4" class="d-box"/>
+      <text x="240" y="116" class="d-t" text-anchor="middle">PENDIENTE DE VALIDACIÓN</text>
+      <text x="240" y="133" class="d-t-sm" text-anchor="middle">las fechas quedan apartadas</text>
+      <line x1="240" y1="146" x2="240" y2="174" class="d-line" marker-end="url(#ah3)"/>
+      <rect x="100" y="174" width="280" height="62" rx="4" class="d-box-mag"/>
+      <text x="240" y="196" class="d-t-mag" text-anchor="middle">USTEDES verifican el abono</text>
+      <text x="240" y="213" class="d-t-mag" text-anchor="middle">en su cuenta bancaria</text>
+      <text x="240" y="229" class="d-t-sm" text-anchor="middle">ventana objetivo: 30 minutos</text>
+      <path d="M 190 236 L 190 262 L 122 262 L 122 292" class="d-line-mag" marker-end="url(#ahm3)"/>
+      <path d="M 300 236 L 300 262 L 372 262 L 372 292" class="d-line-mag" marker-end="url(#ahm3)"/>
+      <rect x="127" y="254" width="58" height="16" class="d-label-bg"/>
+      <text x="156" y="266" class="d-t-sm" text-anchor="middle">aprueban</text>
+      <rect x="307" y="254" width="58" height="16" class="d-label-bg"/>
+      <text x="336" y="266" class="d-t-sm" text-anchor="middle">rechazan</text>
+      <rect x="26" y="292" width="192" height="52" rx="4" class="d-box-slate"/>
+      <text x="122" y="314" class="d-t-slate" text-anchor="middle">CONFIRMADA</text>
+      <text x="122" y="331" class="d-t-sm" text-anchor="middle">fechas bloqueadas</text>
+      <rect x="276" y="292" width="192" height="52" rx="4" class="d-box"/>
+      <text x="372" y="314" class="d-t" text-anchor="middle">RECHAZADA</text>
+      <text x="372" y="331" class="d-t-sm" text-anchor="middle">fechas liberadas</text>
+      <line x1="122" y1="344" x2="122" y2="372" class="d-line" marker-end="url(#ah3)"/>
+      <rect x="26" y="372" width="192" height="52" rx="4" class="d-box"/>
+      <text x="122" y="394" class="d-t" text-anchor="middle">El huésped recibe su</text>
+      <text x="122" y="411" class="d-t" text-anchor="middle">código por SMS</text>
+    </svg>
+    <figcaption><b>EL PASO 04, POR DENTRO.</b> Ninguna reserva se da por pagada sin que una persona de su equipo verifique el abono en su propia cuenta. Si el dinero no aparece, las fechas se liberan solas para el siguiente huésped.</figcaption>
+  </figure>
+
+  <div class="callout">
+    <h3>El control se queda con ustedes</h3>
+    <p>El sistema registra el número de operación que declara el huésped y organiza la cola de validación, pero no consulta cuentas bancarias por su cuenta: la fuente oficial siempre es el movimiento en su banco.</p>
+    <p>La ventana de 30 minutos se cuenta desde que el abono figura en su cuenta, no desde que el huésped presiona el botón &mdash; una transferencia interbancaria puede demorar. Por eso la cola muestra el tiempo de espera de cada reserva, para que ninguna se quede olvidada.</p>
+    <p>El saldo y la garantía nunca pasan por el sistema: se cobran y se devuelven en efectivo en el counter. La plataforma calcula los montos, los muestra al huésped desde el inicio y registra cuándo se cobraron y cuándo se devolvió la garantía, pero ese dinero siempre está en sus manos.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Antes de todo esto: la carga inicial</h2>
+  <p class="muted">Hay un trabajo previo que se hace una sola vez, acompañados por nosotros, y que después solo se actualiza cuando algo cambia:</p>
+  <div class="note">
+    <ul>
+      <li>Cargar las trece casas con sus fotografías, capacidad, metraje y distribución de habitaciones &mdash; una por una desde el panel, o todas juntas desde un archivo Excel.</li>
+      <li>Marcar los días disponibles y el precio de cada fecha, seleccionando rangos completos de una sola vez.</li>
+      <li>Activar la promoción 3x2 en las fechas donde la quieran ofrecer.</li>
+      <li>Fijar el monto de garantía de cada casa, que el huésped verá desde el momento de reservar.</li>
+      <li>Indicar los datos de la cuenta bancaria donde deben llegar los adelantos.</li>
+    </ul>
+  </div>
+  <p class="part" style="margin-top:14px">De ahí en adelante, el panel se abre solo para actualizar disponibilidad, cambiar precios de temporada y validar las transferencias del día.</p>
+</section>
+
+<footer class="end">
+  <div class="sig">
+    Propuesta preparada por <b>LLAAPP</b><br>
+    Binni Cordova &middot; Consultor de Software<br>
+    <a href="mailto:binni.2000.cordova@gmail.com">binni.2000.cordova@gmail.com</a>
+  </div>
+  <div>
+    Para Visit Cieneguilla &middot; Casas de campo<br>
+    Documento privado, no indexado
+  </div>
+</footer>
+
+</div>
+</body>
+</html>
