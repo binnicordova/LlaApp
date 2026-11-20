@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI Transformation &amp; Custom Software in Vancouver, BC | LLAAPP</title>
+<meta name="description" content="AI readiness audits, custom AI agents, and custom software for Vancouver and BC companies. Senior engineers, Canadian data residency, SR&amp;ED-documented work.">
+<meta name="robots" content="index, follow">
+<meta name="geo.region" content="CA-BC">
+<meta name="geo.placename" content="Vancouver">
+<meta name="ICBM" content="49.2827, -123.1207">
+<link rel="canonical" href="https://llaapp.com/">
+<link rel="alternate" hreflang="en" href="https://llaapp.com/?lang=en">
+<link rel="alternate" hreflang="es" href="https://llaapp.com/?lang=es">
+<link rel="alternate" hreflang="de" href="https://llaapp.com/?lang=de">
+<link rel="alternate" hreflang="it" href="https://llaapp.com/?lang=it">
+<link rel="alternate" hreflang="fr" href="https://llaapp.com/?lang=fr">
+<link rel="alternate" hreflang="x-default" href="https://llaapp.com/">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/icon-96x96.png">
+<link rel="apple-touch-icon" href="/assets/icon-96x96.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://llaapp.com/">
+<meta property="og:title" content="AI Transformation & Custom Software in Vancouver, BC | LLAAPP">
+<meta property="og:description" content="AI readiness audits, custom AI agents, and custom software for Vancouver and British Columbia companies. Senior engineers, Canadian data residency, Pacific Time.">
+<meta property="og:image" content="https://llaapp.com/assets/logo-512x512.png">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="AI Transformation & Custom Software in Vancouver, BC | LLAAPP">
+<meta property="twitter:description" content="AI readiness audits, custom AI agents, and custom software for Vancouver and British Columbia companies. Senior engineers, Canadian data residency, Pacific Time.">
+<meta property="twitter:image" content="https://llaapp.com/assets/logo-512x512.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/scrollcraft.css">
+<style>
+  :root {
+    --sc-canvas:     #06080e;
+    --sc-surface:    #0d111a;
+    --sc-ink:        #eef3f7;
+    --sc-ink-soft:   #94a3b1;
+    --sc-accent:     #ffed00;
+    --sc-accent-ink: #06080e;
+    --sc-font-display: "Archivo", system-ui, sans-serif;
+    --sc-font-text: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  /* Chrome is fixed, never in flow: a worldflight has one scroll track and the
+     spacer owns it. */
+  .wf-bar {
+    position: fixed; inset: 0 0 auto 0; z-index: var(--sc-z-chrome);
+    display: flex; align-items: center; gap: var(--sc-4);
+    padding: calc(var(--sc-4) + env(safe-area-inset-top, 0px)) var(--sc-gutter) var(--sc-4);
+    background: linear-gradient(to bottom, rgba(6,8,14,0.72), rgba(6,8,14,0));
+  }
+  .wf-mark {
+    display: inline-flex; align-items: center; gap: var(--sc-2);
+    font-family: var(--sc-font-display); font-weight: 700;
+    letter-spacing: var(--sc-track-wide); font-size: var(--sc-t-xs);
+    text-transform: uppercase; color: var(--sc-ink); text-decoration: none;
+  }
+  .wf-mark img { width: 22px; height: 22px; border-radius: 5px; display: block; }
+  .wf-bar .cta { margin-left: auto; }
+
+  .cta {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 44px; padding: 0 var(--sc-5); white-space: nowrap;
+    border-radius: var(--sc-r-pill); border: 0;
+    background: var(--sc-accent); color: var(--sc-accent-ink);
+    font-family: var(--sc-font-display); font-weight: 600;
+    font-size: var(--sc-t-sm); letter-spacing: var(--sc-track-normal);
+    text-decoration: none; box-shadow: var(--sc-e2);
+    -webkit-tap-highlight-color: transparent;
+    transition: transform var(--sc-d-fast) var(--sc-ease-out),
+                box-shadow var(--sc-d-fast) var(--sc-ease-out);
+  }
+  @media (hover: hover) and (pointer: fine) { .cta:hover { box-shadow: var(--sc-e3); } }
+  .cta:active { transform: translateY(1px) scale(0.985); }
+  .cta--ghost {
+    background: transparent; color: var(--sc-ink);
+    border: 1px solid var(--sc-hairline-strong); box-shadow: none;
+  }
+
+  /* The route rail. The engine publishes the leg; it renders no rail, because a
+     runtime that ships one ships it to every page that uses the mode. */
+  .wf-rail {
+    position: fixed; right: var(--sc-gutter); top: 50%; translate: 0 -50%;
+    z-index: var(--sc-z-chrome); display: grid; gap: var(--sc-3);
+    margin: 0; padding: 0; list-style: none;
+  }
+  .wf-rail__leg {
+    display: flex; align-items: center; justify-content: flex-end; gap: var(--sc-3);
+    font-family: var(--sc-font-display); font-size: 0.68rem;
+    letter-spacing: var(--sc-track-wide); text-transform: uppercase;
+    color: var(--sc-ink-soft); opacity: 0.45;
+    transition: opacity var(--sc-d-base) var(--sc-ease-out),
+                color var(--sc-d-base) var(--sc-ease-out);
+  }
+  .wf-rail__leg::after {
+    content: ""; width: 26px; height: 1px; background: currentColor;
+    transition: width var(--sc-d-base) var(--sc-ease-out);
+  }
+  .wf-rail__leg[aria-current="true"] { opacity: 1; color: var(--sc-ink); }
+  .wf-rail__leg[aria-current="true"]::after { width: 46px; background: var(--sc-accent); }
+  @media (max-width: 860px) { .wf-rail { display: none; } }
+
+  /* Phones get their own route control. The desktop rail is a hover-range
+     affordance; on touch it has to be a real target you can hit and press. */
+  .wf-mrail {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: var(--sc-z-chrome);
+    display: none; flex-direction: column; align-items: center; gap: 2px;
+    padding: var(--sc-2) var(--sc-gutter) calc(var(--sc-2) + env(safe-area-inset-bottom, 0px));
+    background: linear-gradient(to top, rgba(6,8,14,0.92), rgba(6,8,14,0));
+  }
+  @media (max-width: 860px) { .wf-mrail { display: flex; } }
+  .wf-mrail__label {
+    font-family: var(--sc-font-display); font-size: 0.68rem; font-weight: 600;
+    letter-spacing: var(--sc-track-wide); text-transform: uppercase;
+    color: var(--sc-ink); transition: opacity var(--sc-d-base) var(--sc-ease-out);
+  }
+  .wf-mrail__ticks { display: flex; }
+  .wf-sr {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0;
+  }
+  .wf-mrail__leg {
+    appearance: none; background: none; border: 0; cursor: pointer;
+    min-width: 46px; min-height: 46px; padding: 0;
+    display: flex; align-items: center; justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .wf-mrail__leg::after {
+    content: ""; display: block; width: 22px; height: 2px; border-radius: 2px;
+    background: var(--sc-ink-soft); opacity: 0.4;
+    transition: width var(--sc-d-base) var(--sc-ease-out),
+                opacity var(--sc-d-base) var(--sc-ease-out),
+                background-color var(--sc-d-base) var(--sc-ease-out);
+  }
+  .wf-mrail__leg[aria-current="true"]::after { width: 34px; opacity: 1; background: var(--sc-accent); }
+  .wf-mrail__leg:active::after { opacity: 1; transform: scaleY(2); }
+  .wf-mrail__leg:focus-visible { outline: 2px solid var(--sc-accent); outline-offset: -6px; border-radius: var(--sc-r-sm); }
+
+  /* The sounding: the signature move. Its own fixed canvas, under the copy. */
+  #sounding {
+    position: fixed; inset: 0; z-index: 12; pointer-events: none;
+    width: 100%; height: 100%;
+  }
+  @media (prefers-reduced-motion: reduce) { #sounding { display: none; } }
+
+  /* Copy sits low and left, off the bright centre band of the world. */
+  .wf-copy {
+    position: absolute; left: var(--sc-gutter); right: var(--sc-gutter);
+    bottom: clamp(3.5rem, 12vh, 9rem);
+    max-width: 46rem;
+  }
+  .wf-copy h1, .wf-copy h2 { margin: 0; }
+  .wf-copy p { margin: var(--sc-4) 0 0; }
+  .wf-eyebrow {
+    font-family: var(--sc-font-display); font-size: var(--sc-t-xs);
+    letter-spacing: var(--sc-track-wide); text-transform: uppercase;
+    color: var(--sc-accent); margin: 0 0 var(--sc-4);
+  }
+  .wf-actions { display: flex; flex-wrap: wrap; gap: var(--sc-3); margin-top: var(--sc-6); }
+  .wf-work {
+    margin: var(--sc-5) 0 0; padding: 0; list-style: none;
+    display: flex; flex-wrap: wrap; gap: var(--sc-2) var(--sc-5); line-height: 1.25;
+    font-family: var(--sc-font-display); font-weight: 500;
+    font-size: var(--sc-t-lg); letter-spacing: var(--sc-track-snug);
+    color: var(--sc-ink); font-weight: 600;
+  }
+  .wf-work li { display: flex; align-items: center; gap: var(--sc-2); }
+  .wf-work li::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--sc-accent); }
+  .wf-meta { font-size: var(--sc-t-sm); color: var(--sc-ink-soft); }
+
+  /* The close is a person. Depth here is offset shadow and a hairline lip, not
+     a glow: the accent already owns the CTA and the rail. */
+  .wf-founder {
+    display: flex; align-items: center; gap: var(--sc-4);
+    margin: 0 0 var(--sc-5); padding: 0;
+  }
+  .wf-founder img {
+    width: 76px; height: 76px; border-radius: 50%; object-fit: cover;
+    display: block; background: var(--sc-surface);
+    border: 1px solid var(--sc-hairline-strong);
+    box-shadow: var(--sc-e2);
+  }
+  .wf-founder--noimg img { display: none; }
+  .wf-founder figcaption { display: flex; flex-direction: column; gap: 2px; }
+  .wf-founder__name {
+    font-family: var(--sc-font-display); font-weight: 700;
+    font-size: var(--sc-t-base); letter-spacing: var(--sc-track-snug);
+    color: var(--sc-ink);
+  }
+  .wf-founder__role { font-size: var(--sc-t-sm); color: var(--sc-ink-soft); }
+  @media (max-width: 700px) {
+    .wf-founder { gap: var(--sc-3); margin-bottom: var(--sc-4); }
+    .wf-founder img { width: 56px; height: 56px; }
+  }
+
+  /* Phones get the hero a rung down, or a normal headline wraps to six lines. */
+  @media (max-width: 700px) {
+    .wf-copy .sc-display--xl { font-size: var(--sc-t-2xl); }
+    .wf-copy { bottom: clamp(7.5rem, 20vh, 12rem); max-width: none; }
+    .wf-bar { padding: var(--sc-3) var(--sc-gutter); }
+    .wf-bar .cta { font-size: var(--sc-t-xs); padding: 0 var(--sc-4); }
+  }
+
+  .wf-langs {
+    position: fixed; left: var(--sc-gutter); bottom: var(--sc-4);
+    z-index: var(--sc-z-chrome); display: flex; gap: var(--sc-3);
+    font-family: var(--sc-font-display); font-size: 0.68rem;
+    letter-spacing: var(--sc-track-wide); text-transform: uppercase;
+  }
+  .wf-langs button {
+    background: none; border: 0; padding: 4px; cursor: pointer;
+    color: var(--sc-ink-soft); opacity: 0.55;
+    transition: opacity var(--sc-d-fast) var(--sc-ease-out);
+  }
+  .wf-langs button.active { color: var(--sc-ink); opacity: 1; }
+  @media (max-width: 700px) { .wf-langs { display: none; } }
+
+  /* The phone crop puts the copy over the brightest part of the frame, where
+     the product panes sit. The stock band tops out at 58% and leaves the work
+     list at 3.3:1. Shape the density to where the copy actually is. */
+  @media (max-width: 860px) {
+    .sc-world__scrim {
+      background-image: linear-gradient(to top,
+        rgba(6,8,14,0.92) 0%, rgba(6,8,14,0.72) 22%,
+        rgba(6,8,14,0.30) 44%, rgba(6,8,14,0) 64%);
+    }
+  }
+</style>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"LLAAPP","alternateName":"LLAAPP.com","url":"https://llaapp.com","founder":{"@type":"Person","name":"Binni Cordova","jobTitle":"Founder & Principal Engineer"},"logo":"https://llaapp.com/assets/logo-512x512.png","description":"Vancouver, British Columbia AI transformation and custom software partner for mid-market operators: AI readiness audits, custom AI agents, LLM and RAG integration, and custom software engineering, backed by 10+ years of mission-critical software engineering for global market leaders.","address":{"@type":"PostalAddress","addressLocality":"Vancouver","addressRegion":"BC","addressCountry":"CA"},"contactPoint":{"@type":"ContactPoint","contactType":"customer service","email":"llaapp.solutions@gmail.com","areaServed":["CA","US","DE","IT","ES","Europe","Global"]},"knowsAbout":["AI Transformation","Artificial Intelligence Consulting","AI Readiness Audits","Custom AI Agents","LLM Integration","Retrieval-Augmented Generation","Custom Software Engineering","Cloud Architecture"],"sameAs":["https://www.linkedin.com/company/llaapp"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://llaapp.com/#vancouver","name":"LLAAPP","alternateName":"LLAAPP.com","url":"https://llaapp.com","founder":{"@type":"Person","name":"Binni Cordova","jobTitle":"Founder & Principal Engineer"},"image":"https://llaapp.com/assets/logo-512x512.png","description":"AI transformation and custom software partner based in Vancouver, British Columbia, with Canadian data residency and SR&ED-ready technical documentation.","email":"llaapp.solutions@gmail.com","telephone":"+1-650-374-4225","priceRange":"$$$","currenciesAccepted":"CAD, USD","address":{"@type":"PostalAddress","addressLocality":"Vancouver","addressRegion":"BC","addressCountry":"CA"},"geo":{"@type":"GeoCoordinates","latitude":49.2827,"longitude":-123.1207},"areaServed":[{"@type":"City","name":"Vancouver"},{"@type":"City","name":"Burnaby"},{"@type":"City","name":"Richmond"},{"@type":"City","name":"Surrey"},{"@type":"City","name":"Coquitlam"},{"@type":"City","name":"North Vancouver"},{"@type":"City","name":"Victoria"},{"@type":"AdministrativeArea","name":"British Columbia"},{"@type":"Country","name":"Canada"}],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"}],"knowsLanguage":["en","es","fr","de","it"],"sameAs":["https://www.linkedin.com/company/llaapp"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"AI Transformation and Custom Software Engineering","serviceType":"AI readiness audits, custom AI agents, LLM and RAG integration, and custom software engineering","provider":{"@type":"Organization","name":"LLAAPP"},"areaServed":[{"@type":"City","name":"Vancouver"},{"@type":"AdministrativeArea","name":"British Columbia"},{"@type":"Country","name":"Canada"}],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Capabilities","itemListElement":[{"@type":"Offer","price":"0","priceCurrency":"CAD","eligibleCustomerType":"https://schema.org/Business","itemOffered":{"@type":"Service","name":"AI Architecture & ROI Audit","description":"A complimentary 45-minute technical briefing for a qualified leadership team, led by a senior architect."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Agents & Workflow Automation","description":"Production-grade AI agents integrated into existing systems."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"LLM & Knowledge Integration (RAG)","description":"Retrieval-augmented copilots on the client's own data, deployable in Canadian cloud regions."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Custom Software Engineering","description":"Mission-critical application engineering by senior engineers."}}]}}
+</script>
+</head>
+<body>
+
+<div class="sc-grain" aria-hidden="true"></div>
+
+<header class="wf-bar">
+  <a class="wf-mark" href="#top">
+    <img src="/assets/logo-56x56.png" alt="" width="22" height="22" onerror="this.style.display='none'">
+    <span>LLAAPP.com</span>
+  </a>
+  <a class="cta" href="https://calendly.com/llaapp-solutions/llaapp-com" target="_blank" rel="noreferrer noopener" data-i18n="wfCta">Request a technical briefing</a>
+</header>
+
+<ol class="wf-rail" aria-label="Page sections">
+  <li><span class="wf-rail__leg" data-leg="0" aria-current="true" data-i18n="wfLeg1">Vancouver</span></li>
+  <li><span class="wf-rail__leg" data-leg="1" data-i18n="wfLeg2">Consult</span></li>
+  <li><span class="wf-rail__leg" data-leg="2" data-i18n="wfLeg3">Build</span></li>
+  <li><span class="wf-rail__leg" data-leg="3" data-i18n="wfLeg4">Scale</span></li>
+  <li><span class="wf-rail__leg" data-leg="4" data-i18n="wfLeg5">2027</span></li>
+</ol>
+
+<nav class="wf-mrail" aria-label="Sections">
+  <span class="wf-mrail__label" id="mrailLabel" aria-live="polite" data-i18n="wfLeg1">Vancouver</span>
+  <div class="wf-mrail__ticks">
+    <button class="wf-mrail__leg" type="button" data-leg="0" data-at="0.02" aria-current="true"><span class="wf-sr" data-i18n="wfLeg1">Vancouver</span></button>
+    <button class="wf-mrail__leg" type="button" data-leg="1" data-at="0.245"><span class="wf-sr" data-i18n="wfLeg2">Consult</span></button>
+    <button class="wf-mrail__leg" type="button" data-leg="2" data-at="0.490"><span class="wf-sr" data-i18n="wfLeg3">Build</span></button>
+    <button class="wf-mrail__leg" type="button" data-leg="3" data-at="0.620"><span class="wf-sr" data-i18n="wfLeg4">Scale</span></button>
+    <button class="wf-mrail__leg" type="button" data-leg="4" data-at="0.950"><span class="wf-sr" data-i18n="wfLeg5">2027</span></button>
+  </div>
+</nav>
+
+<canvas id="sounding" aria-hidden="true"></canvas>
+
+<main id="top" data-sc-mode="worldflight" data-sc-seam="0.16" data-sc-lerp="0.12">
+
+  <div data-sc-world>
+    <div data-sc-segment data-sc-w="1.10" data-sc-waypoint="Vancouver">
+      <img class="sc-world__poster" src="/assets/leg1.jpg" alt="" decoding="async">
+      <video data-sc-src="/assets/leg1.mp4" data-sc-src-mobile="/assets/leg1-m.mp4" muted playsinline></video>
+    </div>
+    <div data-sc-segment data-sc-w="1.10" data-sc-waypoint="Consult">
+      <img class="sc-world__poster" src="/assets/leg2.jpg" alt="" decoding="async">
+      <video data-sc-src="/assets/leg2.mp4" data-sc-src-mobile="/assets/leg2-m.mp4" muted playsinline></video>
+    </div>
+    <div data-sc-segment data-sc-w="1.10" data-sc-waypoint="Build">
+      <img class="sc-world__poster" src="/assets/leg3.jpg" alt="" decoding="async">
+      <video data-sc-src="/assets/leg3.mp4" data-sc-src-mobile="/assets/leg3-m.mp4" muted playsinline></video>
+    </div>
+    <div data-sc-segment data-sc-w="1.76" data-sc-waypoint="Scale">
+      <img class="sc-world__poster" src="/assets/leg4.jpg" alt="" decoding="async">
+      <video data-sc-src="/assets/leg4.mp4" data-sc-src-mobile="/assets/leg4-m.mp4" muted playsinline></video>
+    </div>
+    <div data-sc-segment data-sc-w="1.10" data-sc-waypoint="2027">
+      <img class="sc-world__poster" src="/assets/leg5.jpg" alt="" decoding="async">
+      <video data-sc-src="/assets/leg5.mp4" data-sc-src-mobile="/assets/leg5-m.mp4" muted playsinline></video>
+    </div>
+  </div>
+
+  <div data-sc-world-copy>
+    <div class="sc-world__scrim sc-scrim sc-scrim--band" aria-hidden="true"></div>
+
+    <div class="wf-copy" data-sc-copy data-sc-window="hero">
+      <h1 class="sc-display sc-display--xl" data-i18n="wfHeroTitle">AI products built for millions.</h1>
+      <p class="sc-lede" data-i18n="wfHeroLead">Custom software and AI transformation, engineered in Vancouver, British Columbia.</p>
+      <div class="wf-actions">
+        <a class="cta" href="https://calendly.com/llaapp-solutions/llaapp-com" target="_blank" rel="noreferrer noopener" data-i18n="wfCta">Request a technical briefing</a>
+        <a class="cta cta--ghost" href="mailto:llaapp.solutions@gmail.com" data-i18n="wfEmail">Email me</a>
+      </div>
+    </div>
+
+    <div class="wf-copy" data-sc-copy data-sc-window="0.165 0.325">
+      <h2 class="sc-display sc-display--lg" data-i18n="wfAuditTitle">Most AI never leaves the pilot.</h2>
+      <p class="sc-body" data-i18n="wfAuditBody">I consult before I build. Every use case ranked by cost, risk and payback, so the thing that ships is the thing that pays.</p>
+    </div>
+
+    <div class="wf-copy" data-sc-copy data-sc-window="0.435 0.545">
+      <h2 class="sc-display sc-display--lg" data-i18n="wfBuildTitle">Elite is a standard, not an adjective.</h2>
+      <p class="sc-body" data-i18n="wfBuildBody">Architecture, security and observability from the first commit, deployable in Canadian regions when your governance needs it. Built to hold up when the download count does.</p>
+    </div>
+
+    <div class="wf-copy" data-sc-copy data-sc-window="0.565 0.700">
+      <h2 class="sc-display sc-display--lg" data-i18n="wfWorkTitle">This is not a logo wall.</h2>
+      <p class="sc-body" data-i18n="wfWorkBody">Every screen from here down is a product I helped build, including apps that reached millions of users.</p>
+    </div>
+
+    <div class="wf-copy" data-sc-copy data-sc-window="0.700 0.825">
+      <p class="wf-eyebrow" data-i18n="wfWorkEyebrow">Products I helped build</p>
+      <ul class="wf-work">
+        <li>NFL</li><li>Coca-Cola</li><li>ITAU Banking</li>
+        <li>Platanitos</li><li>Saludables</li><li>PickPointer</li>
+      </ul>
+      <p class="wf-meta" data-i18n="wfWorkMeta">My role on each of these is available on request, along with references.</p>
+    </div>
+
+    <div class="wf-copy" data-sc-copy data-sc-window="finale">
+      <figure class="wf-founder">
+        <img src="/assets/founder.jpg" alt="Binni Cordova, founder and principal engineer at LLAAPP.com"
+             width="96" height="96" decoding="async"
+             onerror="this.closest('.wf-founder').classList.add('wf-founder--noimg')">
+        <figcaption>
+          <span class="wf-founder__name">Binni Cordova</span>
+          <span class="wf-founder__role" data-i18n="wfFounderRole">Founder &amp; Principal Engineer, LLAAPP.com</span>
+        </figcaption>
+      </figure>
+      <h2 class="sc-display sc-display--lg" data-i18n="wfCloseTitle">Own the 2027 transform.</h2>
+      <p class="sc-body" data-i18n="wfCloseBody">Vancouver’s sovereign AI compute lands through 2026. The teams that start building now are the ones ready to use it. I take the briefing myself, I stay on the build, and you keep my direct line.</p>
+      <div class="wf-actions">
+        <a class="cta" href="https://calendly.com/llaapp-solutions/llaapp-com" target="_blank" rel="noreferrer noopener" data-i18n="wfCta">Request a technical briefing</a>
+        <a class="cta cta--ghost" href="tel:+16503744225">+1 (650) 374-4225</a>
+      </div>
+    </div>
+  </div>
+
+  <div data-sc-spacer aria-hidden="true"></div>
+</main>
+
+<nav class="wf-langs" aria-label="Language">
+  <button data-lang-switch="en" class="active">EN</button>
+  <button data-lang-switch="fr">FR</button>
+  <button data-lang-switch="es">ES</button>
+  <button data-lang-switch="de">DE</button>
+  <button data-lang-switch="it">IT</button>
+</nav>
+
+<script src="/assets/scrollcraft.js"></script>
+<script>
+var COARSE = matchMedia('(pointer: coarse)').matches;
+if (COARSE) {
+  document.querySelector('[data-sc-mode="worldflight"]').setAttribute('data-sc-lerp', '0.16');
+}
+ScrollCraft.mount(document.body);
+
+// The spacer is sized once at mount. If innerHeight reported 0 then, the page
+// has no scroll track at all and it fails silently, looking like a still image.
+function relayout(){ dispatchEvent(new Event('resize')); }
+addEventListener('load', relayout);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(relayout);
+
+// ---- route rail ----------------------------------------------------------
+var mrailLabel = document.getElementById('mrailLabel');
+addEventListener('sc:waypoint', function (e) {
+  document.querySelectorAll('.wf-rail__leg, .wf-mrail__leg').forEach(function (el) {
+    el.setAttribute('aria-current', String(+el.dataset.leg === e.detail.index));
+  });
+  var active = document.querySelector('.wf-mrail__leg[data-leg="' + e.detail.index + '"] .wf-sr');
+  if (mrailLabel && active) mrailLabel.textContent = active.textContent;
+});
+
+// Tapping a tick travels to that leg. The targets are the copy plateaus, not
+// the leg boundaries: a leg boundary can land in the authored silence, and
+// arriving at nothing reads as a broken link.
+(function railJump(){
+  var root = document.querySelector('[data-sc-mode="worldflight"]');
+  if (!root) return;
+  var total = [].reduce.call(root.querySelectorAll('[data-sc-segment]'),
+    function (a, s) { return a + (parseFloat(s.getAttribute('data-sc-w')) || 1.3); }, 0);
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)');
+  document.querySelectorAll('.wf-mrail__leg').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var at = parseFloat(btn.dataset.at) || 0;
+      scrollTo({ top: Math.round(at * total * innerHeight),
+                 behavior: reduce.matches ? 'instant' : 'smooth' });
+    });
+  });
+})();
+
+// ---- the signature move: THE SOUNDING ------------------------------------
+// The pointer is a depth sounder. Moving it releases a ping that travels out
+// across the world, and the contour returns come back lit along the wavefront.
+// Bespoke to this page, driven off nothing in the engine.
+(function sounding(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)');
+  if (reduce.matches) return;
+  var cv = document.getElementById('sounding');
+  if (!cv) return;
+  var ctx = cv.getContext('2d'), dpr = Math.min(devicePixelRatio || 1, 2);
+  var pings = [], last = 0, raf = 0;
+  var coarse = matchMedia('(pointer: coarse)').matches;
+  var LIFE = coarse ? 1550 : 1250;
+  var REACH = coarse ? 0.56 : 0.42;
+
+  function size(){
+    cv.width = Math.round(innerWidth * dpr);
+    cv.height = Math.round(innerHeight * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  size(); addEventListener('resize', size);
+
+  function ping(x, y){
+    if (pings.length > 5) pings.shift();
+    pings.push({ x: x, y: y, t: performance.now() });
+    if (!raf) raf = requestAnimationFrame(draw);
+  }
+
+  // On a fine pointer the ping follows the hand. On a finger, pointermove only
+  // fires mid-drag, which is the scroll gesture, so a tap is the whole input
+  // and the ping is bigger and lasts longer to earn it.
+  if (!coarse) {
+    addEventListener('pointermove', function (e) {
+      var now = performance.now();
+      if (now - last < 190) return;        // a ping is an event, not a trail
+      last = now;
+      ping(e.clientX, e.clientY);
+    }, { passive: true });
+  }
+  addEventListener('pointerdown', function (e) { last = 0; ping(e.clientX, e.clientY); }, { passive: true });
+
+  function draw(now){
+    ctx.clearRect(0, 0, innerWidth, innerHeight);
+    var alive = false;
+    for (var i = 0; i < pings.length; i++){
+      var p = pings[i], age = (now - p.t) / LIFE;
+      if (age >= 1) continue;
+      alive = true;
+      var ease = 1 - Math.pow(1 - age, 3);
+      var r = 40 + ease * Math.max(innerWidth, innerHeight) * REACH;
+      var fade = (1 - age) * (1 - age);
+
+      // the wavefront
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+      ctx.strokeStyle = 'rgba(255,237,0,' + (0.16 * fade).toFixed(3) + ')';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      // contour returns: short level segments lit where the front passes
+      var rings = 7;
+      for (var k = 0; k < rings; k++){
+        var a = (k / rings) * Math.PI * 2 + age * 0.5;
+        var sx = p.x + Math.cos(a) * r, sy = p.y + Math.sin(a) * r * 0.42;
+        var w = 16 + 26 * (1 - age);
+        ctx.beginPath();
+        ctx.moveTo(sx - w / 2, sy);
+        ctx.lineTo(sx + w / 2, sy);
+        ctx.strokeStyle = 'rgba(226,240,250,' + (0.34 * fade).toFixed(3) + ')';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      }
+    }
+    raf = alive ? requestAnimationFrame(draw) : 0;
+    if (!alive) ctx.clearRect(0, 0, innerWidth, innerHeight);
+  }
+})();
+</script>
+<script src="/assets/i18n.js" defer></script>
+</body>
+</html>

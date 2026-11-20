@@ -1,0 +1,12 @@
+# pnpm >= 11 reads these settings here, not from package.json's "pnpm" field.
+overrides:
+  '@types/express-serve-static-core': 5.0.7
+
+# Dependencies allowed to run install scripts. Leaving any of these unset
+# makes pnpm refuse the build (ERR_PNPM_IGNORED_BUILDS), which breaks
+# `firebase deploy` in Cloud Build.
+allowBuilds:
+  '@firebase/util': true
+  core-js: true
+  protobufjs: true
+  unrs-resolver: true
